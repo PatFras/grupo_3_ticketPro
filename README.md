@@ -4,6 +4,7 @@
 ## Esta orientado a un publico joven y adulto.
 
 ## Creadores:
+
 ### Brisa Guimaz de 22 anios, residente en Buenos Aires - Argentina
 ### Paricio Frascaroli de 32 anios, residente en Buenos Aires - Argentina 
 ### Roberto Zalazar de 40 anios, residente en Salta - Argentina 
