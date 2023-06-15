@@ -1,8 +1,8 @@
 # ticketPro 
 
-## Nuestro sitio ofrece a los usuarios una página interactiva en la cual encontrar a diversos eventos, informarse sobre los mismos y adquirir su entrada o explorar a las posibilidades gratuitas que haya disponible en las próximas fechas.
+## Nuestro sitio ofrece a los usuarios una página interactiva en la cual podremos encontrar a diversos eventos, informarnos sobre los mismos y adquirir entradas o explorar a las posibilidades gratuitas que haya disponible en las próximas fechas.
 
-## Está orientado a un público joven y adulto.
+## El publico al que esta orientado es tanto jovenes como adultos.
 
 ## Creadores:
 
