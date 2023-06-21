@@ -12,7 +12,7 @@
 
 ### Patricio Frascaroli, 32 años. Vivo en Tandil, Bs As. Actualmente curso el primer año de la Tecnicatura en Desarrollo y Análisis de Aplicaciones.
 
-### Roberto Zalazar de 40 anios, residente en Salta - Argentina 
+### Roberto Zalazar de 40 anios, residente en Salta - Argentina. Actualmente cursando Crso fullstack Formar
 
 ### Camila Guerrero de 19 anios, residente en Cordoba - Argentina - Desarrollo web fullstack, Salesforce
 
@@ -21,3 +21,5 @@
 ### sitio/s por la estetica que presentan: allacecess.com.ar - ticketle.com.ar - paseshow.com.ar
 
 ### sitio/s por las funcionalidades que presentan: entradaweb.com.ar - ventas.autoentrada.com
+
+### sitio/s por producto allacecess.com.ar - eventbrite.es/
