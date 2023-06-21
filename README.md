@@ -10,7 +10,7 @@
 
 ### Brisa Guimaz de 22 anios, residente en Buenos Aires - Argentina - estudia Desarrollo web fullstack
 
-### Paricio Frascaroli, 32 años. Vivo en Tandil, Bs As. Actualmente cursando el primer año de la Tecnicatura en Desarrollo y Análisis de Aplicaciones.
+### Patricio Frascaroli, 32 años. Vivo en Tandil, Bs As. Actualmente curso el primer año de la Tecnicatura en Desarrollo y Análisis de Aplicaciones.
 
 ### Roberto Zalazar de 40 anios, residente en Salta - Argentina 
 
