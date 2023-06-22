@@ -18,10 +18,10 @@
 
 ## Referencias del mercado
 
-### sitio/s por la estetica que presentan: allacecess.com.ar - ticketle.com.ar - paseshow.com.ar
+### sitio/s por la estetica que presentan: https://www.allacecess.com.ar/ - https://www.ticketle.com.ar/ - https://www.paseshow.com.ar/
 
-### sitio/s por las funcionalidades que presentan: entradaweb.com.ar - ventas.autoentrada.com
+### sitio/s por las funcionalidades que presentan: https://www.entradaweb.com.ar/ - https://www.ventas.autoentrada.com/
 
-### sitio/s por producto/servicio que ofrecen: allacecess.com.ar - eventbrite.es/
+### sitio/s por producto/servicio que ofrecen: https://www.allacecess.com.ar/ - https://www.eventbrite.es/
 
 ### sitio/s por los clientes a los que apuntan: https://www.tuentrada.com/ - https://www.turboentrada.com/
