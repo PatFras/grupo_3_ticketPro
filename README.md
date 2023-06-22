@@ -12,9 +12,9 @@
 
 ### Patricio Frascaroli, 32 años. Vivo en Tandil, Bs As. Actualmente curso el primer año de la Tecnicatura en Desarrollo y Análisis de Aplicaciones.
 
-### Roberto Zalazar de 40 anios, residente en Salta - Argentina. Actualmente cursando Crso fullstack Formar
+### Roberto Zalazar de 40 anios, residente en Salta - Argentina. Actualmente Curso fullstack Formar
 
-### Camila Guerrero de 19 anios, residente en Cordoba - Argentina - Desarrollo web fullstack, Salesforce
+### Camila Guerrero de 19 anios, residente en Cordoba - Argentina - Cursando Desarrollo web fullstack, Salesforce
 
 ## Referencias del mercado
 
@@ -22,4 +22,6 @@
 
 ### sitio/s por las funcionalidades que presentan: entradaweb.com.ar - ventas.autoentrada.com
 
-### sitio/s por producto allacecess.com.ar - eventbrite.es/
+### sitio/s por producto/servicio que ofrecen: allacecess.com.ar - eventbrite.es/
+
+### sitio/s por los clientes a los que apuntan: https://www.tuentrada.com/ - https://www.turboentrada.com/
