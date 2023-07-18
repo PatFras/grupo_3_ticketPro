@@ -1,13 +1,13 @@
 # RETROSPECTIVA DEL SPRINT 1
 
 ## Seguir haciendo
-• Organización 
-• Intercambio de ideas
-• Comunicación respetuosa 
+• Organización   
+• Intercambio de ideas  
+• Comunicación respetuosa  
 
 ## Hacer mas
-• Comunicarse más frecuentemente por whatsapp
-• Compartir progreso 
+• Comunicarse más frecuentemente por whatsapp  
+• Compartir progreso  
 
 ## Empezar a hacer
 • Definir las dailys, dia y hora.
