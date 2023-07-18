@@ -1,0 +1,54 @@
+.home__footer {
+    background-color: var(--colorAzul);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 0 10px;
+    gap: 1em;
+    text-align: center;
+}
+
+.footer--topBox {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    border-bottom: 2px solid var(--colorBlanco);
+}
+
+.footer--topBox h2 {
+    color: var(--colorBlanco);
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+
+.footer--topBox button {
+    background-color: var(--colorTurquesa);
+    border-radius: 30px;
+    border: none;
+    padding: 5px;
+    margin-bottom: 1.5em;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.home_footer-nav a {
+    color: var(--colorBlanco);
+}
+
+.home__footer img {
+    width: 7em;
+}
+
+.icons-box {
+    display: flex;
+    flex-direction: row;
+    color: var(--colorTurquesa);
+    gap: 1em;
+}
+
+.home__footer p {
+    color: silver;
+    font-size: 12px;
+    text-align: left;
+    padding-bottom: 1em;
+}

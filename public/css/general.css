@@ -1,0 +1,20 @@
+:root {
+    --colorAzul: #000B27;
+    --colorTurquesa: #41EAD4;
+    --colorBlanco: #FDFFFC;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Barlow';
+}
+
+footer ul li {
+    list-style: none;
+    text-decoration: underline;
+}
