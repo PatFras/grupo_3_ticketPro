@@ -8,13 +8,13 @@
 
 ## Creadores:
 
-### Brisa Guimaz de 22 anios, residente en Buenos Aires - Argentina - estudia Desarrollo web fullstack
+### Brisa Guimaz de 22 años, residente en Buenos Aires - Argentina - estudia Desarrollo web fullstack
 
 ### Patricio Frascaroli, 32 años. Vivo en Tandil, Bs As. Actualmente curso el primer año de la Tecnicatura en Desarrollo y Análisis de Aplicaciones.
 
-### Roberto Zalazar de 40 anios, residente en Salta - Argentina. Actualmente Curso fullstack Formar
+### Roberto Zalazar de 40 años, residente en Salta - Argentina. Actualmente Curso fullstack Formar
 
-### Camila Guerrero de 19 anios, residente en Cordoba - Argentina - Cursando Desarrollo web fullstack, Salesforce
+### Camila Guerrero de 19 años, residente en Cordoba - Argentina - Cursando Desarrollo web fullstack, Salesforce
 
 ## Referencias del mercado
 
