@@ -4,24 +4,24 @@
     flex-direction: column;
     align-items: center;
     padding: 20px 0 0 10px;
-    gap: 1em;
     text-align: center;
 }
 
-.footer--topBox {
+.footer-helpBox {
     display: flex;
     flex-direction: row;
     gap: 0.5em;
     border-bottom: 2px solid var(--colorBlanco);
+    margin: 1em 0;
 }
 
-.footer--topBox h2 {
+.footer-helpBox h2 {
     color: var(--colorBlanco);
     font-weight: 400;
     margin-bottom: 1em;
 }
 
-.footer--topBox button {
+.footer-helpBox button {
     background-color: var(--colorTurquesa);
     border-radius: 30px;
     border: none;
@@ -31,24 +31,85 @@
     font-size: 14px;
 }
 
-.home_footer-nav a {
+.footer-nav a {
     color: var(--colorBlanco);
 }
 
 .home__footer img {
-    width: 7em;
+    width: 9em;
+    margin: 1em 0 0.5em 0;
 }
 
-.icons-box {
+.footer-iconsBox {
     display: flex;
     flex-direction: row;
     color: var(--colorTurquesa);
-    gap: 1em;
+    gap: 0.8em;
+    margin: 1em 0;
+    justify-content: center
 }
 
 .home__footer p {
     color: silver;
     font-size: 12px;
     text-align: left;
-    padding-bottom: 1em;
+    padding: 1em;
+}
+
+@media (min-width:768px) {
+    .home__footer {
+        text-align: left;
+    }
+
+    .home__footer p {
+        font-size: 12px;
+        align-self: flex-start;
+
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .footer-topBox {
+        width: 65%;
+    }
+
+    .footer-helpBox {
+        margin: 0 1em 2em 1em;
+        font-size: 20px;
+    }
+
+    .footer-helpBox button {
+        font-size: 24px;
+        margin-bottom: 1.3em;
+    }
+
+    .footer-nav ul li {
+        display: inline;
+        margin: 0.2em;
+        font-weight: 700;
+        font-size: 16px;
+        align-self: flex-start;
+    }
+
+    .footer-bottomBox {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-bottomBox img {
+        margin: 0;
+        width: 11em;
+    }
+
+    .footer-bottomBox i {
+        margin-top: 0.3em;
+    }
+
 }

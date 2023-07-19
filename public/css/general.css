@@ -14,7 +14,10 @@ body {
     font-family: 'Barlow';
 }
 
-footer ul li {
+li {
     list-style: none;
-    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
 }
