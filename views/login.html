@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/styles.css">
+    <script src="https://kit.fontawesome.com/2d81885619.js" crossorigin="anonymous"></script>
+    <title>Login</title>
+</head>
+
+<body class="body__login">
+    <main class="login-container">
+
+        <div class="topBox">
+            <img src="../public/images/logo.png" alt="logo ticket Pro">
+
+            <h1>Please sign in</h1>
+        </div>
+
+
+        <div class="middleBox">
+            <form action="/login" method="POST">
+                <label for="name"></label>
+                <input id="name" type="text" name="name">
+
+                <label for="password"></label>
+                <input id="password" type="password" name="password">
+
+                <div class="checkbox">
+                    <label for=""></label>
+                    <input type="checkbox">
+                </div>
+
+            </form>
+        </div>
+
+        <div class="bottomBox">
+            <button>Sign in</button>
+
+            <p>Create account</p>
+        </div>
+
+    </main>
+</body>
+
+</html>

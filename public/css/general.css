@@ -1,7 +1,10 @@
 :root {
-    --colorAzul: #000B27;
     --colorTurquesa: #41EAD4;
     --colorBlanco: #FDFFFC;
+    --colorNaranja: #FE7F2D;
+    --colorAzul: #011627;
+    --colorGris: #383E48;
+    --colorGrisOscuro: #272B32;
 }
 
 * {

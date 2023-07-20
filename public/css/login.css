@@ -1,0 +1,79 @@
+.body__login {
+    background-color: var(--colorAzul);
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container {
+    background-color: var(--colorGris);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0 2em;
+    gap: 1em;
+}
+
+.topBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.topBox img {
+    width: 6em;
+}
+
+.topBox h1 {
+    color: silver;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.middleBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3em 0 3em;
+}
+
+input {
+    background-color: var(--colorGrisOscuro);
+    border-color: var(--colorTurquesa);
+    border-radius: 0.5em;
+    margin: 0.2em;
+    padding: 0.5em;
+}
+
+.checkbox {
+    margin-top: 1em;
+}
+
+.checkbox input {
+    background-color: var(--colorGrisOscuro);
+    border-color: var(--colorTurquesa);
+}
+
+.bottomBox {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.bottomBox button {
+    background-color: var(--colorNaranja);
+    border: none;
+    border-radius: 3em;
+    padding: 0.5em;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.bottomBox p {
+    color: silver;
+    font-size: 9px;
+}
