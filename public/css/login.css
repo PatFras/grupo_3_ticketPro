@@ -42,11 +42,10 @@
 }
 
 input {
-    background-color: var(--colorGrisOscuro);
-    border-color: var(--colorTurquesa);
     border-radius: 0.5em;
-    margin: 0.2em;
+    border: none;
     padding: 0.5em;
+    margin: 0.2em;
 }
 
 .checkbox {
@@ -56,6 +55,11 @@ input {
 .checkbox input {
     background-color: var(--colorGrisOscuro);
     border-color: var(--colorTurquesa);
+}
+
+.checkbox label {
+    font-size: 12px;
+    color: silver;
 }
 
 .bottomBox {
@@ -76,4 +80,29 @@ input {
 .bottomBox p {
     color: silver;
     font-size: 9px;
+}
+
+@media (min-width:768px) {
+.login-container {
+    margin: 2em 0;
+}
+
+.topBox img {
+    width: 9em;
+}
+
+.topBox h1 {
+    font-size: 24px;
+}
+
+.middleBox {
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
 }
