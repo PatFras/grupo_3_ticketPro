@@ -13,11 +13,10 @@
     <main class="login-container">
 
         <div class="topBox">
-            <img src="../public/images/logo.png" alt="logo ticket Pro">
-
+            <a href="/index.html"><img src="../public/images/logo.png" alt="logo ticket Pro">
+            </a>
             <h1>Sign in</h1>
         </div>
-
 
         <div class="middleBox">
             <form class="login-form" action="/login" method="POST">
@@ -36,20 +35,20 @@
                     </label>
                 </form>
 
-
-
                 <div class="checkbox">
-                    <input type="checkbox" name="remember">
-                    <label for="remember">Remember me</label>
+                    <input title="remember" type="checkbox" name="remember">
+                    <label for="remember"><span>Remember me</span></label>
                 </div>
 
             </form>
         </div>
 
         <div class="bottomBox">
-            <button>Sign in</button>
+            <div class="button-container">
+                <button>Sign in</button>
+            </div>
 
-            <p>Create account</p>
+            <a href="/register.html"><p>Create account</p></a>
         </div>
 
     </main>
