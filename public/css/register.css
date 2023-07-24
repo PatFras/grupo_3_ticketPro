@@ -1,0 +1,92 @@
+.register{
+    margin: 0;
+    background-color: #011627;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+.register_conteiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#444D55;
+    width: 100%;
+    height: 100vh;
+}
+/*herader*/
+.register_header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    gap: 1em;
+}
+.register_header img{
+    width:6em;
+}
+.register_header h1{
+    color: silver;
+    font-size: 18px;
+    font-weight: 500;
+}
+/*form*/
+.register_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.register_form-inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.register_form input{
+    color: #FDFFFC;
+    border: none;
+    border-bottom: #41EAD4 3px solid;
+    background-color: #444D55;
+    padding: 8px 15px;
+}
+.register_form input:focus{
+    outline: none;
+}
+.register_form input:read-write{
+    
+    background-color:#444D55;
+}
+
+.register_form-buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    gap : 1.5em;
+}
+.register_form-buttons-register{
+    color:silver;
+    background-color:#444D55;
+    font-size: 12px;
+    letter-spacing: 1px;
+    width: 5.5em;
+    height: 40px;
+    outline: none;
+    border: 2px solid  #fe7f2d;
+    border-radius: 40px;
+    transition: all 0.25s ease;
+}
+.register_form-buttons-register:hover{
+    background-color: #fe7f2d ;
+}  
+.register_form-buttons-singIn p{
+    color: silver;
+    font-size: 9px;
+    text-align: center;
+}
+@media(min-width:800px){   
+    .register_conteiner{
+        width: 480px;
+        height: 100vh;
+    } 
+}
