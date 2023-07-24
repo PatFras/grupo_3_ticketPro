@@ -173,9 +173,7 @@
     .login-container {
         margin: 6em 0;
         padding: 0.5em;
-        gap: 0;
-        height: 100%;
-
+        height: 70vh;
     }
 
     .topBox img {
@@ -190,6 +188,24 @@
         display: flex;
         flex-direction: column;
     }
+}
 
+@media (min-width:1024px) {
+    .login-container {
+        margin: 5em 0;
+        padding: 14em;
+        position: 50%;
+    }
 
+    .topBox img {
+        width: 14em;
+    }
+
+    .topBox h1 {
+        font-size: 32px;
+    }
+
+    .middleBox {
+        width: 16em;
+    }
 }
