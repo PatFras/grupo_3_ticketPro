@@ -1,0 +1,26 @@
+:root {
+    --colorTurquesa: #41EAD4;
+    --colorBlanco: #FDFFFC;
+    --colorNaranja: #FE7F2D;
+    --colorAzul: #011627;
+    --colorGris: #383E48;
+    --colorGrisOscuro: #272B32;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Barlow';
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
