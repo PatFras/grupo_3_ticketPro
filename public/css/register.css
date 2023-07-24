@@ -59,10 +59,10 @@
 
 .register_form-buttons{
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
-    padding: 3em;
-    gap: 1.5em;
+    padding: 2em;
+    gap : 1.5em;
 }
 .register_form-buttons-register{
     color:silver;
@@ -78,14 +78,11 @@
 }
 .register_form-buttons-register:hover{
     background-color: #fe7f2d ;
-}
-.register_form-buttons-singIn{
-    background-color: #444D55;
-    width: 13em;
-    border: #41EAD4 1px solid;
-    border-radius: 8px;
-    color: #9E9E9E;
-    padding: 3px;
+}  
+.register_form-buttons-singIn p{
+    color: silver;
+    font-size: 9px;
+    text-align: center;
 }
 @media(min-width:800px){   
     .register_conteiner{
