@@ -1,0 +1,28 @@
+body {
+    
+    
+    background-color: #000e38;
+    color: white;
+    
+}
+
+.body-container {
+    background-color: #000b27;
+    width: 90%;
+    height: 85vh;
+    border-radius: 10px;
+    border: none;
+    
+}
+
+
+.text-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.product-hora{
+    display: flex;
+}

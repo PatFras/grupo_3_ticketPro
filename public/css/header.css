@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000e38;
+}
+
+.home-header {
+    background-color: #000b27;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 0;
+}
+
+.home-header a {
+    color: #FE7F2D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.nav-logo img{
+    display: none;
+}
+
+.containe {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.containe h6{
+    display: none;
+}
+
+.home-header-nav {
+    display: flex;
+}
+
+.nav-home-a a{
+    display: none;
+}
+
+.home-header-nav img {
+    width: 60px;
+    height: auto;
+    margin: 5px;
+}
+
+
+.nav-icon-a i{
+    border-right: 1px solid #41ead4;
+    padding-right: 10px;
+}
+
+.nav-icon-b {
+
+    margin-left: 10px;
+}
+.menu-desple{
+    display: none;
+}
+
+
+
+@media  (min-width: 768px) {
+    .containe{
+        height: 40px ;
+        align-items: center;
+    }
+  
+  .nav-home-a img{
+    display: none;
+  }  
+  .home-header-nav.nav-home-b .nav-icon-a {
+    display: none;
+  }
+
+  .nav-icon-a {
+    border-right: none;
+   
+    
+}
+.nav-home-a a{
+    display: block;
+}
+.containe h6{
+    display: block;
+    color: #ffff;
+    font-size: 15px;
+}
+.nav-logo img{
+    display: block;
+    width: 200px;
+    justify-content: center;
+}
+.nav-logo{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+
+.menu-desple{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+
+
+.d-flex {
+    display: flex;
+  }
+  
+ 
+  
+ 
+  .search-container {
+    margin: 20px;
+  }
+  
+ 
+  .search-input {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #41ead4;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+
+  .select-container {
+    margin: 20px;
+  }
+  
+  
+  .custom-select {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #41ead4;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+ 
+  .custom-select option {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+ 
+  .custom-select:focus {
+    outline: none;
+    border-color: #41ead4;
+  }
+  
+
+  }
