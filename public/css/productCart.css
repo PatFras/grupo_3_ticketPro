@@ -1,28 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
-    
-    
-    background-color: #000e38;
+    display: flex;
+    flex-direction: column;
+   background-color: #000e38;
     color: white;
     
 }
+.header-container{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.header-container i{
+    color: #FE7F2D;
+}
+.text-body{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    justify-content: space-between
+}
+
 
 .body-container {
     background-color: #000b27;
     width: 90%;
     height: 85vh;
-    border-radius: 10px;
-    border: none;
-    
+   margin:  auto;
+   padding: 15px;
 }
-
-
-.text-body{
+.resumen-cuenta-body{
+    color: #41ead4;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
+    justify-content: flex-end
+}
+.resumen-compra-body{
+    margin: 30px 0 30px 0;
 }
 
 .product-hora{
     display: flex;
+    gap: 5px;
+    margin: 20px 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .content-flex{
+    display: flex;
+    justify-content: space-between;
+  }
+  .details-flex{
+    display: flex;
+    gap: 5px;
+  }
+  .details-number{
+    color: #FE7F2D;
+  }
+.btn-reserva{
+    background-color: #FE7F2D;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.btn-reserva h4{
+    
+    color: #ffff;
+    padding: 5px 0;
+    
+}
+.btn-reserva a{
+    text-decoration: none;
+}
+
+
+@media (min-width: 768px){
+    h5, h4, p {
+        font-size: 1.2rem; /* Reducción adicional del tamaño de fuente para pantallas pequeñas */
+      }
+      .body-container {
+        
+       padding: 20px 35px;
+    }
+    .header-container i{
+        
+        font-size: 1.3rem;
+    }
+
+
+}
+
+@media (min-width: 1024px){
+     h5, h4, p {
+        font-size: 1.3rem; /* Reducción adicional del tamaño de fuente para pantallas pequeñas */
+      }
+      .body-container {
+        
+       padding: 20px 45px;
+    }
+    .header-container i{
+        
+        font-size: 1.4rem;
+    }
 }
