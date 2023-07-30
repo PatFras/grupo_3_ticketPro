@@ -162,11 +162,18 @@
     background: var(--colorNaranja);
 }
 
-.bottomBox p {
+.links-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3em;
+    cursor: pointer;
+}
+
+.links-box a {
     color: silver;
     font-size: 9px;
-    margin-top: 6em;
-    cursor: pointer;
+    margin-top: 0.5em;
 }
 
 @media (min-width:768px) {
@@ -186,7 +193,7 @@
         font-size: 24px;
     }
 
-    form {
+    form .login-form {
         display: flex;
         flex-direction: column;
     }
