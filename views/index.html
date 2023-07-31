@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://kit.fontawesome.com/2d81885619.js" crossorigin="anonymous"></script>
+    <title>Home</title>
+</head>
+
+<body class="body__main">
+    <header class="home-header-all">
+        <div class="home-header">
+            <div class="containe">
+                <div class="home-header-nav nav-home-a">
+                    <a href="" class="nav-icon-a"><i class="fa-regular fa-user"></i></a>
+                    <img src="/images/logo.png" alt="">
+                    <h6>Ingresar</h6>
+                </div>
+                <div class="home-header-nav nav-home-b">
+                    <a href="" class="nav-icon-a"><i class="fa-regular fa-user"></i></a>
+                    <a href="" class="nav-icon-b"><i class="fa-solid fa-cart-shopping"></i></a>
+
+                </div>
+
+            </div>
+
+        </div>
+      
+
+        <!-- <div class="menu-desple">
+            <div class="search-container">
+                <input class="search-input" type="search" placeholder="Search">
+            </div>
+
+            <div class="select-container">
+                <select class="custom-select">
+                    <option selected>Open this select menu</option>
+                    <option value="1">Opción 1</option>
+                    <option value="2">Opción 2</option>
+                    <option value="3">Opción 3</option>
+                </select>
+            </div> -->
+
+
+
+        </div>
+
+    </header>
+
+    <main>
+        <!-- carrousel mobile-tablet Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="/images/pelotas.webp" alt=""></div>
+                <div class="swiper-slide"><img src="/images/fab.webp" alt=""></div>
+                <div class="swiper-slide"><img src="/images/sirenita.webp" alt=""></div>
+                <div class="swiper-slide"><img src="/images/qlokura.webp" alt=""></div>
+                <div class="swiper-slide"><img src="/images/rusia.webp" alt=""></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="logo__container">
+            <img class="body__main--logo" src="/images/logo.png" alt="logo">  
+        </div>
+
+        <form class="body__main__form" action="">
+            <div class="body__main__containerSearch">
+                <div class="body__main__containerSearchBar">
+                    <i class="fas fa-search"></i>
+                    <input class="body__main__containerSearch--searchbar" type="text" name="busqueda" id="busqueda"
+                        placeholder="Buscá artista o evento">
+                </div>
+                <div class="select">
+                    <i class="fa-solid fa-caret-down"></i>
+                    <select class="select__options">
+                        <option disabled selected=false>Categorías</option>
+                        <option>categoria 1</option>
+                        <option>categoria 2</option>
+                        <option>categoria 3</option>
+                        <option>categoria 4</option>
+                        <option>categoria 5</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+
+        <!-- carrousel desktop -->
+        <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="/images/pelotas.webp" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/images/fab.webp" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/images/sirenita.webp" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/images/qlokura.webp" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/images/rusia.webp" />
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+        <section class="body__main--sliderlEventos">
+            <h2>Eventos cerca de ti</h2>
+            <div class="swiper mySwiper3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="div__card--cercaDeTi">
+                            <img class="div__card--cercaDeTi-img" src="/images/evento1.jpg" alt="">
+                            <p class="div__card--title">Nombre</p>
+                            <p>día 00 mes</p>
+                            <p>Lugar</p>
+                            <a href="/productDetail">
+                                <button>comprar</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="div__card--cercaDeTi">
+                            <img class="div__card--cercaDeTi-img" src="/images/evento2.jpg" alt="">
+                            <p class="div__card--title"> Nombre </p>
+                            <p>día 00 mes</p>
+                            <p>Lugar</p>
+                            <a href="/productDetail">
+                                <button>Comprar</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="div__card--cercaDeTi">
+                            <img class="div__card--cercaDeTi-img" src="/images/evento3.jpg" alt="">
+                            <p class="div__card--title"> Nombre </p>
+                            <p>día 00 mes</p>
+                            <p>Lugar</p>
+                            <a href="/productDetail">
+                                <button>Comprar</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="div__card--cercaDeTi">
+                            <img class="div__card--cercaDeTi-img" src="/images/evento4.jpg" alt="">
+                            <p class="div__card--title"> Nombre </p>
+                            <p>día 00 mes</p>
+                            <p>Lugar</p>
+                            <a href="/productDetail">
+                                <button>Comprar</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="div__card--cercaDeTi">
+                            <img class="div__card--cercaDeTi-img" src="/images/evento5.jpg" alt="">
+                            <p class="div__card--title"> Nombre </p>
+                            <p>día 00 mes</p>
+                            <p>Lugar</p>
+                            <a href="/productDetail">
+                                <button>Comprar</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <a href="">Ver todo</a>
+        </section>
+
+        <div class="body__main--sections">
+            
+            <aside class="body__main--pickup">
+                <i class="fa-solid fa-location-dot"></i>
+                <a href="">Conocé los puntos de retiro</a>
+            </aside>
+            
+            <div class="body__main--sections-actYevents">
+                <section class="body__main--actividades">
+                    <p class="body__main--actividades-title">Actividades gratuitas</p>
+                    <p class="actividades-description">Descubrí las opciones disponibles en esta sección</p>
+                    
+                    <button>Explorar</button>
+                </section>
+        
+                <section class="body__main--proxEvento">
+                    <div class="div__card--proxEvento">
+                        <p>Próximo evento</p>
+                        <img src="/images/evento4.jpg" alt="">
+                        <div class="div__card--proxEvento-description">
+                            <p class="div__card--proxEvento-title">Nombre</p>
+                            <p>día 00 mes</p>
+                            <p>Lugar</p>
+                            <button>Ver en calendario</button>
+                        </div>
+            </div>
+
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer class="home__footer">
+
+        <div class="footer-container">
+            <div class="footer-topBox">
+
+                <div class="footer-helpBox">
+                    <h2>¿Necesitás ayuda?</h2>
+                    <button>Soporte</button>
+                </div>
+
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="">¿Quiénes somos?</a></li>
+                        <li><a href="">Políticas de privacidad</a></li>
+                        <li><a href="">Términos y condiciones</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div class="footer-bottomBox">
+
+                <img src="/images/logo.png" alt="logo ticket Pro">
+
+                <div class="footer-iconsBox">
+                    <i class="fa-brands fa-instagram fa-2xl"></i>
+                    <i class="fa-brands fa-facebook fa-2xl"></i>
+                    <i class="fa-brands fa-twitter fa-2xl"></i>
+                </div>
+
+            </div>
+        </div>
+
+        <p>Copyright © 2023 ticketpro.com | All rights reserved</p>
+    </footer>
+    <!-- js swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script src="/js/swiper-carrousel.js"></script>
+    <script src="/js/swiper-carrousel-desktop.js"></script>
+    <script src="/js/swiper-sliderEventos.js"></script>
+</body>
+
+</html>

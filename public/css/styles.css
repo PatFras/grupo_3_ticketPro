@@ -8,4 +8,9 @@
 @import './productDetail.css';
 @import './header.css';
 @import './footer.css';
+<<<<<<< HEAD
 @import '/css/detailsCard.css'
+=======
+@import './carrousel-mob.css';
+@import './carrousel-desktop.css';
+>>>>>>> 638bda12839325aa60b198666126128714f55fc3
