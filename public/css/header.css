@@ -13,7 +13,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3px 0;
+    padding: 15px 0;
 }
 
 .home-header a {
@@ -32,10 +32,12 @@ body {
     width: 95%;
     display: flex;
     justify-content: space-between;
+   
 }
 
 .containe h6{
     display: none;
+    margin-left: 10px;
 }
 
 .home-header-nav {
