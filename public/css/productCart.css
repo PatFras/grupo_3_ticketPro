@@ -42,13 +42,15 @@
 }
 
 .logo-header img {
-  width: 8vw;
+  width: 6vw;
+  margin: 7px;
 
 }
 
 .btn-cuenta {
 
   color: #ffff;
+  margin-right: 3px;
 }
 
 .icon-header-nav {
