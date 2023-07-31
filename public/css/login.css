@@ -186,7 +186,7 @@
         font-size: 24px;
     }
 
-    form {
+    .login-form {
         display: flex;
         flex-direction: column;
     }
