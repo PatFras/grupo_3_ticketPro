@@ -5,73 +5,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/e4646141a1.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/productCart.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Document</title>
 </head>
 
 <body>
 
-    <header class="header-container">
-        <div class="text-body">
-            <h4>Confirmar la Operación</h4>
-            <i class="fa-solid fa-cart-shopping"></i></i>
 
 
+    <header class="text-body">
+
+        <div class="logo-header">
+
+            <img src="/images/logo.png" alt="">
         </div>
+
+        <div class="icon-header-nav">
+            <a href="/login" class="nav-icon-a"><i class="fa-regular fa-user"></i></a>
+            <a href="">
+                <p class="btn-cuenta">Mi cuenta</p>
+            </a>
+            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+
 
     </header>
 
-    <div class="body-container">
-        <a href="#">
-            <h5 class="resumen-cuenta-body">Cancelar compra</h5>
-        </a>
-        <h5 class="resumen-compra-body">Resumen de Compras</h5>
-        <p>Atencion: Tus entradas todaavia no estan reservadas, confirma tu reserva para asegurar tu lugar</p>
-        <div class="product-hora">
-            <div id="fecha"></div>
-            <div id="hora"></div>
+
+
+
+    <main class="header-container">
+
+        <div class="body-container">
+            <div class="text-bodyy">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <div>
+                <a href="#">
+                    <h5 class="resumen-cuenta-body">Cancelar compra</h5>
+                </a>
+
+            </div>
+            <h5 class="resumen-compra-body">Resumen de Compras</h5>
+            <p>Atencion: Tus entradas todaavia no estan reservadas, confirma tu reserva para asegurar tu lugar</p>
+            <div class="product-hora">
+                <div id="fecha"></div>
+                <div id="hora"></div>
+            </div>
+
+            <div class="container">
+
+                <div class="titulo-entradas-cart">
+                    <h4>TUS ENTRADAS</h4>
+
+                </div>
+
+                <div class="nombre-artista-cart">
+                    <h4>Roger Waters</h4>
+                </div>
+
+                <div class="content">
+
+                    <div class="carrito">
+                        <span>Cantidad: <span id="cantidad"> 1</span></span>
+                        <button id="restar">-</button>
+                        <button id="sumar">+</button>
+                    </div>
+
+
+                    <p>1x Entradas Campo Delantero - General</p>
+                    <p>$55.000</p>
+
+                </div>
+            </div>
+
+            <div class="content-flex">
+                <div class="details-flex">
+                    <h4 class="details-number">1</h4>
+                    <h4>Total</h4>
+
+                </div>
+                <p>$55.000</p>
+            </div>
+
+            <div class="btn-reserva">
+                <a href="/productCart">
+                    <h4>Continuar</h4>
+                </a>
+            </div>
+
+
         </div>
+    </main>
 
-        <div class="container">
 
-            <h4>Servicios</h4>
 
-            <div class="content">
-                <p>Cargo por servicios</p>
-                <p>$900</p>
+<!-- ///////////////////main/////////////// -->
+
+
+    <footer class="home__footer">
+
+        <div class="footer-container">
+            <div class="footer-topBox">
+
+                <div class="footer-helpBox">
+                    <h2>¿Necesitás ayuda?</h2>
+                    <button>Soporte</button>
+                </div>
+
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="">¿Quiénes somos?</a></li>
+                        <li><a href="">Políticas de privacidad</a></li>
+                        <li><a href="">Términos y condiciones</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div class="footer-bottomBox">
+
+                <img src="/images/logo.png" alt="logo ticket Pro">
+
+                <div class="footer-iconsBox">
+                    <i class="fa-brands fa-instagram fa-2xl"></i>
+                    <i class="fa-brands fa-facebook fa-2xl"></i>
+                    <i class="fa-brands fa-twitter fa-2xl"></i>
+                </div>
 
             </div>
         </div>
 
-        <div class="container">
-            <h4>Entrega</h4>
-            <div class="content">
-                <p>Ticket digital usando Quentro</p>
-                <p>$0,00</p>
+        <p>Copyright © 2023 ticketpro.com | All rights reserved</p>
+    </footer>
 
-            </div>
-        </div>
-
-        <div class="content-flex">
-            <div class="details-flex">
-                <h4 class="details-number">1</h4>
-                <h4>Total</h4>
-
-            </div>
-            <p>$6.900</p>
-        </div>
-
-        <div class="btn-reserva">
-            <a href="">
-                <h4>Confirmar reserva</h4>
-            </a>
-        </div>
     </div>
-
-
-
-
     <script src="/js/date.js"></script>
+    <script src="/js/carritoSuma.js"></script>
 </body>
 
 </html>

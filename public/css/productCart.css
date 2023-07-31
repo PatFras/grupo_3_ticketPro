@@ -1,117 +1,203 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-body {
+  }
+  
+  
+  body {
     display: flex;
     flex-direction: column;
-   background-color: #000e38;
+    background-color: #000e38;
     color: white;
+  }
+  
+  
+  
+  /* ///////////////////////BTN SUMA RESTA CANTIDAD DE ENTRADAS///////////////////// */
+  .carrito {
+    display: flex;
+    align-items: center;
+  }
+  
+  #cantidad {
+    font-size: 1.5rem;
+    color: #FE7F2D;
+    margin: 0 5px;
+  }
+  
+  button {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  
+  
+  .text-body {
+    display: flex;
+    justify-content: space-between;
+    background-color: #000b27;
+    padding: 0 10px;
+  }
+  
+  .text-bodyy i{
+    color: #FE7F2D;
+    font-size: 1.5rem;
     
-}
-.header-container{
+  }
+  .logo-header img {
+    width: 8vw;
+  
+  }
+  .btn-cuenta{
+    
+    color: #ffff;
+  }
+  .icon-header-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-header-nav i {
+    color: #FE7F2D;
+    margin-right: 10px;
+  
+  }
+  
+  .header-container {
     display: flex;
     justify-content: center;
     margin: 20px 0;
-}
-.header-container i{
-    color: #FE7F2D;
-}
-.text-body{
-    display: flex;
-    justify-content: center;
-    width: 90%;
-    justify-content: space-between
-}
-
-
-.body-container {
+  }
+  
+  
+  
+  /* ////////////////////MAIN/////////////////////// */
+  
+  .body-container {
     background-color: #000b27;
     width: 90%;
     height: 85vh;
-   margin:  auto;
-   padding: 15px;
-}
-.resumen-cuenta-body{
+    margin: auto;
+    padding: 15px;
+  }
+  
+  .resumen-cuenta-body {
     color: #41ead4;
     display: flex;
     justify-content: flex-end
-}
-.resumen-compra-body{
+  }
+  
+  .resumen-compra-body {
     margin: 30px 0 30px 0;
-}
-
-.product-hora{
+  }
+  
+  .product-hora {
     display: flex;
     gap: 5px;
     margin: 20px 0;
-}
-.container {
+  }
+  #fecha{
+    color: #FE7F2D;
+  }
+  
+  .container {
     display: flex;
     flex-direction: column;
     margin: 20px 0;
+  }
+  .titulo-entradas-cart,
+  .nombre-artista-cart{
+    margin: 10px 0;
   }
   
   .content {
     display: flex;
     justify-content: space-between;
+    margin: 10px 0;
+    flex-wrap: wrap;
   }
-  .content-flex{
+  
+  .content-flex {
     display: flex;
     justify-content: space-between;
+    margin: 10px 0;
   }
-  .details-flex{
+  
+  .details-flex {
     display: flex;
     gap: 5px;
   }
-  .details-number{
+  
+  .details-number {
     color: #FE7F2D;
   }
-.btn-reserva{
+  
+  .btn-reserva {
     background-color: #FE7F2D;
     border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
-.btn-reserva h4{
-    
+  margin: 0 auto;
+    text-align: center;
+    width: 40vw;
+  }
+  .btn-reserva a{
+    text-decoration: none;
+  }
+  
+  .btn-reserva h4 {
+  
     color: #ffff;
     padding: 5px 0;
-    
-}
-.btn-reserva a{
-    text-decoration: none;
-}
-
-
-@media (min-width: 768px){
-    h5, h4, p {
-        font-size: 1.2rem; /* Reducción adicional del tamaño de fuente para pantallas pequeñas */
-      }
-      .body-container {
+  
+  }
+  
+  
+  
+  
+  @media (min-width: 768px) {
+  
+    h5,
+    h4,
+    p {
+        font-size: 1.2rem;
         
-       padding: 20px 35px;
     }
-    .header-container i{
-        
+  
+    .body-container {
+  
+        padding: 20px 35px;
+    }
+  
+    .header-container i {
+  
         font-size: 1.3rem;
     }
-
-
-}
-
-@media (min-width: 1024px){
-     h5, h4, p {
-        font-size: 1.3rem; /* Reducción adicional del tamaño de fuente para pantallas pequeñas */
-      }
-      .body-container {
+  
+  
+  }
+  
+  @media (min-width: 1024px) {
+  
+    h5,
+    h4,
+    p {
+        font-size: 1.3rem;
         
-       padding: 20px 45px;
     }
-    .header-container i{
-        
+  
+    .body-container {
+  
+        padding: 20px 45px;
+    }
+  
+    .header-container i {
+  
         font-size: 1.4rem;
     }
-}
+  }
+  
+  
+  
+  @media(min-width: 600px) {}
