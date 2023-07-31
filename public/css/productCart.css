@@ -1,28 +1,224 @@
-body {
-    
-    
-    background-color: #000e38;
-    color: white;
-    
+.body-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #000e38;
+  color: white;
 }
+
+
+
+/* ///////////////////////BTN SUMA RESTA CANTIDAD DE ENTRADAS///////////////////// */
+.carrito {
+  display: flex;
+  align-items: center;
+}
+
+#cantidad {
+  font-size: 1.5rem;
+  color: #FE7F2D;
+  margin: 0 5px;
+}
+
+.suma-resta {
+  width: 25px;
+  height: 25px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+.text-body {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000b27;
+  padding: 0 10px;
+}
+
+.text-bodyy i {
+  color: #FE7F2D;
+  font-size: 1.5rem;
+
+}
+
+.logo-header img {
+  width: 6vw;
+  margin: 7px;
+
+}
+
+.btn-cuenta {
+
+  color: #ffff;
+  margin-right: 3px;
+}
+
+.icon-header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.icon-header-nav i {
+  color: #FE7F2D;
+  margin-right: 10px;
+
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+
+
+/* ////////////////////MAIN/////////////////////// */
 
 .body-container {
-    background-color: #000b27;
-    width: 90%;
-    height: 85vh;
-    border-radius: 10px;
-    border: none;
-    
+  background-color: #000b27;
+  width: 90%;
+  height: 85vh;
+  margin: auto;
+  padding: 15px;
+}
+
+.resumen-cuenta-body {
+  color: #41ead4;
+  display: flex;
+  justify-content: flex-end
+}
+
+.resumen-compra-body {
+  margin: 30px 0 30px 0;
+}
+
+.product-hora {
+  display: flex;
+  gap: 5px;
+  margin: 20px 0;
+}
+
+#fecha {
+  color: #FE7F2D;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.titulo-entradas-cart,
+.nombre-artista-cart {
+  margin: 10px 0;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.content-flex {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.details-flex {
+  display: flex;
+  gap: 5px;
+}
+
+.details-number {
+  color: #FE7F2D;
+}
+
+.btn-reserva {
+  
+  background-color: var(--colorAzul);
+  border-radius: 5px;
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+  color: silver;
+  text-transform: uppercase;
+  border: 2px solid var(--colorNaranja);
+  transition: all 0.25s ease;
+  margin-top: 0.7rem;
+}
+
+.btn-reserva h4:hover {
+  background-color: var(--colorNaranja);
+}
+
+.btn-reserva a {
+  text-decoration: none;
+}
+
+.btn-reserva h4 {
+
+  color: #ffff;
+  padding: 5px 0;
+
 }
 
 
-.text-body{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
+
+
+@media (min-width: 768px) {
+
+  h5,
+  h4,
+  p {
+    font-size: 1.2rem;
+
+  }
+
+  .body-container {
+
+    padding: 20px 35px;
+  }
+
+  .header-container i {
+
+    font-size: 1.3rem;
+  }
+  .btn-reserva {
+  
+   
+    margin-top: 1rem;
+  }
+
+
 }
 
-.product-hora{
-    display: flex;
+@media (min-width: 1024px) {
+
+  h5,
+  h4,
+  p {
+    font-size: 1.3rem;
+
+  }
+
+  .body-container {
+
+    padding: 20px 45px;
+  }
+
+  .header-container i {
+
+    font-size: 1.4rem;
+  }
+  .btn-reserva {
+  
+   
+    margin-top: 7rem;
+  }
 }
+
+
+
+@media(min-width: 600px) {}

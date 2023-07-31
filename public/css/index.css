@@ -1,0 +1,495 @@
+body {
+  background-color: var(--colorAzul);
+  font-family: 'Barlow';
+}
+
+.body__main--logo {
+  display: none;
+}
+
+/* SEARCHBAR */
+
+.body__main__containerSearch {
+  display: flex;
+  justify-content: center;
+  border-radius: 16px;
+  margin: 10px 0;
+}
+
+.body__main__containerSearchBar {
+  display: flex;
+  background-color: var(--colorAzul2);
+  border: 2px solid var(--colorNaranja);
+  padding: 5px 20px;
+  border-radius: 18px;
+  margin: 10px 0;
+  box-shadow: 0 5px 3px 0 var(--colorAzul2);
+  width: 75%;
+}
+
+.body__main__containerSearchBar i {
+  color: var(--colorNaranja);
+  padding-right: 5px;
+}
+
+.body__main__containerSearch--searchbar {
+  border: none;
+  background-color: transparent;
+  font-family: 'Barlow';
+  font-weight: 500;
+}
+
+.select {
+  display: none;
+}
+
+
+.body__main--sliderlEventos {
+  margin: 10px 0;
+}
+
+.body__main--sliderlEventos h2 {
+  text-align: center;
+  color: var(--colorBlanco);
+  padding-bottom: 10px;
+}
+
+.body__main--sliderlEventos a {
+  color: var(--colorTurquesa);
+}
+
+.div__card--cercaDeTi {
+  background-color: var(--colorAzul2);
+  width: 65%;
+  margin-bottom: 10px;
+  color: var(--colorBlanco);
+  box-shadow: 0 5px 3px 0 var(--colorAzul2);
+}
+
+.div__card--cercaDeTi img {
+  padding: 15px 20px;
+  height: 200px;
+}
+
+.div__card--title {
+  border-bottom: 1px solid var(--colorTurquesa);
+  margin: 0 20px;
+  padding-bottom: 5px;
+  font-size: x-large;
+}
+
+
+.div__card--cercaDeTi button {
+  border: none;
+  padding: 5px 10px;
+  margin: 10px;
+  border-radius: 10px;
+  font-weight: 700;
+  color: var(--colorAzul2);
+  text-transform: uppercase;
+  background-color: var(--colorNaranja);
+}
+
+.body__main--sections {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.body__main--sections-actYevents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.body__main--actividades {
+  background-image: url(/images/actividades.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  padding: 15px 10px;
+  margin: 10px 0 20px 0;
+  width: 90%;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 5px 3px 0 var(--colorAzul2);
+}
+
+.body__main--actividades-title {
+  color: var(--colorBlanco);
+  border-radius: 10px;
+  padding-bottom: 10px;
+  padding-bottom: 5px;
+  font-size: larger;
+  font-weight: 500;
+}
+
+.actividades-description {
+  display: none;
+}
+
+.body__main--actividades button {
+  border: none;
+  border-radius: 15px;
+  padding: 2px 5px;
+  background-color: var(--colorTurquesa);
+}
+
+.body__main--pickup {
+  background: linear-gradient(rgba(0, 11, 39, 0.50), rgba(0, 11, 39, 0.50)), url('/images/location.jpg') no-repeat;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  margin: 10px 10px 15px 10px;
+  width: 90%;
+  box-shadow: 0 2px 3px 0 var(--colorAzul2);
+}
+
+.body__main--pickup i {
+  color: var(--colorNaranja);
+}
+
+.body__main--pickup a {
+  color: var(--colorBlanco);
+}
+
+.body__main--proxEvento {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background: url(/images/fondo.png) no-repeat bottom;
+  background-size: 100% 100px;
+}
+
+.div__card--proxEvento {
+  background-color: var(--colorAzul2);
+  margin-bottom: 25px;
+  color: var(--colorBlanco);
+  box-shadow: 0 3px 3px 0 var(--colorAzul2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+}
+
+.div__card--proxEvento p {
+  font-weight: 500;
+  text-align: center;
+}
+
+.div__card--proxEvento img {
+  width: 40%;
+  height: 110px;
+  padding: 10px 3px;
+}
+
+.div__card--proxEvento-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35%;
+  padding: 5px;
+}
+
+.div__card--proxEvento-title {
+  border-bottom: 1px solid var(--colorTurquesa);
+  width: 93%;
+  text-align: center;
+  padding-bottom: 2px;
+  font-size: large;
+}
+
+.div__card--proxEvento-description button {
+  border: none;
+  padding: 2px 10px;
+  margin: 4px 0;
+  border-radius: 10px;
+  font-weight: 700;
+  color: var(--colorAzul2);
+  background-color: var(--colorNaranja);
+}
+
+/* TABLET */
+
+@media (min-width: 481px) {
+  
+  /* SEARCHBAR */
+
+  .body__main__form {
+    display: flex;
+    justify-content: center;
+  }
+
+  .body__main__containerSearch {
+    justify-content: space-evenly;
+    background-color: var(--colorAzul2);
+    box-shadow: 0 5px 3px 0 var(--colorAzul2);
+    width: 90%;
+  }
+
+  .body__main__containerSearchBar {
+    background-color: var(--colorAzul);
+    border: 2px solid var(--colorTurquesa);
+    border-radius: 0;
+    padding: 5px 10px;
+    margin: 10px 0;
+    width: 45%;
+  }
+
+  .body__main__containerSearchBar i {
+    color: var(--colorTurquesa);
+    padding-right: 8px;
+  }
+
+  .select {
+    display: flex;
+    width: 45%;
+    position: relative;
+  }
+
+  .select i {
+    color: var(--colorTurquesa);
+    position: absolute;
+    right: 13px;
+    bottom: 18px;
+  }
+
+  .select__options {
+    height: 30px;
+    margin-top: 10px;
+    color: gray;
+    background-color: var(--colorAzul);
+    border: 2px solid var(--colorTurquesa);
+    text-align: center;
+    width: 100%;
+    appearance: none;
+    transition: all, 0.5s;
+    transition-property: background-color, color;
+  }
+
+  .select__options option {
+    background-color: var(--colorAzul2);
+    color: var(--colorBlanco);
+    text-align: center;
+  }
+
+  .select__options:hover {
+    background-color: var(--colorTurquesa);
+    color: var(--colorAzul2);
+  }
+  
+
+  /* SLIDER */
+
+  .body__main--sliderlEventos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorAzul2);
+    box-shadow: 0 5px 3px 0 var(--colorAzul2);
+  }
+
+  .div__card--cercaDeTi {
+    background-color: var(--colorAzul);
+    width: 55%;
+    height: 238px;
+    margin: 10px 0;
+    color: var(--colorBlanco);
+    box-shadow: 0 5px 3px 0 var(--colorAzul2);
+  }
+
+  .body__main--sliderlEventos h2 {
+    margin: 20px;
+  }
+
+  .div__card--cercaDeTi img {
+    padding: 10px 20px 5px 20px;
+    height: 125px;
+  }
+
+  .div__card--title {
+    padding-bottom: 2px;
+  }
+
+  .div__card--cercaDeTi button {
+    padding: 2px 10px;
+    margin-top: 5px;
+  }
+  
+
+  /* SECTIONS */
+
+  .body__main--actividades-title {
+    color: var(--colorBlanco);
+    border-radius: 10px;
+    background-color: rgba(0,0,0, 0.5);
+    box-shadow: 2px 1px 9px black;
+    font-size: x-large;
+  }
+
+  .actividades-description {
+    display: inline-block;
+    color: black;
+    background-color: rgba(255,255,255, 0.5);
+    box-shadow: 2px 1px 9px var(--colorBlanco);
+    margin: 10px 0;
+    font-size: small;
+    
+  }
+
+  .body__main--actividades button {
+    padding: 5px 10px;
+  }
+
+  .body__main--pickup {
+    justify-content: center;
+    padding: 15px;
+  }
+
+  .body__main--pickup i {
+    font-size: x-large;
+    padding: 0 10px;
+  }
+
+  .body__main--pickup a {
+    font-weight: 500;
+    font-size: x-large;
+  }
+
+
+
+}
+
+@media (min-width: 600px) {
+
+  .div__card--cercaDeTi {
+  width: 63%;
+ }
+
+ .body__main--sections {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  background: url(/images/fondo.png) no-repeat bottom;
+  background-size: cover;
+}
+
+ .body__main--pickup {
+  width: 30%;
+  height: 264px;
+  margin: 10px 0 15px 10px;
+ }
+
+ .body__main--sections-actYevents {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+
+ }
+
+ .body__main--proxEvento {
+  background: none;
+ }
+
+
+}
+
+/* DESKTOP */
+
+@media (min-width: 769px) {
+
+
+  .logo__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .body__main__containerSearch {
+    width: 75%;
+}
+
+  .body__main--logo {
+    display: inline-block;
+    width: 20%;
+    padding: 10px 0;
+  }
+
+  .div__card--cercaDeTi {
+    width: 80%;
+    height: 250px;
+  }
+
+  .div__card--cercaDeTi button {
+    margin: 10px;
+
+  }
+
+  .div__card--proxEvento img {
+    width: 25%;
+  }
+
+  .body__main--pickup {
+    width: 25%;
+
+  }
+
+  .body__main--sections {
+    background: url(/images/fondo.png) no-repeat bottom;
+    background-size: cover;
+  }
+
+  .body__main--sections-actYevents {
+    width: 90%;
+}
+
+  .body__main--actividades {
+  margin: 10px 0 30px 0;
+  }
+
+  .actividades-description {
+    font-size: large;
+  }
+
+  .body__main--proxEvento{
+  height: 150px;
+  }
+
+  .body__main--proxEvento p{
+    font-size: x-large;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  .body__main--pickup {
+    margin: 10px 0 15px 15px;
+    width: 21%;
+    height: 290px;
+  }
+
+  .body__main--actividades-title {
+    font-size: xx-large;
+  }
+
+  .div__card--proxEvento img {
+    width: 25%;
+    height: 110px;
+    padding: 10px 0px;
+    margin: 0 20px;
+  }
+
+
+}
+
+@media (min-width: 1024px) {
+
+  .body__main__containerSearch {
+    width: 70%;
+  }
+
+  .div__card--cercaDeTi {
+    width: 70%;
+  }
+}
