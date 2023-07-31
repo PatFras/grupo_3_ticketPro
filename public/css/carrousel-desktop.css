@@ -3,7 +3,7 @@
   margin: 20px 0;  
 
   background: url(/images/fondo.png) no-repeat bottom;
-  background-size: contain;
+  background-size: cover;
   box-shadow: 0 5px 6px 0 var(--colorAzul2);
 
   .swiper {

@@ -292,8 +292,8 @@ body {
 
   .div__card--cercaDeTi {
     background-color: var(--colorAzul);
-    width: 50%;
-    height: 230px;
+    width: 55%;
+    height: 238px;
     margin: 10px 0;
     color: var(--colorBlanco);
     box-shadow: 0 5px 3px 0 var(--colorAzul2);
@@ -314,7 +314,7 @@ body {
 
   .div__card--cercaDeTi button {
     padding: 2px 10px;
-    margin: 0;
+    margin-top: 5px;
   }
   
 
@@ -372,7 +372,7 @@ body {
   flex-direction: row;
   align-items: baseline;
   background: url(/images/fondo.png) no-repeat bottom;
-  background-size: contain;
+  background-size: cover;
 }
 
  .body__main--pickup {
@@ -385,10 +385,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 65%;
-
- }
-
- .body__main--actividades {
 
  }
 
@@ -421,6 +417,16 @@ body {
 
   .div__card--cercaDeTi {
     width: 80%;
+    height: 250px;
+  }
+
+  .div__card--cercaDeTi button {
+    margin: 10px;
+
+  }
+
+  .div__card--proxEvento img {
+    width: 25%;
   }
 
   .body__main--pickup {
@@ -430,7 +436,7 @@ body {
 
   .body__main--sections {
     background: url(/images/fondo.png) no-repeat bottom;
-    background-size: contain;
+    background-size: cover;
   }
 
   .body__main--sections-actYevents {
@@ -475,4 +481,15 @@ body {
   }
 
 
+}
+
+@media (min-width: 1024px) {
+
+  .body__main__containerSearch {
+    width: 70%;
+  }
+
+  .div__card--cercaDeTi {
+    width: 70%;
+  }
 }
