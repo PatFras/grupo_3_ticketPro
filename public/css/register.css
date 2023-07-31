@@ -1,17 +1,18 @@
 .register{
-    margin: 0;
-    background-color: var(--colorAzul);
     display: flex;
-    justify-content: center;
-    height: 100vh;
+    align-items: center;
+    margin: 0;
+    background-color: var(--colorAzul);   
+    height: 100vh; 
 }
 .register_conteiner{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: var(--colorGris);
     width: 100%;
-    height: 100vh;
+    height: 100vh;   
 }
 /*herader*/
 .register_header{
@@ -87,6 +88,5 @@
 @media(min-width:800px){   
     .register_conteiner{
         width: 480px;
-        height: 100vh;
     } 
 }

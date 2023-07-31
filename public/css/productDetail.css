@@ -1,9 +1,10 @@
+.productdetail{
+    background-color: var(--colorAzul);
+}
 .productdetail_main{
-    height: 100vh;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
-    background-color: var(--colorAzul); 
+    flex-wrap: wrap;   
     width: 100%;
 }
 /*primer div*/
@@ -12,8 +13,9 @@
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
-    align-items: flex-end;
-    width: 100%;
+    width: 90%;
+    margin: 10px 0;
+    gap: 10px;
 }
 .productdetail_main-buttons a{
     width: 80%;
@@ -32,6 +34,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     width: 80%;
+    margin: 10px 0;
 }
 .productdetail_main-des-img{
     display: flex;
@@ -41,12 +44,14 @@
 }
 .productdetail_main-description{
     display: flex;
-    flex-direction: column;
+    flex-direction: column;  
+    justify-content: center;
     gap: 3px;
+    
 }
 .productdetail_main-description-item{
     display: flex;
-    font-size:12px;
+    font-size:13px;
     gap: 3px;
 }
 .productdetail_main-description-item i, a{
@@ -54,6 +59,7 @@
 }
 .productdetail_main-description-item h4{
     color: silver;
+    font-size:13px;
 }
 /*tercer div*/
 .productdetail_main-det{
@@ -62,15 +68,12 @@
     flex-wrap: wrap;
     align-content: space-around;
     width: 80%;
+    gap: 5px;
 }
 .productdetail_main-det-img{
-    width: 80%;
     display: flex;
     justify-content:center;
-}
-.productdetail_main-det-img img{
-    width: 180px;
-    height: 180px;
+    height: 160px;
 }
 .productdetail_main-det-selects{
     width: 80%;
@@ -106,13 +109,11 @@
 @media(min-width:768px){
     /*primer div*/
     .productdetail_main-buttons{
-        flex-wrap: nowrap;
-        width: 100%;
+        
         gap: 10px;
-        margin: 0 10px;
     }
     .productdetail_main-buttons a{
-        width: 40%;
+        width: 30%;
     }
     /*tercer div*/
     .productdetail_main-des{
@@ -120,6 +121,7 @@
     }
     .productdetail_main-det{
         width: 66%;
+        gap: 18px;
     }
     .productdetail_main-det-img{
         width: 33%;   
