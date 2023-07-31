@@ -162,16 +162,23 @@
     background: var(--colorNaranja);
 }
 
-.bottomBox p {
+.links-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3em;
+    cursor: pointer;
+}
+
+.links-box a {
     color: silver;
     font-size: 9px;
-    margin-top: 6em;
-    cursor: pointer;
+    margin-top: 0.5em;
 }
 
 @media (min-width:768px) {
     .login-container {
-        margin: 10em 0;
+        margin: 12em 0;
         padding: 3em 0;
         align-content: normal;
         justify-content: normal;
@@ -194,7 +201,7 @@
 
 @media (min-width:1024px) {
     .login-container {
-        margin: 4em 0;
+        margin: 6em 0;
     }
 
     .topBox img {
