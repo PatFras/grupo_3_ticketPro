@@ -30,6 +30,7 @@
     margin-bottom: 1.5em;
     font-weight: 700;
     font-size: 14px;
+    cursor: pointer;
 }
 
 .footer-nav a {
@@ -39,6 +40,7 @@
 .home__footer img {
     width: 9em;
     margin: 1em 0 0.5em 0;
+    cursor: pointer;
 }
 
 .footer-iconsBox {
@@ -47,7 +49,8 @@
     color: var(--colorTurquesa);
     gap: 0.8em;
     margin: 1em 0;
-    justify-content: center
+    justify-content: center;
+    cursor: pointer;
 }
 
 .home__footer p {
@@ -115,53 +118,53 @@
 }
 
 @media (min-width:1024px) {
-.footer-container {
-    margin-top: 1em;
-    gap: 3em;
-}
+    .footer-container {
+        margin-top: 1em;
+        gap: 3em;
+    }
 
-.footer-topBox {
-    display: flex;
-    flex-direction: row;
-    width: 75%;
-}
+    .footer-topBox {
+        display: flex;
+        flex-direction: row;
+        width: 75%;
+    }
 
-.footer-nav {
-    order: 1;
-    align-content: center;
-}
+    .footer-nav {
+        order: 1;
+        align-content: center;
+    }
 
-.footer-nav ul li {
-    display: flex;
-    flex-direction: column;
-    font-size: 18px;
-    font-weight: 300;
-    margin: 1em 0 0 0;
-    align-items: center;
-}
+    .footer-nav ul li {
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+        font-weight: 300;
+        margin: 1em 0 0 0;
+        align-items: center;
+    }
 
-.footer-helpBox {
-    order: 2;
-    display: flex;
-    flex-direction: column;
-    border-bottom: none;
-    border-left: 2px solid var(--colorBlanco);
-    align-items: center;
-}
+    .footer-helpBox {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        border-bottom: none;
+        border-left: 2px solid var(--colorBlanco);
+        align-items: center;
+    }
 
-.footer-helpBox h2 {
-    margin-left: 2em;
-    text-align: center;
-    display: inline;
-}
+    .footer-helpBox h2 {
+        margin-left: 2em;
+        text-align: center;
+        display: inline;
+    }
 
-.footer-helpBox button {
-    margin-left: 2em;
-    width: 5em;
-}
+    .footer-helpBox button {
+        margin-left: 2em;
+        width: 5em;
+    }
 
-.footer-bottomBox {
-    width: 25%;
-}
+    .footer-bottomBox {
+        width: 25%;
+    }
 
 }

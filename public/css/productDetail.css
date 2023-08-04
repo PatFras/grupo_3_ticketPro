@@ -23,7 +23,7 @@
     text-align: center;
     text-transform: uppercase;
     color: var(--colorBlanco);
-    background-color: #7bbab1;
+    background-color: var(--colorAzul2);
     border: 2px solid var(--colorTurquesa);
     border-radius: 40px;
     padding: 3px 30px;
@@ -51,6 +51,7 @@
 }
 .productdetail_main-description-item{
     display: flex;
+    align-items: center;
     font-size:13px;
     gap: 3px;
 }
@@ -59,7 +60,7 @@
 }
 .productdetail_main-description-item h4{
     color: silver;
-    font-size:13px;
+    font-size:15px;
 }
 /*tercer div*/
 .productdetail_main-det{
