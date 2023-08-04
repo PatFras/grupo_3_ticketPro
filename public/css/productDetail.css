@@ -51,7 +51,7 @@
 }
 .productdetail_main-description-item{
     display: flex;
-    align-items: center;
+    align-items: flex-end;   
     font-size:13px;
     gap: 3px;
 }
