@@ -37,6 +37,7 @@ body {
   background-color: transparent;
   font-family: 'Barlow';
   font-weight: 500;
+  width: 100%;
 }
 
 .select {
@@ -79,7 +80,7 @@ body {
 }
 
 
-.div__card--cercaDeTi button {
+.div__card--cercaDeTi-button {
   border: none;
   padding: 5px 10px;
   margin: 10px;
@@ -88,6 +89,13 @@ body {
   color: var(--colorAzul2);
   text-transform: uppercase;
   background-color: var(--colorNaranja);
+  cursor: pointer;
+  transition: all, 0.5s;
+  transition-property: background-color;
+}
+
+.div__card--cercaDeTi-button:hover {
+  background-color: var(--colorTurquesa);
 }
 
 .body__main--sections {
@@ -129,11 +137,19 @@ body {
   display: none;
 }
 
-.body__main--actividades button {
+.body__main--actividades-button {
   border: none;
   border-radius: 15px;
   padding: 2px 5px;
   background-color: var(--colorTurquesa);
+  cursor: pointer;
+  transition: all, 0.5s;
+  transition-property: background-color, color;
+}
+
+.body__main--actividades-button:hover {
+  background-color: var(--colorNaranja);
+
 }
 
 .body__main--pickup {
@@ -200,7 +216,7 @@ body {
   font-size: large;
 }
 
-.div__card--proxEvento-description button {
+.div__card--proxEvento-description-button {
   border: none;
   padding: 2px 10px;
   margin: 4px 0;
@@ -208,6 +224,13 @@ body {
   font-weight: 700;
   color: var(--colorAzul2);
   background-color: var(--colorNaranja);
+  cursor: pointer;
+  transition: all, 0.5s;
+  transition-property: background-color;
+}
+
+.div__card--proxEvento-description-button:hover {
+  background-color: var(--colorTurquesa);
 }
 
 /* TABLET */
@@ -235,11 +258,23 @@ body {
     padding: 5px 10px;
     margin: 10px 0;
     width: 45%;
+    color: var(--colorBlanco);
+    transition: all, 0.5s;
+    transition-property: background-color, color;
+}
+
+.body__main__containerSearchBar:hover {
+  background-color: var(--colorTurquesa);
+  color: var(--colorAzul);
   }
 
   .body__main__containerSearchBar i {
     color: var(--colorTurquesa);
     padding-right: 8px;
+  }
+
+  .body__main__containerSearch--searchbar {
+    color: var(--colorBlanco);
   }
 
   .select {
@@ -312,7 +347,7 @@ body {
     padding-bottom: 2px;
   }
 
-  .div__card--cercaDeTi button {
+  .div__card--cercaDeTi-button {
     padding: 2px 10px;
     margin-top: 5px;
   }
@@ -400,7 +435,7 @@ body {
 @media (min-width: 769px) {
 
 
-  .logo__container {
+  .logo__container a {
     display: flex;
     justify-content: center;
   }
@@ -420,7 +455,7 @@ body {
     height: 250px;
   }
 
-  .div__card--cercaDeTi button {
+  .div__card--cercaDeTi-button {
     margin: 10px;
 
   }

@@ -1,6 +1,7 @@
 .register{
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 0;
     background-color: var(--colorAzul);   
     height: 100vh; 
@@ -8,7 +9,6 @@
 .register_conteiner{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     background-color: var(--colorGris);
     width: 100%;
@@ -24,6 +24,7 @@
 }
 .register_header img{
     width:6em;
+    cursor: pointer;
 }
 .register_header h1{
     color: silver;
@@ -75,6 +76,7 @@
     outline: none;
     border: 2px solid var(--colorNaranja);
     border-radius: 40px;
+    cursor: pointer;
     transition: all 0.25s ease;
 }
 .register_form-buttons-register:hover{
