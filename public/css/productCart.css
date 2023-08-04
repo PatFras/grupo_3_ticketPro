@@ -130,6 +130,9 @@
   display: flex;
   gap: 5px;
 }
+.suma-cantidad-letra{
+  margin-right: 5px;
+}
 
 .details-number {
   color: #FE7F2D;
