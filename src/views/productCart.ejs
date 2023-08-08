@@ -1,35 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/e4646141a1.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>productCart</title>
-</head>
+<%- include('partials/head') %>
+
 
 <body class="body-card">
 
 
 
-    <header class="text-body">
-
-        <div class="logo-header">
-<a href="/"><img src="/images/logo.png" alt=""></a>
-            
-        </div>
-
-        <div class="icon-header-nav">
-            <a href="/login" class="nav-icon-a"><i class="fa-regular fa-user"></i></a>
-            <a href="/login">
-                <p class="btn-cuenta">Mi cuenta</p>
-            </a>
-            <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
-        </div>
-
-
-    </header>
+    <%- include('partials/header') %>
 
 
 
@@ -90,7 +69,7 @@
             </div>
 
             <div class="btn-reserva">
-                <a href="/login">
+                <a href="/">
                     <h4>Comprar</h4>
                 </a>
             </div>
@@ -104,41 +83,7 @@
 <!-- ///////////////////main/////////////// -->
 
 
-    <footer class="home__footer">
-
-        <div class="footer-container">
-            <div class="footer-topBox">
-
-                <div class="footer-helpBox">
-                    <h2>¿Necesitás ayuda?</h2>
-                    <button>Soporte</button>
-                </div>
-
-                <nav class="footer-nav">
-                    <ul>
-                        <li><a href="">¿Quiénes somos?</a></li>
-                        <li><a href="">Políticas de privacidad</a></li>
-                        <li><a href="">Términos y condiciones</a></li>
-                    </ul>
-                </nav>
-
-            </div>
-
-            <div class="footer-bottomBox">
-
-                <img src="/images/logo.png" alt="logo ticket Pro">
-
-                <div class="footer-iconsBox">
-                    <i class="fa-brands fa-instagram fa-2xl"></i>
-                    <i class="fa-brands fa-facebook fa-2xl"></i>
-                    <i class="fa-brands fa-twitter fa-2xl"></i>
-                </div>
-
-            </div>
-        </div>
-
-        <p>Copyright © 2023 ticketpro.com | All rights reserved</p>
-    </footer>
+<%- include('partials/footer') %>
 
     </div>
     <script src="/js/date.js"></script>
