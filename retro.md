@@ -28,13 +28,13 @@
 • Compartir progreso  
 
 ## Hacer mas
-• Respetar la consigna de cada tarea
-• Entregar a tiempo 
+• Respetar la consigna de cada tarea  
+• Entregar a tiempo   
 • Comunicar dificultades  
 
 ## Empezar a hacer
-• Definir las dailys
-• Agregar fecha de vencimiento a las tarjetas  
+• Definir las dailys  
+• Agregar fecha de vencimiento a las tarjetas    
 
 ## Hacer menos
 • Procrastinar  
