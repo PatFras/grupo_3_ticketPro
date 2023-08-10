@@ -1,42 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="https://kit.fontawesome.com/2d81885619.js" crossorigin="anonymous"></script>
-    <title>Home</title>
-</head>
-
+<%- include('partials/head') %>
 
 <body class="body-card">
 
-
-
-    <header class="home-header-all">
-        <div class="home-header">
-            <div class="containe">
-                <div class="home-header-nav nav-home-a">
-                    <a href="/users/login" class="nav-icon-a"><i class="fa-regular fa-user"></i></a>
-                    <img src="/images/logo.png" alt="">
-                    <a href="/users/login">
-                        <h6>Ingresar</h6>
-                    </a>
-                </div>
-                <div class="home-header-nav nav-home-b">
-                    <a href="/users/login" class="nav-icon-a"><i class="fa-regular fa-user"></i></a>
-                    <a href="/users/productCart" class="nav-icon-b"><i class="fa-solid fa-cart-shopping"></i></a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-
-
+    <%- include('partials/header') %>
 
     <main class="header-container">
 
@@ -108,39 +77,7 @@
 <!-- ///////////////////main/////////////// -->
 
 
-<footer class="home__footer">
-    <div class="footer-container">
-        <div class="footer-topBox">
-
-            <div class="footer-helpBox">
-                <h2>¿Necesitás ayuda?</h2>
-                <button>Soporte</button>
-            </div>
-
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="">¿Quiénes somos?</a></li>
-                    <li><a href="">Políticas de privacidad</a></li>
-                    <li><a href="">Términos y condiciones</a></li>
-                </ul>
-            </nav>
-
-        </div>
-
-        <div class="footer-bottomBox">
-
-            <img src="/images/logo.png" alt="logo ticket Pro">
-
-            <div class="footer-iconsBox">
-                <i class="fa-brands fa-instagram fa-2xl"></i>
-                <i class="fa-brands fa-facebook fa-2xl"></i>
-                <i class="fa-brands fa-twitter fa-2xl"></i>
-            </div>
-
-        </div>
-    </div>
-    <p>Copyright © 2023 ticketpro.com | All rights reserved</p>
-</footer>
+<%- include('partials/footer') %>
 
     </div>
     <script src="/js/date.js"></script>
