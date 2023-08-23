@@ -1,0 +1,72 @@
+[
+    {
+        "id" : 1,
+        "name" : "Nenagenix",
+        "description" : "XLR Club - San Miguel, Sabado 01 de Septiembre 19:00 Hs",
+        "location" : "San Miguel",
+        "adress" : " Tribulato",
+        "category" : "show",
+        "price" : 2000,
+        "serviceCharge" : 10,
+        "section" : "sold out",
+        "image" : "nenagenix.jpg",
+        "date" : "01-09-2023"
+    },
+
+    {
+        "id" : 2,
+        "name" : "Palito Ortega",
+        "description" : "Auditorio Ángel Bustelo - Mendoza, Viernes 17 de Noviembre 22:00 Hs",
+        "location" : "Mendoza",
+        "adress" : " Mtro. Joaquín González 40",
+        "category" : "show",
+        "price" : [5000, 7500, 10000, 12500, 15000],
+        "serviceCharge" : 10,
+        "section" : "new",
+        "image" : "nenagenix.jpg",
+        "date" : "17-11-2023"
+    },
+
+    {
+        "id" : 3,
+        "name" : "VIRUS",
+        "description" : "Mood Live, NQN - Sábado 16 de Septiembre - 21:00hs",
+        "location" : "Neuquen",
+        "adress" : " Mtro. Joaquín González 40",
+        "category" : "show",
+        "price" : [22000, 8500],
+        "serviceCharge" : 10,
+        "section" : "new",
+        "image" : "palito.webp",
+        "date" : "16-09-2023"
+    },
+
+    {
+        "id" : 4,
+        "name" : "Axel ",
+        "description" : "Teatro Sarmiento - San Juan, 16 de Noviembre - 22.00 hs",
+        "location" : "San Juan",
+        "adress" : " Av. Leandro N. Alem Norte 1",
+        "category" : "show",
+        "price" : [7000, 8000, 9000, 10000],
+        "serviceCharge" : 10,
+        "section" : "new",
+        "image" : "axel.webp",
+        "date" : "16-11-2023"
+    },
+
+    {
+        "id" : 5,
+        "name" : "La obra completa para órgano de Bach",
+        "description" : "Centro Cultural Kirchner - CABA, 16 de Noviembre - 22.00 hs",
+        "location" : "CABA",
+        "adress" : "Sarmiento 151",
+        "category" : "show",
+        "price" : 0,
+        "serviceCharge" : 0,
+        "section" : "free",
+        "image" : "bach.jpg",
+        "date" : "23-08-2023"
+    }
+
+]
