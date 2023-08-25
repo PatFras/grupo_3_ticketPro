@@ -2,14 +2,13 @@ const { readJSON } = require("./index");
 
 const products = readJSON('products.json');
 
-const Product = function ({name, price, discount, category, description, location, addres, serviceCharge, section, date}) {
+const Product = function ({name, price, category, description, image, location, addres, serviceCharge, section, date}) {
             this.id = products[products.length - 1].id + 1;
 			this.name = name.trim();
 			this.price = +price;
-			this.discount = +discount;
 			this.category = category;
 			this.description = description.trim();			
-			this.image = null;
+			this.image = image;
             this.location = location;
             this.addres = addres;
             this.serviceCharge = +serviceCharge;
