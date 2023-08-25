@@ -8,59 +8,73 @@
         <%-include('partials/header')%>
             <div class="col-12 col-md-8 mx-auto mt-5" id="formAdd">
                 <div class="card shadow" style="background-color: #000B27; color: white;">
-                    <div class="card-header">
+                    <div class="card-header" style="text-align: center;">
                         <h4 class="card-title">Add products</h4>
                     </div>
-                    <div class="card-body">
-                        <form action="" method="POST" class="row">
-                            <div class="col-12 col-md-6 mb-3">
+                    <div class="card-body" style="display: inline-block;">
+                        <form action="/products/add" method="POST" class="row">
+                            <div class="col-12 col-md-4 mb-3">
                                 <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Títle" name="title">
+                                <input type="text" class="form-control" id="name" placeholder="Name of the product" name="name">
                             </div>
-                            
+                            <div class="col-12 col-md-4 mb-3">
+                                <label for="price" class="form-label">Price</label>
+                                <input type="number" class="form-control" id="price" name="price">
+                            </div>
+                            <div class="col-12 col-md-4 mb-3">
+                                <label for="serviceCharge" class="form-label">Service Charge</label>
+                                <input type="number" class="form-control" id="serviceCharge" name="serviceCharge">
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="address" class="form-label">Addres</label>
+                                <input type="text" class="form-control" id="address" name="address">
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="location" class="form-label">Location</label>
+                                <input type="text" class="form-control" id="location" name="location">
+                            </div>
+
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="date" class="form-label">Date</label>
+                                <input type="date" class="form-control" id="date" name="date">
+                            </div> 
+
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="category" class="form-label">Category</label>
                                 <select class="form-select" aria-label="Default select example" name="category"
                                     id="category">
                                     <option value="" selected hidden>Selec...</option>
-                                    <option>categoria 1</option>
-                                    <option>categoria 2</option>
-                                    <option>categoria 3</option>
-                                    <option>categoria 4</option>
-                                    <option>categoria 5</option>
+                                    <option>Cine</option>
+                                    <option>Show</option>
+                                    <option>Teatro</option>
+                                    <option>Streaming</option>
+                                    <option>Festival</option>
                                 </select>
                             </div>   
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="date" class="form-label">Date</label>
-                                <input type="number" class="form-control" id="date" name="date">
-                            </div>                        
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="price" class="form-label">Price</label>
-                                <input type="number" class="form-control" id="price" name="price">
-                            </div>
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="site" class="form-label">Site</label>
-                                <select class="form-select" aria-label="Default select example" name="site"
-                                    id="site">
+                                <label for="section" class="form-label">Section</label>
+                                <select class="form-select" aria-label="Default select example" name="section"
+                                    id="section">
                                     <option value="" selected hidden>Selec...</option>
-                                    <option>site 1</option>
-                                    <option>site 2</option>
-                                    <option>site 3</option>
-                                    <option>site 4</option>
-                                    <option>site 5</option>
+                                    <option>Free</option>
+                                    <option>New</option>
+                                    <option>Sold Out</option>
+                                    <option>Available</option>
                                 </select>
                             </div>    
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="formFile" class="form-label">Add image</label>
+                                <input type="file" class="form-control" id="formFile" name="image">
+                            </div> 
                             <div class="col-12 mb-3">
-                                <label for="description" class="form-label">Descripción</label>
+                                <label for="description" class="form-label">Description</label>
                                 <textarea name="description" id="description" class="form-control"
                                     style="resize: none;"></textarea>
-                            </div>                          
+                            </div>
+
                             <div class="col-12 d-flex justify-content-end gap-2 mb-3">
-                                <label for="image" class="btn btn " style="background-color: #FE7F2D; color: white;">Add
-                                    image</label>
-                                <input type="file" name="image" id="image" hidden>
-                                <button class="btn" style="background-color: #FE7F2D; color: white;">Add
-                                    chances</button>
+                                <button type="submit" class="btn" style="background-color: #FE7F2D; color: white;">Add
+                                    product</button>
                             </div>
                         </form>
                     </div>
