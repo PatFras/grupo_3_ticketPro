@@ -1,0 +1,13 @@
+#formAdd{
+    margin-bottom: 4rem;
+}
+#name,
+#price,
+#discount,
+#description,
+#site,
+#date,
+#category{
+    border: solid 3px #41EAD4;
+}
+
