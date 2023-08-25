@@ -1,0 +1,18 @@
+#formAdd{
+    margin-bottom: 4rem;
+}
+#name,
+#price,
+#discount,
+#description,
+#location,
+#serviceCharge,
+#address,
+#site,
+#date,
+#formFile,
+#section,
+#category{
+    border: solid 3px #41EAD4;
+}
+
