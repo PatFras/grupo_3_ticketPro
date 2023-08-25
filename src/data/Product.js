@@ -1,4 +1,8 @@
-const Product = function ({name, price, discount, category, description, image, location, addres, serviceCharge, section, date}) {
+const { readJSON } = require("./index");
+
+const products = readJSON('products.json');
+
+const Product = function ({name, price, discount, category, description, location, addres, serviceCharge, section, date}) {
             this.id = products[products.length - 1].id + 1;
 			this.name = name.trim();
 			this.price = +price;
