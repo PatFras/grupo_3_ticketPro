@@ -89,5 +89,17 @@
       "serviceCharge": 40,
       "section": "New",
       "date": "2023-08-31"
+   },
+   {
+      "id": 7,
+      "name": "efewrfw",
+      "price": 12,
+      "category": "Show",
+      "description": "ewfrefr",
+      "image": "Captura de pantalla (6).png",
+      "location": "eferfwe",
+      "serviceCharge": 12,
+      "section": "Free",
+      "date": "2112-12-12"
    }
 ]
