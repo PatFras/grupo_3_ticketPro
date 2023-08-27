@@ -34,14 +34,12 @@
                     </div>
                     <div class="select">
                         <i class="fa-solid fa-caret-down"></i>
-                        <select class="select__options">
-                            <option disabled selected=false>Categorías</option>
-                            <option>categoria 1</option>
-                            <option>categoria 2</option>
-                            <option>categoria 3</option>
-                            <option>categoria 4</option>
-                            <option>categoria 5</option>
-                        </select>
+                        <select class="form-select" aria-label="Default select example" name="category" id="category">
+                            <option value="" selected hidden>Seleccione una categoria</option>
+                            <% categories.forEach(category => { %>
+                            <option value="<%= category.name %>"><%= category.name %></option>
+                        <% }) %>
+                      </select>
                     </div>
                 </div>
             </form>

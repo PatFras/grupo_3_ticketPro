@@ -41,26 +41,21 @@
 
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="category" class="form-label">Category</label>
-                                <select class="form-select" aria-label="Default select example" name="category"
-                                    id="category">
-                                    <option value="" selected hidden>Selec...</option>
-                                    <option>Cine</option>
-                                    <option>Show</option>
-                                    <option>Teatro</option>
-                                    <option>Streaming</option>
-                                    <option>Festival</option>
-                                </select>
+                                    <select class="form-select" aria-label="Default select example" name="category" id="category">
+                                        <option value="" selected hidden>Seleccione una categoria</option>
+                                        <% categories.forEach(category => { %>
+                                        <option value="<%= category.name %>"><%= category.name %></option>
+                                    <% }) %>
+                                  </select>
                             </div>   
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="section" class="form-label">Section</label>
-                                <select class="form-select" aria-label="Default select example" name="section"
-                                    id="section">
-                                    <option value="" selected hidden>Selec...</option>
-                                    <option>Free</option>
-                                    <option>New</option>
-                                    <option>Sold Out</option>
-                                    <option>Available</option>
-                                </select>
+                                <select class="form-select" aria-label="Default select example" name="section" id="section">
+                                    <option value="" selected hidden>Seleccione una seccion</option>
+                                    <% sections.forEach(section => { %>
+                                        <option value="<%= section.name %>"><%= section.name %></option>
+                                    <% }) %>
+                                  </select>
                             </div>    
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="formFile" class="form-label">Add image</label>

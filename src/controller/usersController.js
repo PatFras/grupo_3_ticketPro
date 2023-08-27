@@ -1,3 +1,7 @@
+const { readJSON } = require("../data");
+const products     = readJSON('products.json');
+const categories   = readJSON('categories.json');
+const sections     = readJSON('sections.json');
 module.exports = {
     register : (req,res) => {
         return res.render('register')
@@ -15,7 +19,7 @@ module.exports = {
         return res.render('productDetail')
     },
     addProduct : (req,res) => {
-        return res.render('addProduct')
+        return res.render('addProduct', { products, categories, sections })
     },
     editProduct : (req,res) =>{
         return res.render('productEdit')
