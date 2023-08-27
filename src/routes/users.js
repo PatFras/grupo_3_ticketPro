@@ -7,7 +7,7 @@ var router = express.Router();
 router.get('/register', usersController.register);
 router.get('/login', usersController.login);
 router.get('/productCart', usersController.productCart);
-router.get('/productDetail', usersController.productDetail);
+router.get('/productDetail/:id', usersController.productDetail);
 router.get('/addProduct', usersController.addProduct);
 router.get('/editProduct', usersController.editProduct);
 
