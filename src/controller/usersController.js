@@ -15,8 +15,12 @@ module.exports = {
     productCart : (req,res) => {
         return res.render('productCart')
     },
-    productDetail : require('./products/detail'),
-    productList : require('./products/list'),
+    productDetail : (req,res) => {
+        return res.render('productDetail')
+    },
+    productList : (req,res) => {
+        return res.render('productList', {products, categories, sections})
+    },
     addProduct : (req,res) => {
         return res.render('addProduct', { products, categories, sections })
     },
