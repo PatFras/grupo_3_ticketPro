@@ -42,6 +42,9 @@
     align-items: center;
     margin: 0.5em;
 }
+.productdetail_main-des-img img{
+    height: 200px;
+}
 .productdetail_main-description{
     display: flex;
     flex-direction: column;  
@@ -119,6 +122,9 @@
     /*tercer div*/
     .productdetail_main-des{
         width: 33%;
+    }
+    .productdetail_main-des-img img{
+        height: 400px;
     }
     .productdetail_main-det{
         width: 66%;
