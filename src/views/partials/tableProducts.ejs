@@ -1,0 +1,45 @@
+<div class="table-responsive">
+    <table class="table  table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Evento</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Localidad</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% products.forEach(({id, name,description, location, image, date},index)=> { %>
+                <tr>
+                    <th scope="row">
+                        <%= index + 1 %>
+                    </th>
+                    <td>
+                        <%= name %>
+                    </td>
+                    <td>
+                        <%= description || 'No hay descripcion' %>
+                    </td>
+                    <td>
+                        <%= location %>
+                    </td>
+                    
+                    <td>
+                        <%= date %>
+                    </td>
+                    <td>
+                        <div class="d-flex gap-1">
+                            <a class="btn btn-sm btn-success" href="users/editProduct">
+                                <i class="fas fa-edit"></i></a>
+                            <a class="btn btn-sm btn-danger" href="">
+                                <i class="fas fa-trash"></i></a>
+                        </div>
+                    </td>
+                </tr>
+                <% }) %>
+        </tbody>
+
+    </table>
+</div>
