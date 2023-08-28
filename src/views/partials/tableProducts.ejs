@@ -31,10 +31,13 @@
                     </td>
                     <td>
                         <div class="d-flex gap-1">
-                            <a class="btn btn-sm btn-success" href="users/editProduct">
+                            <a class="btn btn-sm btn-success" href="/users/editProduct">
                                 <i class="fas fa-edit"></i></a>
-                            <a class="btn btn-sm btn-danger" href="/products/remove/:id">
-                                <i class="fas fa-trash"></i></a>
+                                <form action="/products/remove/<%= id %>?_method=delete" method="POST">
+                                <button type="submit">eliminar</button>
+                                </form>
+                                <!-- <a class="btn btn-sm btn-danger" href="">Eliminar</a>
+                                <i class="fas fa-trash"></i></a> -->
                         </div>
                     </td>
                 </tr>

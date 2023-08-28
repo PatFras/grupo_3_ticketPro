@@ -524,7 +524,13 @@ body {
     width: 70%;
   }
 
+}
+
+@media (min-width: 1200px) {
+
   .div__card--cercaDeTi {
     width: 70%;
+    height: 260px;
   }
+
 }
