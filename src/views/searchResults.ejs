@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="/stylesheets/searchResults.css">
+<%- include('partials/head') %>
+<body>
+    <%- include('partials/header') %>
+    <% results.forEach(product => { %>
+        <div class="div__card--cercaDeTi">
+            <img class="div__card--cercaDeTi-img" src="/images/<%= product.image %>" alt="">
+            <p class="div__card--title"><%= product.name %></p>
+            <p><%= product.date %></p>
+            <p><%= product.location %></p>
+            <a href="/users/productDetail/<%= product.id %>">
+                <button class="div__card--cercaDeTi-button">comprar</button>
+            </a>
+        </div>
+    <% }) %>
+    <%- include('partials/footer') %>
+</body>
+</html>

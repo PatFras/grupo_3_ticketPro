@@ -1,0 +1,42 @@
+.div__card--cercaDeTi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--colorAzul2);
+    margin: 10px 0 10px 50px;
+    color: var(--colorBlanco);
+    box-shadow: 0 5px 3px 0 var(--colorAzul2);
+  }
+  
+  .div__card--cercaDeTi img {
+    padding: 15px 20px;
+    height: 200px;
+  }
+  
+  .div__card--title {
+    border-bottom: 1px solid var(--colorTurquesa);
+    margin: 0 20px;
+    padding-bottom: 5px;
+    font-size: x-large;
+  }
+  
+  
+  .div__card--cercaDeTi-button {
+    border: none;
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    color: var(--colorAzul2);
+    text-transform: uppercase;
+    background-color: var(--colorNaranja);
+    cursor: pointer;
+    transition: all, 0.5s;
+    transition-property: background-color;
+  }
+  
+  .div__card--cercaDeTi-button:hover {
+    background-color: var(--colorTurquesa);
+  }
+
+  

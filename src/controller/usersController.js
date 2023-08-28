@@ -19,7 +19,7 @@ module.exports = {
         return res.render('productDetail')
     },
     productList : (req,res) => {
-        return res.render('productList', {products, categories, sections})
+        return res.render('productList', { products, categories, sections })
     },
     addProduct : (req,res) => {
         return res.render('addProduct', { products, categories, sections })
