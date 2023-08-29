@@ -44,6 +44,21 @@ body {
   display: none;
 }
 
+.body__main__div--admin {
+  display: flex;
+  justify-content: center;
+}
+
+.body__main__div--admin-button {
+  background-color: var(--colorNaranja);
+  padding: 5px;
+  text-transform: uppercase;
+  margin: 5px 0 0 0;
+  border-radius: 10px;
+  box-shadow: 0 5px 3px 0 var(--colorAzul2);
+  color: white;
+}
+
 
 .body__main--sliderlEventos {
   margin: 10px 0;
