@@ -33,13 +33,39 @@
                         <div class="d-flex gap-1">
                             <a class="btn btn-sm btn-success" href="/users/editProduct">
                                 <i class="fas fa-edit"></i></a>
-                                <form action="/products/remove/<%= id %>?_method=delete" method="POST">
-                                <button class="btn btn-danger" type="submit"><i class="fas fa-trash"></i></button>
-                                </form>
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#removeProduct<%= id %>">
+                                <i class="fas fa-trash"></i>
+                            </button>
+  
+                         <!-- Modal -->
+                        <div class="modal fade" id="removeProduct<%= id %>" tabindex="-1" aria-labelledby="removeProduct<%= id %>Label" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="removeProduct<%= id%>Label">Eliminar producto</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>¿Estás seguro de que queres eliminar el evento <b><%= name %></b>?</p>
+                            
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <form action="/products/remove/<%= id %>?_method=delete" method="POST">
+                            <button type="submit" class="btn btn-danger">Si, eliminar</button>
+                            </form>
+                    </div>
+                </div>
+            </div>
+            </div>
                         </div>
                     </td>
                 </tr>
                 <% }) %>
+
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
         </tbody>
 
     </table>
