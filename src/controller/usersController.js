@@ -25,6 +25,6 @@ module.exports = {
         return res.render('addProduct', { products, categories, sections })
     },
     editProduct : (req,res) =>{
-        return res.render('productEdit')
+        return res.render('productEdit', {products, categories, sections})
     }
 }
