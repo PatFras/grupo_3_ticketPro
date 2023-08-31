@@ -1,18 +1,5 @@
 [
    {
-      "id": 1,
-      "name": "Nenagenix",
-      "description": "XLR Club - San Miguel, Sabado 01 de Septiembre 19:00 Hs",
-      "location": "San Miguel",
-      "addres": " Tribulato",
-      "category": "show",
-      "price": 2000,
-      "serviceCharge": 10,
-      "section": "Agotado",
-      "image": "nenagenix.jpg",
-      "date": "01-09-2023"
-   },
-   {
       "id": 2,
       "name": "Palito Ortega",
       "description": "Auditorio Ángel Bustelo - Mendoza, Viernes 17 de Noviembre 22:00 Hs",
@@ -92,41 +79,8 @@
    },
    {
       "id": 8,
-      "name": "Barbie",
-      "description": "Teatro Seminari - Escobar, 30 de Agosto - 13.00 hs",
       "location": "Escobar",
       "addres": "Mitre 451",
-      "category": "cine",
-      "price": 800,
-      "serviceCharge": 10,
-      "section": "Agotado",
-      "image": "barbie.webp",
-      "date": "30-08-2023"
-   },
-   {
-      "id": 9,
-      "name": "Hilda",
-      "description": "Teatro Seminari - Escobar, 08 de Septiembre - 21.30 hs",
-      "location": "Escobar",
-      "addres": "Mitre 451",
-      "category": "teatro",
-      "price": 5500,
-      "serviceCharge": 10,
-      "section": "Disponible",
-      "image": "hilda.webp",
-      "date": "08-09-2023"
-   },
-   {
-      "id": 10,
-      "name": "Fest. Bandera",
-      "description": "Ex rural - Rosario, 7 de Octubre - 14.30 hs",
-      "location": "Rosario",
-      "addres": "Mitre 451",
-      "category": "festival",
-      "price": 15000,
-      "serviceCharge": 10,
-      "section": "Disponible",
-      "image": "bandera.webp",
-      "date": "07-10-2023"
+      "price": null
    }
 ]
