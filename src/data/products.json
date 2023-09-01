@@ -131,14 +131,14 @@
    },
    {
       "id": 11,
-      "name": "erv",
-      "price": 0,
-      "category": "",
-      "description": "",
-      "image": "img-pdto-2.jpg",
-      "location": "",
-      "serviceCharge": 0,
-      "section": "",
-      "date": ""
+      "name": "eerg",
+      "price": 3454,
+      "category": "show",
+      "description": "erreg",
+      "location": "ergerg",
+      "address": "erer",
+      "serviceCharge": 34,
+      "section": "Nuevo",
+      "date": "2023-09-15"
    }
 ]
