@@ -121,7 +121,7 @@
       "name": "Fest. Bandera",
       "description": "Ex rural - Rosario, 7 de Octubre - 14.30 hs",
       "location": "Rosario",
-      "addres": "Mitre 451",
+      "address": "Mitre 451",
       "category": "festival",
       "price": 15000,
       "serviceCharge": "10",
