@@ -122,11 +122,11 @@
       "description": "Ex rural - Rosario, 7 de Octubre - 14.30 hs",
       "location": "Rosario",
       "addres": "Mitre 451",
-      "category": "",
+      "category": "festival",
       "price": 15000,
       "serviceCharge": "10",
-      "section": "",
+      "section": "Disponible",
       "image": "bandera.webp",
-      "date": ""
+      "date": "2023-10-07"
    }
 ]
