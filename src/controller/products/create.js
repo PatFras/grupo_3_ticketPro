@@ -7,5 +7,5 @@ module.exports = (req,res) => {
     const newProduct = new Product(req.body);
     products.push(newProduct);
     writeJSON(products, 'products.json');
-    return res.redirect('/')
+    return res.redirect('/users/productList')
 }
