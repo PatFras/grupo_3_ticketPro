@@ -23,5 +23,5 @@ module.exports = (req,res) => {
 
     writeJSON(productsModify, 'products.json')
 
-    return res.redirect('/users/productList')
+    return res.redirect('/products/productList')
 }

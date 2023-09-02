@@ -128,5 +128,17 @@
       "section": "Disponible",
       "image": "bandera.webp",
       "date": "2023-10-07"
+   },
+   {
+      "id": 12,
+      "name": "un nombre",
+      "price": 5000,
+      "category": "",
+      "description": "sdthgtdgh",
+      "location": "asdgfdrtg",
+      "address": "sdthgsfdgh",
+      "serviceCharge": "2",
+      "section": "",
+      "date": "2023-08-28"
    }
 ]

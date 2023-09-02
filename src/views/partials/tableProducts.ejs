@@ -1,35 +1,35 @@
 <div class="table-responsive">
     <table class="table  table-striped">
         <thead >
-            <tr>
-                <th scope="col" style="background-color: #000B27; color: white;">#</th>
-                <th scope="col" style="background-color: #000B27; color: white;">Evento</th>
-                <th scope="col" style="background-color: #000B27; color: white;">Descripcion</th>
-                <th scope="col" style="background-color: #000B27; color: white;">Localidad</th>
-                <th scope="col" style="background-color: #000B27; color: white;">Fecha</th>
-                <th scope="col" style="background-color: #000B27; color: white;">Acciones</th>
+            <tr class="productList-table-description">
+                <th scope="col" >#</th>
+                <th scope="col">Evento</th>
+                <th scope="col" >Descripcion</th>
+                <th scope="col" >Localidad</th>
+                <th scope="col" >Fecha</th>
+                <th scope="col" >Acciones</th>
             </tr>
         </thead>
         <tbody>
             <% products.forEach(({id, name,description, location, image, date},index)=> { %>
-                <tr>
-                    <th scope="row" style="background-color: #000B27; color: white;">
+                <tr class="productList-table-products">
+                    <th scope="row" id="productList-product" >
                         <%= index + 1 %>
                     </th>
-                    <td style="background-color: #000B27; color: white;">
+                    <td id="productList-product">
                         <%= name %>
                     </td>
-                    <td style="background-color: #000B27; color: white;">
+                    <td id="productList-product">
                         <%= description || 'No hay descripcion' %>
                     </td>
-                    <td style="background-color: #000B27; color: white;">
+                    <td id="productList-product">
                         <%= location %>
                     </td>
                     
-                    <td style="background-color: #000B27; color: white;">
+                    <td id="productList-product">
                         <%= date %>
                     </td>
-                    <td style="background-color: #000B27; color: white;">
+                    <td id="productList-product">
                         <div class="d-flex gap-1">
                             <a class="btn btn-sm btn-success" href="/products/edit/<%= id %>">
                                 <i class="fas fa-edit"></i></a>
@@ -42,12 +42,12 @@
                          <!-- Modal -->
                         <div class="modal fade" id="removeProduct<%= id %>" tabindex="-1" aria-labelledby="removeProduct<%= id %>Label" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content"  style="background-color: #000B27; color: white;"> 
+                            <div class="modal-content"  id="productList-product"> 
                             <div class="modal-header">
                             <h1 class="modal-title fs-5" id="removeProduct<%= id%>Label">Eliminar producto</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body"  style="background-color: #000B27; color: white;">
+                        <div class="modal-body"  id="productList-product">
                             <p>¿Estás seguro de que queres eliminar el evento <b><%= name %></b>?</p>
                             
                         </div>
