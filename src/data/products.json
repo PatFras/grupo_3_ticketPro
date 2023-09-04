@@ -5,12 +5,12 @@
       "description": "XLR Club - San Miguel, Sabado 01 de Septiembre 19:00 Hs",
       "location": "San Miguel",
       "address": " Tribulato",
-      "category": "",
+      "category": "show",
       "price": 2000,
       "serviceCharge": "10",
-      "section": "",
+      "section": "Agotado",
       "image": "1693866702262_products_.jpg",
-      "date": ""
+      "date": "2023-09-01"
    },
    {
       "id": 2,
@@ -18,12 +18,12 @@
       "description": "Auditorio Ángel Bustelo - Mendoza, Viernes 17 de Noviembre 22:00 Hs",
       "location": "Mendoza",
       "address": " Mtro. Joaquín González 40",
-      "category": "",
+      "category": "show",
       "price": 12000,
       "serviceCharge": "10",
-      "section": "",
+      "section": "Nuevo",
       "image": "1693866730867_products_.webp",
-      "date": ""
+      "date": "2023-11-17"
    },
    {
       "id": 3,
@@ -31,12 +31,12 @@
       "description": "Mood Live, NQN - Sábado 16 de Septiembre - 21:00hs",
       "location": "Neuquen",
       "address": " Mtro. Joaquín González 40",
-      "category": "",
+      "category": "show",
       "price": 22000,
       "serviceCharge": "10",
-      "section": "",
+      "section": "Disponible",
       "image": "1693866781825_products_.webp",
-      "date": ""
+      "date": "2023-09-16"
    },
    {
       "id": 4,
@@ -44,12 +44,12 @@
       "description": "Teatro Sarmiento - San Juan, 16 de Noviembre - 22.00 hs",
       "location": "San Juan",
       "address": " Av. Leandro N. Alem Norte 1",
-      "category": "",
+      "category": "show",
       "price": 10000,
       "serviceCharge": "10",
-      "section": "",
+      "section": "Disponible",
       "image": "1693867671364_products_.webp",
-      "date": ""
+      "date": "2023-09-16"
    },
    {
       "id": 5,
@@ -57,12 +57,12 @@
       "description": "Centro Cultural Kirchner - CABA, 16 de Noviembre - 22.00 hs",
       "location": "CABA",
       "address": "Sarmiento 151",
-      "category": "",
+      "category": "teatro",
       "price": 0,
       "serviceCharge": "0",
-      "section": "",
+      "section": "Gratis",
       "image": "1693866853852_products_.jpg",
-      "date": ""
+      "date": "2023-11-16"
    },
    {
       "id": 6,
@@ -70,12 +70,12 @@
       "description": "Estadio GEI - Ituzaingo, 5 de Octubre - 19.00 hs",
       "location": "Ituzaingo",
       "address": "Alvear 1106",
-      "category": "",
+      "category": "show",
       "price": 10000,
       "serviceCharge": "15",
-      "section": "",
+      "section": "Nuevo",
       "image": "1693867795408_products_.webp",
-      "date": ""
+      "date": "2023-10-05"
    },
    {
       "id": 7,
@@ -83,12 +83,12 @@
       "description": "Feria puro Diseño La Rural - Palermo, 1,2 y 3 de Septiembre - 21.00 hs",
       "location": "Ituzaingo",
       "address": "Av. Sarmiento 2704",
-      "category": "",
+      "category": "festival",
       "price": 4500,
       "serviceCharge": "10",
-      "section": "",
+      "section": "Agotado",
       "image": "1693867825508_products_.jpg",
-      "date": ""
+      "date": "2023-09-01"
    },
    {
       "id": 8,
@@ -96,12 +96,12 @@
       "description": "Teatro Seminari - Escobar, 30 de Agosto - 13.00 hs",
       "location": "Escobar",
       "address": "Mitre 451",
-      "category": "",
+      "category": "cine",
       "price": 800,
       "serviceCharge": "10",
-      "section": "",
+      "section": "Agotado",
       "image": "1693867850518_products_.webp",
-      "date": ""
+      "date": "2023-08-30"
    },
    {
       "id": 9,
@@ -109,11 +109,11 @@
       "description": "Teatro Seminari - Escobar, 08 de Septiembre - 21.30 hs",
       "location": "Escobar",
       "address": "Mitre 451",
-      "category": "",
+      "category": "cine",
       "price": 5500,
       "serviceCharge": "10",
-      "section": "",
-      "date": "",
+      "section": "Disponible",
+      "date": "2023-09-08",
       "image": "1693867876962_products_.webp"
    },
    {
