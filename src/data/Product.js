@@ -17,3 +17,4 @@ const Product = function ({name, price, category, description, image, location, 
 }
 
 module.exports = Product
+

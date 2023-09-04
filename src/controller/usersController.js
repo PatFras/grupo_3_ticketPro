@@ -1,6 +1,6 @@
-const { readJSON } = require("../data");
-const categories   = readJSON('categories.json');
-const sections     = readJSON('sections.json');
+//const { readJSON } = require("../data");
+//const categories   = readJSON('categories.json');
+//const sections     = readJSON('sections.json');
 
 module.exports = {
     register : (req,res) => {

@@ -1,4 +1,7 @@
+
 const { readJSON, writeJSON } = require("../../data");
+
+
 
 module.exports = (req,res) => {
     const {name, price, category, description, section, address, date, image, serviceCharge} = req.body;
@@ -14,7 +17,7 @@ module.exports = (req,res) => {
             product.section = section
             product.address = address
             product.date = date
-            product.image = product.image
+            product.image = req.file ? req.file.filename : product.image;
             product.serviceCharge = serviceCharge
         }
 
