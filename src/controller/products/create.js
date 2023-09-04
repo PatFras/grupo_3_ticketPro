@@ -16,6 +16,7 @@ module.exports = async (req, res) => {
             date: req.body.date,
             image: req.file ? req.file.filename : '',
             serviceCharge: +req.body.serviceCharge,
+            location: req.body.location,
         };
         
         const newProduct = new Product(newProductData);
