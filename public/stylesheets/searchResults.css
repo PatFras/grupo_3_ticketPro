@@ -1,27 +1,25 @@
-.div__card--cercaDeTi {
+.search_card-results {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--colorAzul2);
-    margin: 10px 0 10px 50px;
+    margin: 40px 20%;
     color: var(--colorBlanco);
     box-shadow: 0 5px 3px 0 var(--colorAzul2);
+    width: 60%;
   }
   
-  .div__card--cercaDeTi img {
-    padding: 15px 20px;
-    height: 200px;
+  .search_card-results-img {
+    height: 250px;
+    width: 90%;
   }
-  
   .div__card--title {
     border-bottom: 1px solid var(--colorTurquesa);
     margin: 0 20px;
     padding-bottom: 5px;
     font-size: x-large;
   }
-  
-  
-  .div__card--cercaDeTi-button {
+  .search_card-results-button {
     border: none;
     padding: 5px 10px;
     margin: 10px;
@@ -35,8 +33,25 @@
     transition-property: background-color;
   }
   
-  .div__card--cercaDeTi-button:hover {
+  .search_card-results-button:hover {
     background-color: var(--colorTurquesa);
   }
 
-  
+  .search-products-title{
+    display: flex; 
+    justify-content: center; 
+    color: tomato; 
+    padding: 200px 10px;
+  }
+  @media(min-width:768px){
+    
+    .search_card-results-img {
+      height: 400px;
+    }
+  }
+  @media(min-width:1024px){
+    .search_card-results-img {
+      height: 500px;
+      width: 500px;
+    }
+  }
