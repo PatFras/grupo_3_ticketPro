@@ -1,4 +1,4 @@
-
+const fs = require('fs');
 const { readJSON, writeJSON } = require("../../data");
 
 
@@ -10,6 +10,7 @@ module.exports = (req,res) => {
 
     const productsModify = products.map(product => {
         if(product.id === +req.params.id){
+            req.file &&(fs.existsSync(`./public/images/${product.image}`) && fs.unlinkSync(`./public/images/${product.image}`))
             product.name = name
             product.description = description
             product.price = +price
