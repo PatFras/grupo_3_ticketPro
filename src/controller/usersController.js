@@ -1,7 +1,6 @@
-const { readJSON } = require("../data");
-const products     = readJSON('products.json');
-const categories   = readJSON('categories.json');
-const sections     = readJSON('sections.json');
+//const { readJSON } = require("../data");
+//const categories   = readJSON('categories.json');
+//const sections     = readJSON('sections.json');
 
 module.exports = {
     register : (req,res) => {
@@ -13,19 +12,5 @@ module.exports = {
     profile : (req,res) => {
         return res.render('profile')
     },
-    productCart : (req,res) => {
-        return res.render('productCart')
-    },
-    productDetail : (req,res) => {
-        return res.render('productDetail')
-    },
-    productList : (req,res) => {
-        return res.render('productList', { products, categories, sections })
-    },
-    addProduct : (req,res) => {
-        return res.render('addProduct', { products, categories, sections })
-    },
-    editProduct : (req,res) =>{
-        return res.render('productEdit',)
-    }
+    
 }

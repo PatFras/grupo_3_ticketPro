@@ -13,7 +13,8 @@ module.exports = {
     search : (req,res) => {
         const results = products.filter(product => product.name.toLowerCase().includes(req.query.keywords.toLowerCase()));
         return res.render('searchResults', {
-            results
+            results,
+            keywords : req.query.keywords
         })
     }
 }

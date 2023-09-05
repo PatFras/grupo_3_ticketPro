@@ -5,5 +5,5 @@ module.exports = (req,res) => {
     const modifyProducts = products.filter(product => product.id != req.params.id);
     writeJSON(modifyProducts, 'products.json');
     
-    return res.redirect('/');
+    return res.redirect('/products/productList');
 }

@@ -5,12 +5,12 @@
       "description": "XLR Club - San Miguel, Sabado 01 de Septiembre 19:00 Hs",
       "location": "San Miguel",
       "address": " Tribulato",
-      "category": "show",
+      "category": "",
       "price": 2000,
-      "serviceCharge": 10,
-      "section": "Agotado",
+      "serviceCharge": "10",
+      "section": "",
       "image": "nenagenix.jpg",
-      "date": "01-09-2023"
+      "date": ""
    },
    {
       "id": 2,
@@ -109,12 +109,11 @@
       "description": "Teatro Seminari - Escobar, 08 de Septiembre - 21.30 hs",
       "location": "Escobar",
       "address": "Mitre 451",
-      "category": "teatro",
+      "category": "show",
       "price": 5500,
-      "serviceCharge": 10,
-      "section": "Disponible",
-      "image": "hilda.webp",
-      "date": "08-09-2023"
+      "serviceCharge": "10",
+      "section": "Agotado",
+      "date": ""
    },
    {
       "id": 10,
@@ -125,8 +124,7 @@
       "category": "festival",
       "price": 15000,
       "serviceCharge": "10",
-      "section": "Disponible",
-      "image": "bandera.webp",
+      "section": "Nuevo",
       "date": "2023-10-07"
    }
 ]
