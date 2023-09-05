@@ -8,7 +8,18 @@
     box-shadow: 0 5px 3px 0 var(--colorAzul2);
     width: 60%;
   }
+
+  .search-results-title {
+    color: aliceblue;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+  }
   
+  .search-results-keywords {
+    color: var(--colorNaranja);
+  }
+
   .search_card-results-img {
     height: 250px;
     width: 90%;
