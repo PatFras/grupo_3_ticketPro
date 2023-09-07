@@ -1,6 +1,6 @@
 const Product = require('../../data/Product');
 const { readJSON, writeJSON } = require('../../data');
-const upload = require('../../middlewares/upload'); // Importa el middleware upload
+const upload = require('../../middlewares/upload');
 
 module.exports = async (req, res) => {
     try {

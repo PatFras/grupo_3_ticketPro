@@ -5,12 +5,11 @@ const { readJSON, writeJSON } = require("../../data");
 
 module.exports = (req,res) => {
     const {name, price, category, description, section, address, date, image, serviceCharge, location} = req.body;
-    console.log(  "este es el body" ,req.body)
     const products = readJSON('products.json');
 
     const productsModify = products.map(product => {
         if(product.id === +req.params.id){
-            req.file &&(fs.existsSync(`./public/images/${product.image}`) && fs.unlinkSync(`./public/images/${product.image}`))
+            req.file &&(fs.existsSync(`./public/images/products${product.image}`) && fs.unlinkSync(`./public/images/products/${product.image}`))
             product.name = name
             product.description = description
             product.price = +price
