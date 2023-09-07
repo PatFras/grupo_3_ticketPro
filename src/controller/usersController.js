@@ -1,16 +1,9 @@
-//const { readJSON } = require("../data");
-//const categories   = readJSON('categories.json');
-//const sections     = readJSON('sections.json');
-
 module.exports = {
-    register : (req,res) => {
-        return res.render('register')
-    },
-    login : (req,res) => {
-        return res.render('login')
-    },
-    profile : (req,res) => {
-        return res.render('profile')
-    },
-    
+    register : require('./users/register'),
+    processRegister : require('./users/processRegister'),
+    login : require('./users/login'),
+    processLogin : require('./users/processLogin'),
+    profile : require('./users/profile'),
+    update : require('./users/update'),
+    logout : require('./users/logout')
 }

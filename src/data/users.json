@@ -28,15 +28,6 @@
     },
     {
         "id": 4,
-        "firstName": "Camila",
-        "lastName": "Guerrero",
-        "email": "Camilag.main@gmail.com",
-        "password": "lD3*NnwW(t0yYx",
-        "rolUser": "User",
-        "avatar": "/images/avatars/polloCorazon.jpg"
-    },
-    {
-        "id": 5,
         "firstName": "Roberto",
         "lastName": "Zalazar",
         "email": "servicios773@gmail.com",

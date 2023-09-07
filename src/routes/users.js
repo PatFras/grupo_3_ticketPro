@@ -1,10 +1,14 @@
-var express = require('express');
-const usersController = require('../controller/usersController');
+const express = require('express');
+const { register, processRegister, login, processLogin, profile, update, logout } = require('../controller/usersController');
+const router = express.Router();
 
-var router = express.Router();
-
-/* GET users listing. */
-router.get('/register', usersController.register);
-router.get('/login', usersController.login);
+router
+  .get('/register', register)
+  .post('/register', processRegister)
+  .get('/login', login)
+  .post('/login', processLogin)
+  .get('/profile', profile)
+  .put('/update', update)
+  .get('/logout', logout)
 
 module.exports = router;
