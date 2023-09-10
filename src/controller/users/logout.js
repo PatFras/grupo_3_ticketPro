@@ -1,3 +1,4 @@
 module.exports = (req,res) => {
-    return res.render('logout')
+    req.session.destroy();
+    return res.redirect('/')
 }
