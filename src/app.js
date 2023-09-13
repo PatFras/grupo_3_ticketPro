@@ -10,7 +10,7 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
 const userSessionCheck = require('./middlewares/userSessionCheck');
-
+const cookieCheck = require('./middlewares/cookieCheck')
 const app = express();
 
 /* setup PUT & DELETE */
@@ -32,7 +32,7 @@ app.use(session({
   resave : true,
   saveUninitialized : true
 }));
-
+app.use(cookieCheck);
 app.use(userSessionCheck);
 
 app.use('/', indexRouter);
