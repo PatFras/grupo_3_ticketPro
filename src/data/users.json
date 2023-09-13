@@ -1,38 +1,10 @@
 [
    {
-      "id": 1,
-      "firstName": "admin",
-      "lastName": "general",
-      "email": "grupo3formar23@gmail.com",
-      "password": "hI8*/Jw7T",
-      "rolUser": "Admin",
-      "avatar": "/images/avatars/pretzel.jpg"
-   },
-   {
-      "id": 2,
-      "firstName": "Patricio",
-      "lastName": "Frascaroli",
-      "email": "pmfrascaroli@gmail.com",
-      "password": "123123",
-      "rolUser": "User",
-      "avatar": "/images/avatars/jala.jpg"
-   },
-   {
-      "id": 3,
-      "firstName": "Brisa",
-      "lastName": "Guimaraz",
-      "email": "brisaguimaraz01@gmail.com",
-      "password": "sN7+8(>!00By9}s}",
-      "rolUser": "User",
-      "avatar": ""
-   },
-   {
-      "id": 4,
-      "firstName": "Roberto",
-      "lastName": "Zalazar",
+      "id": "2bbd9c64-fbea-4ff5-8ce9-a7b1c32e54f0",
+      "name": "chizzo",
       "email": "servicios773@gmail.com",
-      "password": "dB5>dFf#",
-      "rolUser": "User",
-      "avatar": "/images/avatars/polloCorazon.jpg"
+      "password": "$2a$10$vEPULcrdMjCUqb3Tm6VgR.tAykX3Cf9nRWVkigstF67iYxCbgDT7u",
+      "role": "user",
+      "createAt": "2023-09-13T17:27:51.856Z"
    }
 ]

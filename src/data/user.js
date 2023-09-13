@@ -1,13 +1,10 @@
 const {hashSync} = require('bcryptjs');
+const { v4: uuidv4 } = require('uuid');
 
-const fs = require('fs');
-const path = require('path');
-const usersFilePath = path.join(__dirname, 'users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath));
 
 const user = function ({ userName, email, password}) {
     
-    this.id = users[users.length - 1].id + 1;
+    this.id = uuidv4();
     this.name = userName.trim();
     this.email = email.trim();
     this.password = hashSync(password,10);
