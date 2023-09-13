@@ -14,5 +14,13 @@
       "password": "$2a$10$0lPkdeULNZFlQrSAnvjST.tXet/ZDti7hYzpWZXMXXuzf1VALYLy2",
       "role": "user",
       "createAt": "2023-09-13T17:36:06.701Z"
+   },
+   {
+      "id": "7ec127b0-f43f-449e-9c4c-e8980ca6e00f",
+      "name": "Patricio",
+      "email": "pmfrascaroli@gmail.com",
+      "password": "$2a$10$BOuG7FuVjrq/o/7cNbbLhO.pJdU9nFnX14h3uKOugIe2qnjWYF9l2",
+      "role": "user",
+      "createAt": "2023-09-13T20:10:31.756Z"
    }
 ]
