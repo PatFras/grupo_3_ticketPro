@@ -460,9 +460,7 @@ body {
 }
 
   .body__main--logo {
-    display: inline-block;
-    width: 20%;
-    padding: 10px 0;
+    display: none;
   }
 
   .div__card--cercaDeTi {

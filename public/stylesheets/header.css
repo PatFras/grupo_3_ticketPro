@@ -13,7 +13,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px 0;
+    padding: 0.5em;
 }
 
 .home-header a {
@@ -25,18 +25,17 @@ body {
 
 }
 .nav-logo img{
-    display: none;
+    width: 6em;
 }
 
 .containe {
     width: 95%;
     display: flex;
     justify-content: space-between;
-   
+    align-items: center;
 }
 
 .containe h6{
-    display: none;
     margin-left: 10px;
 }
 
@@ -51,9 +50,8 @@ body {
 .home-header-nav img {
     width: 60px;
     height: auto;
-    margin: 5px;
+    margin: 0.1em;
 }
-
 
 .nav-icon-a i{
     border-right: 1px solid #41ead4;
@@ -61,39 +59,38 @@ body {
 }
 
 .nav-icon-b {
-
     margin-left: 10px;
 }
 .menu-desple{
     display: none;
 }
 
+.header_login {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
 
 
 @media  (min-width: 768px) {
-    .containe{
-        height: 40px ;
-        align-items: center;
-    }
-  
-  .nav-home-a img{
-    display: none;
-  }  
-  .home-header-nav.nav-home-b .nav-icon-a {
-    display: none;
-  }
+.containe{
+    height: 40px ;
+    align-items: center;
+}
 
-  .nav-icon-a {
+.home-header-nav.nav-home-b .nav-icon-a {
+    display: none;
+}
+
+.nav-icon-a {
     border-right: none;
-   
-    
 }
 .nav-home-a a{
     display: block;
 }
 .containe h6{
     display: block;
-    color: #ffff;
+    color: #FE7F2D;
     font-size: 15px;
 }
 .nav-logo img{
@@ -107,27 +104,20 @@ body {
     margin-top: 30px;
 }
 
-
 .menu-desple{
     display: flex;
     justify-content: center;
     margin-top: 30px;
 }
 
-
-
 .d-flex {
     display: flex;
   }
-  
- 
-  
- 
+
   .search-container {
     margin: 20px;
   }
-  
- 
+
   .search-input {
     width: 300px;
     padding: 10px;
@@ -135,13 +125,11 @@ body {
     border-radius: 5px;
     font-size: 16px;
   }
-  
 
   .select-container {
     margin: 20px;
   }
-  
-  
+
   .custom-select {
     width: 300px;
     padding: 10px;
@@ -151,18 +139,19 @@ body {
     background-color: #ffffff;
     color: #000000;
   }
-  
  
   .custom-select option {
     background-color: #ffffff;
     color: #000000;
   }
-  
  
   .custom-select:focus {
     outline: none;
     border-color: #41ead4;
   }
-  
 
+  }
+
+  @media  (min-width: 768px) {
+    
   }

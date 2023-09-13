@@ -13,36 +13,22 @@
         </div>
 
         <div class="middleBox">
-            <form class="login-form" action="/login" method="POST">
-                <input id="user" type="text" name="user" required>
-                <label class="lbl-user" for="user">
-                    <span class="text-user">User</span>
-                </label>
+            <form class="register_form" action="" method="POST">
+                <div class="register_form-inputs">
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <div class="bottomBox">
+                    <div class="button-container">
+                        <button type="submit">Sign in</button>
+                    </div>
+                    <div class="links-box">
+                        <a href="/users/register">Create account</a>
+                        <a href="">Forgot your password?</a>
+                    </div>
+                </div>
             </form>
-            <form class="login-form" action="/login" method="POST">
-                <input id="password" type="password" name="password" required>
-                <label class="lbl-pass" for="password">
-                    <span class="password-pass">Password</span>
-                </label>
-            </form>
-
-            <div class="checkbox">
-                <input type="checkbox" name="remember">
-                <label for="remember">Remember me</label>
-            </div>
-
         </div>
-
-        <div class="bottomBox">
-            <div class="button-container">
-                <button type="submit">Sign in</button>
-            </div>
-            <div class="links-box">
-                <a href="/users/register">Create account</a>
-                <a href="">Forgot your password?</a>
-            </div>
-        </div>
-
     </main>
 </body>
 
