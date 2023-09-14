@@ -2,20 +2,20 @@
     <div class="home-header">
         <div class="containe">
             <div class="home-header-nav nav-home-a">
-                <img src="/images/logo.png" alt="">
+                <a href="/"><img src="/images/logo.png" alt=""></a>
             </div>
             <div class="home-header-nav nav-home-b">
                 <% if (!locals.userLogin) { %>
                     <a href="/users/login">
-                        <h6>Log in</h6>
+                        <h6>Ingresar</h6>
                     </a>
                 <% } %>
                 
                 <% if (locals.userLogin) { %>
                     <div class="header_login">
-                        <a href="/users/profile">Hello <%= userLogin.name %>!</a>
-                        <a href="/users/logout">Exit</a>
+                        <a href="/users/profile">Hola <%= userLogin.name %>!</a>
                         <a href="/products/productCart" class="nav-icon-b"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="/users/logout">Salir</a>              
                     </div>
                 <% } %>
             </div>

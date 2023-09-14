@@ -3,33 +3,34 @@
 
 <%- include('../partials/head') %>
 
-<body class="body__login">
-    <main class="login-container">
+    <body class="body__login">
+        <main class="login-container">
 
-        <div class="topBox">
-            <a href="/"><img src="/images/logo.png" alt="logo ticket Pro">
-            </a>
-            <h1>Sign in</h1>
-        </div>
+            <div class="topBox">
+                <a href="/"><img src="/images/logo.png" alt="logo ticket Pro"></a>
+            </div>
 
-        <div class="middleBox">
-            <form class="register_form" action="" method="POST">
-                <div class="register_form-inputs">
-                    <input type="email" name="email" placeholder="Email">
-                    <input type="password" name="password" placeholder="Password">
-                </div>
-                <div class="bottomBox">
-                    <div class="button-container">
-                        <button type="submit">Sign in</button>
+            <div class="middleBox">
+                <form class="register_form" action="" method="POST">
+                    <div class="register_form-inputs">
+                        <input type="email" name="email" placeholder="Email">
+                        <input type="password" name="password" placeholder="Contraseña">
+                        <div class="checkbox">
+                            <input type="checkbox" value="" id="remember" name="remember">
+                            <label for="remember">Recordarme</label>
+                        </div>
                     </div>
-                    <div class="links-box">
-                        <a href="/users/register">Create account</a>
-                        <a href="">Forgot your password?</a>
+                    <div class="bottomBox">
+                        <div class="button-container">
+                            <button type="submit">Ingresar</button>
+                        </div>
+                        <div class="links-box">
+                            <a href="/users/register">Crear cuenta</a>
+                        </div>
                     </div>
-                </div>
-            </form>
-        </div>
-    </main>
-</body>
+                </form>
+            </div>
+        </main>
+    </body>
 
 </html>

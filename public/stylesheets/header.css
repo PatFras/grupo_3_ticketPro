@@ -21,11 +21,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
-
-}
-.nav-logo img{
-    width: 6em;
 }
 
 .containe {
@@ -43,12 +38,8 @@ body {
     display: flex;
 }
 
-.nav-home-a a{
-    display: none;
-}
-
 .home-header-nav img {
-    width: 60px;
+    width: 4.5em;
     height: auto;
     margin: 0.1em;
 }
@@ -59,7 +50,7 @@ body {
 }
 
 .nav-icon-b {
-    margin-left: 10px;
+    margin: 0 0.5em;
 }
 .menu-desple{
     display: none;
@@ -70,7 +61,6 @@ body {
     flex-direction: row;
     gap: 0.5em;
 }
-
 
 @media  (min-width: 768px) {
 .containe{
