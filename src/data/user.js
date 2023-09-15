@@ -2,7 +2,7 @@ const {hashSync} = require('bcryptjs');
 const { v4: uuidv4 } = require('uuid');
 
 
-const user = function ({ userName, email, password}) {
+const User = function ({ userName, email, password}) {
     
     this.id = uuidv4();
     this.name = userName.trim();
@@ -12,4 +12,4 @@ const user = function ({ userName, email, password}) {
     this.createAt = new Date;
 }
 
-module.exports = user
+module.exports = User

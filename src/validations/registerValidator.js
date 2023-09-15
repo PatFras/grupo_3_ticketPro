@@ -2,14 +2,16 @@ const { check, body } = require("express-validator");
 const { readJSON } = require("../data");
 module.exports = [
   
-  check("userName")
+  body("userName")
     .isLength({
       min: 2,
     })
     .withMessage("El user name es obligatorio")
+    .trim()
     .isAlpha("es-ES")
     .withMessage("Solo letras"),
   body("email")
+    .trim()
     .notEmpty()
     .withMessage("El email es obligatorio")
     .isEmail()
@@ -24,10 +26,12 @@ module.exports = [
       return true;
     })
     .withMessage("El email ya se encuentra registrado"),
-  check("password").isLength({
+  body("password").isLength({
     min: 6,
     max: 12,
-  }),
+  })
+  .withMessage('La contraseña debe contar con un minimo de 6 caracteres y maximo de 12')
+  ,
   body('password2')
     .custom((value,{req}) => {
         if(value !== req.body.password){

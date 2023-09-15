@@ -44,9 +44,11 @@
                 </div>
             </form>
 
+            <% if (locals.userLogin && locals.userLogin.role === "admin") { %>
             <div class="body__main__div--admin">
                 <a class="body__main__div--admin-button" href="/products/productList">Admin</a>
             </div>
+            <% } %>
 
             <!-- carrousel desktop -->
             <div class="swiper mySwiper2">

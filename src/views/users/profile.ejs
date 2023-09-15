@@ -8,18 +8,17 @@
     <div class="register_conteiner">
         <header class="register_header">
             <a href="/"><img src="/images/logo.png" alt="POST"></a> 
-            <h1>Register</h1>
+            <h1>Edición de perfil</h1>
         </header>
-        <form class="register_form" action="/users/update?_method=PUT" method="POST">
+        <form class="register_form" action="/users/profile?_method=PUT" method="POST">
             <div class="register_form-inputs">
-                <input type="text" name="userName" placeholder="User name" <%= name %>>
-                <input type="email" name="email" placeholder="Email" <%= email %>>
-                <input type="password" name="password" placeholder="Password" <%= password %>>
-                <input type="password" name="password2" placeholder="Repet password" <%= password2 %>>
+                <input type="text" name="userName" placeholder="Name" value="<%= name %>" >
+                <input type="email" name="email" placeholder="Email" value="<%= email %>" >
+                <input type="password" name="password" placeholder="Password" value="<%= password %>" >
+                <input type="password" name="password2" placeholder="Repeat password" value="<%= password %>" >
             </div>
             <div class="register_form-buttons">
-                <button class="register_form-buttons-register" type="submit">actualizar</button>
-                <a href="/users/login" class="register_form-buttons-singIn"><p>sing in</p></a>
+                <button class="register_form-buttons-register" type="submit">Actualizar</button>
             </div>
         </form>
     </div>

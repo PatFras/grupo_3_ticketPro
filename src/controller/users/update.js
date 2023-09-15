@@ -1,3 +1,3 @@
 module.exports = (req,res) => {
-    return res.render('update')
+    return res.render('users/profile')
 }
