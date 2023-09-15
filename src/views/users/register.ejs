@@ -11,11 +11,11 @@
         </header>
         <form class="register_form" action="" method="POST">
             <div class="register_form-inputs">
-                <input  type="text" name="userName" placeholder="Nombre de usuario" value="<%= old.userName? old.userName: null; %>">
+                <input  type="text" name="userName" placeholder="Nombre de usuario" value="<%= locals.old && old.userName? old.userName: null; %>">
                 <% if (locals.errors && errors.userName) { %>
                     <small><%= errors.userName.msg %> </small>
                 <% } %>        
-                <input type="email" name="email" placeholder="Email" value="<%= old.email ? old.email: null ;%>">
+                <input type="email" name="email" placeholder="Email" value="<%= locals.old && old.email ? old.email: null ;%>">
                 <% if (locals.errors && errors.email) { %>
                     <small><%= errors.email.msg %> </small>
                 <% } %>   
