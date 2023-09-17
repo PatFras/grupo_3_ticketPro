@@ -1,4 +1,4 @@
-.register{
+.profile{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6,7 +6,7 @@
     background-color: var(--colorAzul);   
     height: 100vh; 
 }
-.register_conteiner{
+.profile_container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,58 +16,58 @@
     margin: 0 2em;
 }
 /*herader*/
-.register_header{
+.profile_header{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2em;
     gap: 1em;
 }
-.register_header img{
+.profile_header img{
     width:6em;
     cursor: pointer;
 }
-.register_header h1{
+.profile_header h1{
     color: silver;
     font-size: 18px;
     font-weight: 500;
 }
 /*form*/
-.register_form{
+.profile_form{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.register_form-inputs{
+.profile_form-inputs{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1em;
 }
 
-.register_form input{
+.profile_form input{
     color: var(--colorBlanco);
     border: none;
     border-bottom: var(--colorTurquesa) 3px solid;
     background-color: var(--colorGris);
     padding: 8px 15px;
 }
-.register_form input:focus{
+.profile_form input:focus{
     outline: none;
 }
-.register_form input:read-write{
+.profile_form input:read-write{
     
     background-color:var(--colorGris);
 }
 
-.register_form-buttons{
+.profile_form-buttons{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2em;
     gap : 1.5em;
 }
-.register_form-buttons-register{
+.profile_form-buttons-profile{
     color:silver;
     background-color:var(--colorGris);
     font-size: 12px;
@@ -80,19 +80,23 @@
     cursor: pointer;
     transition: all 0.25s ease;
 }
-.register_form-buttons-register:hover{
+.profile_form-buttons-profile:hover{
     background-color: var(--colorNaranja) ;
 }  
-.register_form-buttons-singIn p{
+.profile_form-buttons-singIn p{
     color: silver;
     font-size: 9px;
     text-align: center;
 }
-.register small {
+
+.profile small {
     color: rgb(207, 40, 40);
 }
+.profile-successMsg {
+    color: var(--colorTurquesa);
+}
 @media(min-width:768px){   
-    .register_conteiner{
+    .profile_container{
         margin: 12em 0;
         padding: 3em 0;
         align-content: normal;
@@ -100,7 +104,7 @@
         height: auto;
     } 
 
-    .register_header img {
+    .profile_header img {
         width: 8em;
     }
 }
