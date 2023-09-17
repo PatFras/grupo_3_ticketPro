@@ -1,6 +1,6 @@
 module.exports = (req,res) => {
     req.session.destroy();
-    res.cookie('ticketPro', null,{
+    res.cookie('ticketProUser', null,{
         maxAge : -1
     })
     
