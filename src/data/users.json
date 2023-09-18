@@ -22,5 +22,13 @@
       "password": "$2a$10$BOuG7FuVjrq/o/7cNbbLhO.pJdU9nFnX14h3uKOugIe2qnjWYF9l2",
       "role": "user",
       "createAt": "2023-09-13T20:10:31.756Z"
+   },
+   {
+      "id": "7fed5511-1435-4fc7-93d7-6754bb973f58",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "$2a$10$Xb8aoQU3jJJ8lz2xV8RBp.jd4smkyjheeIzbSDMuakwsBo4IIclRu",
+      "role": "admin",
+      "createAt": "2023-09-18T16:24:32.734Z"
    }
 ]
