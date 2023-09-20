@@ -21,8 +21,21 @@
                 <div class="swiper-pagination"></div>
             </div>
 
-            <div class="logo__container">
-                <a href="/"><img class="body__main--logo" src="/images/logo.png" alt="logo"></a>
+              <!-- carrousel desktop -->
+              <div class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <% products.forEach(product => { %>
+                        <div class="swiper-slide">
+                            <img src="/images/products/<%= product.image %>" /> 
+                        </div>
+                    
+                       <% }) %>
+                    
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+
             </div>
 
             <form class="body__main__form" action="/search" method="GET">
@@ -50,22 +63,7 @@
             </div>
             <% } %>
 
-            <!-- carrousel desktop -->
-            <div class="swiper mySwiper2">
-                <div class="swiper-wrapper">
-                    <% products.forEach(product => { %>
-                        <div class="swiper-slide">
-                        <img src="/images/products/<%= product.image %>" />
-                        </div>
-                    
-                       <% }) %>
-                    
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-
-            </div>
+          
 
             <section class="body__main--sliderlEventos">
                 <h2>Eventos destacados</h2>
@@ -90,14 +88,14 @@
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
-                    <a href="">Ver todo</a>
+                    <a class="ver-todo" href="">Ver todo</a>
             </section>
 
             <div class="body__main--sections">
 
                 <aside class="body__main--pickup">
-                    <i class="fa-solid fa-location-dot"></i>
                     <a href="">Conocé los puntos de retiro</a>
+                    <i class="fa-solid fa-location-dot"></i>
                 </aside>
 
                 <div class="body__main--sections-actYevents">

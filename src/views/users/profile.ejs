@@ -3,24 +3,49 @@
 
 <%- include('../partials/head') %>
 
+  <body class="profile">
+    <div class="profile_container">
+      <header class="profile_header">
+        <a href="/"><img src="/images/logo.png" alt="POST"></a>
+        <h1>Edición de perfil</h1>
+      </header>
+      <form class="profile_form" action="/users/profile?_method=PUT" method="POST">
+        <div class="profile_form-inputs">
+          <input type="text" name="name" placeholder="Name" value="<%= name %>">
+          <% if (locals.errors && errors.name) { %>
+            <small>
+              <%= errors.name.msg %>
+            </small>
+            <% } %>
+              <input type="email" name="email" placeholder="Email" value="<%= email %>">
+              <% if (locals.errors && errors.email) { %>
+                <small>
+                  <%= errors.email.msg %>
+                </small>
+                <% } %>
+                  <input type="password" name="password" placeholder="Password">
+                  <% if (locals.errors && errors.password) { %>
+                    <small>
+                      <%= errors.password.msg %>
+                    </small>
+                    <% } %>
+                      <input type="password" name="password2" placeholder="Repeat password">
+                      <% if (locals.errors && errors.password2) { %>
+                        <small>
+                          <%= errors.password2.msg %>
+                        </small>
+                        <% } %>
+        </div>
+        <div class="profile_form-buttons">
+          <button class="profile_form-buttons-profile" type="submit">Actualizar</button>
+        </div>
 
-<body class="register">
-    <div class="register_conteiner">
-        <header class="register_header">
-            <a href="/"><img src="/images/logo.png" alt="POST"></a> 
-            <h1>Edición de perfil</h1>
-        </header>
-        <form class="register_form" action="/users/profile?_method=PUT" method="POST">
-            <div class="register_form-inputs">
-                <input type="text" name="userName" placeholder="Name" value="<%= name %>" >
-                <input type="email" name="email" placeholder="Email" value="<%= email %>" >
-                <input type="password" name="password" placeholder="Password" value="<%= password %>" >
-                <input type="password" name="password2" placeholder="Repeat password" value="<%= password %>" >
-            </div>
-            <div class="register_form-buttons">
-                <button class="register_form-buttons-register" type="submit">Actualizar</button>
-            </div>
-        </form>
+        <% if (successMsg===1) { %>
+          <span class="profile-successMsg">¡Tus datos se actualizaron exitosamente!</span>
+          <% } %>
+      </form>
     </div>
-</body>
+
+  </body>
+
 </html>

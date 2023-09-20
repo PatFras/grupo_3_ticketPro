@@ -4,6 +4,6 @@ module.exports = {
     login : require('./users/login'),
     processLogin : require('./users/processLogin'),
     profile : require('./users/profile'),
-    update : require('./users/update'),
+    edit : require('./users/edit'),
     logout : require('./users/logout')
 }

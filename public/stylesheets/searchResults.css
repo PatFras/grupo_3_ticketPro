@@ -40,7 +40,7 @@
     text-transform: uppercase;
     background-color: var(--colorNaranja);
     cursor: pointer;
-    transition: all, 0.5s;
+    transition: 500ms;
     transition-property: background-color;
   }
   
