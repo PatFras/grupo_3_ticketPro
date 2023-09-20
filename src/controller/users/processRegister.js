@@ -13,7 +13,7 @@ module.exports = (req,res) => {
         users.push(user);
         writeJSON(users,'users.json')
     
-        return res.redirect('/')
+        return res.redirect('/users/login')
     }else {
         return res.render('users/register',{
         errors: errors.mapped(),
