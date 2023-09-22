@@ -13,41 +13,68 @@
                     </div>
                     <div class="card-body" style="display: inline-block;">
                         <form action="/products/add" method="POST" class="row" enctype="multipart/form-data">
+                            
                             <div class="col-12 col-md-4 mb-3">
                                 <label for="name" class="form-label">Name</label>
                                 <input type="text" class="form-control" id="name" placeholder="Name of the product" name="name">
+                                <% if (locals.errors && locals.errors.name) { %>
+                                    <small><%= locals.errors.name.msg %></small>
+                                <% } %>
                             </div>
+
                             <div class="col-12 col-md-4 mb-3">
                                 <label for="price" class="form-label">Price</label>
                                 <input type="number" class="form-control" id="price" name="price">
+                                <% if (locals.errors && locals.errors.price) { %>
+                                    <small><%= locals.errors.price.msg %></small>
+                                <% } %>
                             </div>
+
                             <div class="col-12 col-md-4 mb-3">
                                 <label for="serviceCharge" class="form-label">Service Charge</label>
                                 <input type="number" class="form-control" id="serviceCharge" name="serviceCharge">
                             </div>
+                            <% if (locals.errors && locals.errors.serviceCharge) { %>
+                                <small><%= locals.errors.serviceCharge.msg %></small>
+                            <% } %>
+
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="address" class="form-label">Address</label>
                                 <input type="text" class="form-control" id="address" name="address">
+                                <% if (locals.errors && locals.errors.address) { %>
+                                    <small><%= locals.errors.address.msg %></small>
+                                <% } %>
                             </div>
+
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="location" class="form-label">Location</label>
                                 <input type="text" class="form-control" id="location" name="location">
+                                <% if (locals.errors && locals.errors.location) { %>
+                                    <small><%= locals.errors.location.msg %></small>
+                                <% } %>
                             </div>
 
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="date" class="form-label">Date</label>
                                 <input type="date" class="form-control" id="date" name="date">
+                                <% if (locals.errors && locals.errors.date) { %>
+                                    <small><%= locals.errors.date.msg %></small>
+                                <% } %>
                             </div> 
 
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="category" class="form-label">Category</label>
-                                    <select class="form-select" aria-label="Default select example" name="category" id="category">
-                                        <option value="" selected hidden>Seleccione una categoria</option>
-                                        <% categories.forEach(category => { %>
+                                <select class="form-select" aria-label="Default select example" name="category" id="category">
+                                    <option value="" selected hidden>Seleccione una categoria</option>
+                                    <% categories.forEach(category => { %>
                                         <option value="<%= category.name %>"><%= category.name %></option>
                                     <% }) %>
-                                  </select>
-                            </div>   
+                                </select>
+                                <% if (locals.errors && locals.errors.category) { %>
+                                    <small><%= locals.errors.category.msg %></small>
+                                <% } %>
+                            </div>
+
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="section" class="form-label">Section</label>
                                 <select class="form-select" aria-label="Default select example" name="section" id="section">
@@ -55,17 +82,27 @@
                                     <% sections.forEach(section => { %>
                                         <option value="<%= section.name %>"><%= section.name %></option>
                                     <% }) %>
-                                  </select>
-                            </div>    
+                                </select>
+                                <% if (locals.errors && locals.errors.section) { %>
+                                    <small><%= locals.errors.section.msg %></small>
+                                <% } %>
+                            </div>
+    
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="formFile" class="form-label">Add image</label>
                                 <input type="file" class="form-control" id="formFile" name="image">
+                                <% if (locals.errors && locals.errors.image) { %>
+                                    <small><%= locals.errors.image.msg %></small>
+                                <% } %>
                             </div> 
+
                             <div class="col-12 mb-3">
                                 <label for="description" class="form-label">Description</label>
-                                <textarea name="description" id="description" class="form-control"
-                                    style="resize: none;"></textarea>
-                            </div>
+                                <textarea name="description" id="description" class="form-control" style="resize: none;"></textarea>
+                                <% if (locals.errors && locals.errors.description) { %>
+                                    <small><%= locals.errors.description.msg %></small>
+                                <% } %>
+                            </div>                            
 
                             <div class="col-12 d-flex justify-content-end gap-2 mb-3">
                                 <button type="submit" class="btn" style="background-color: #FE7F2D; color: white;">Add
