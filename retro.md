@@ -42,3 +42,24 @@
 ## Dejar de hacer
 • -
 
+----
+
+# RETROSPECTIVA DEL SPRINT 3 
+
+## Seguir haciendo
+• Organización
+• Comunicación frecuente por whatsapp  
+
+## Hacer mas
+• Respetar la consigna de cada tarea  
+• Comunicar dificultades  
+• Compartir progreso  
+
+## Empezar a hacer 
+• Reuniones de testeo
+
+## Hacer menos
+• Procrastinar  
+
+## Dejar de hacer
+• Entregas a último momento 
