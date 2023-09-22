@@ -63,3 +63,20 @@
 
 ## Dejar de hacer
 • Entregas a último momento 
+
+# RETROSPECTIVA DEL SPRINT 5
+
+## Seguir haciendo
+• Mantener la comunicación
+
+## Hacer mas
+• Pedir ayuda
+
+## Empezar a hacer 
+• Ultimar detalles por fuera del sprint
+
+## Hacer menos
+• Procastinar
+
+## Dejar de hacer
+• Entregas a último momento
