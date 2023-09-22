@@ -16,5 +16,11 @@ module.exports = {
             results,
             keywords : req.query.keywords
         })
+    },
+    allEvents : (req,res) => {
+        return res.render('allEvents', {
+            products,
+            categories
+        })
     }
 }
