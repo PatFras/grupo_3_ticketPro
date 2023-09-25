@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head') %>
+
+
+<body class="register">
+    <div class="register_conteiner">
+        <header class="register_header">
+            <a href="/"><img src="/images/logo.png" alt="POST"></a> 
+            <h1>Register</h1>
+        </header>
+        <form class="register_form" action="">
+            <div class="register_form-inputs">
+                <input type="text" name="userName" placeholder="User name">
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Password">
+                <input type="password" name="password2" placeholder="Repet password">
+            </div>
+            <div class="register_form-buttons">
+                <button class="register_form-buttons-register" type="submit">register</button>
+                <a href="/users/login" class="register_form-buttons-singIn"><p>sing in</p></a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
