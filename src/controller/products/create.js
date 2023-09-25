@@ -34,6 +34,6 @@ module.exports = async (req, res) => {
         products.push(newProduct);
         writeJSON(products, 'products.json');
         
-        return res.redirect('/products/productList');
+        return res.redirect('/products/productList') ;
     }
 }
