@@ -18,7 +18,7 @@ module.exports = (req, res) => {
     };
     req.body.remember !== undefined &&
       res.cookie("ticketProUser", req.session.userLogin, {
-        maxAge: 1000 * 60,
+        maxAge: 5000 * 60,
       });
 
     return res.redirect("/");

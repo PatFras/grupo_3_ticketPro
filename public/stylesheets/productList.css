@@ -1,6 +1,6 @@
 .productList-main{
     min-height: 550px;
-    margin: auto;
+    margin: 1em;
 }
 .productList-main .card-header{
     background-color: var(--colorAzul2); 
