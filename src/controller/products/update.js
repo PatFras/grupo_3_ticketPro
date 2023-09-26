@@ -1,4 +1,3 @@
-
 const { validationResult } = require("express-validator");
 const { readJSON, writeJSON } = require("../../data");
 
@@ -7,7 +6,8 @@ module.exports = (req, res) => {
   const products = readJSON("products.json");
 
   if (errors.isEmpty()) {
-    const { name, price, category, description, section, addres, date, serviceCharge } = req.body;
+    const { name, price, category, description, section, address, date, serviceCharge } = req.body;
+    
 
     const productsModify = products.map((product) => {
       if(product.id === +req.params.id){
@@ -18,7 +18,7 @@ module.exports = (req, res) => {
         product.price = +price
         product.category = category
         product.section = section
-        product.address = addres
+        product.address = address
         product.date = date
         product.image = product.image
         product.serviceCharge = serviceCharge
@@ -29,7 +29,7 @@ module.exports = (req, res) => {
 
     writeJSON(productsModify, "products.json");
 
-    return res.redirect('/users/productList');
+    return res.redirect('/products/productList');
   } else {
     const categories = readJSON("categories.json");
     const sections = readJSON("sections.json");

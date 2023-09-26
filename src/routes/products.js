@@ -14,7 +14,7 @@ router
     .get('/addProduct', adminCheck, productsController.addProduct)
     .post('/add',[adminCheck,upload.single('image'),addProductValidator], productsController.create)
     .get('/edit/:id', adminCheck, productsController.edit)
-    .put('/update/:id', [adminCheck, editProductvalidator,upload.single('image')], productsController.update)
+    .put('/update/:id', [adminCheck, upload.single('image')], editProductvalidator, productsController.update)
     .delete('/remove/:id', adminCheck, productsController.remove)
 
 module.exports = router;
