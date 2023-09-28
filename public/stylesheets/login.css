@@ -5,7 +5,7 @@
 }
 
 .login-container {
-    background-color: var(--colorGris);
+    background-color: var(--colorAzul);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -172,7 +172,7 @@
 }
 
 .links-box a {
-    color: silver;
+    color: var(--colorBlanco);
     font-size: 9px;
     margin-top: 1em;
 }
