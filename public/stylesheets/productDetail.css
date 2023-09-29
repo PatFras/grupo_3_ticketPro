@@ -1,5 +1,6 @@
 .productdetail{
     background-color: var(--colorAzul);
+    font-family: 'Barlow';
 }
 .productdetail_main{
     display: flex;
@@ -7,6 +8,74 @@
     flex-wrap: wrap;   
     width: 100%;
 }
+
+.detail--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.detail-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--colorAzul2);
+    margin: 40px 20%;
+    color: var(--colorBlanco);
+    width: 60%;
+    border-radius: 10%;
+    box-shadow: 0 0 5px 1px var(--colorTurquesa), 0 0 15px 2px #ebecca;
+    padding: 0 20px 10px 20px;
+    transition: 500ms;
+    transition-property: box-shadow, color;
+
+}
+
+.detail-card:hover {
+    box-shadow:  0 2px 2px var(--colorTurquesa), 0 0 22px 2px #ebecca;
+    color: var(--colorNaranja);
+  }
+
+.detail-img {
+    width: 87%;
+    padding: 30px 10px;
+    border-radius: 10%;
+}
+
+.productdetail_main-description-name {
+    display: flex;
+    align-items: center;   
+    font-size:20px;
+    gap: 3px;
+}
+
+.detail-card-button {
+        border: none;
+        padding: 5px 10px;
+        margin: 10px;
+        border-radius: 10px;
+        font-weight: 700;
+        color: var(--colorAzul2);
+        text-transform: uppercase;
+        background-color: var(--colorNaranja);
+        cursor: pointer;
+        transition: 500ms;
+        transition-property: background-color;
+      
+    }
+    
+    .detail-card-button:hover {
+      background-color: var(--colorTurquesa);
+    }
+
+
+
+
+
+
+/* -------------------- camila :  */
+
+
 /*primer div*/
 .productdetail_main-buttons{
     display: flex;

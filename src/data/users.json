@@ -30,5 +30,13 @@
       "password": "$2a$10$Xb8aoQU3jJJ8lz2xV8RBp.jd4smkyjheeIzbSDMuakwsBo4IIclRu",
       "role": "admin",
       "createAt": "2023-09-18T16:24:32.734Z"
+   },
+   {
+      "id": "b628fedc-c77f-4e95-a624-63490d89f415",
+      "name": "brisa",
+      "email": "b@b.com",
+      "password": "$2a$10$EydpYhA8lh3fwBiKTINJceZndd8YR6VnGTQnU8lafVgQx/0/vvkj6",
+      "role": "user",
+      "createAt": "2023-09-29T07:42:00.400Z"
    }
 ]

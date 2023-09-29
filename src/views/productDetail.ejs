@@ -9,39 +9,40 @@
     <%- include('partials/header') %>
     
     <main class="productdetail_main">
-        <div class="productdetail_main-des">
-            <div class="productdetail_main-des-img">
-                <img src="/images/products/<%= image %>" alt="imagen del producto">
+        <div class="detail--container">
+            <div class="detail-card">
+                <img class="detail-img" src="/images/products/<%= image %>" alt="">
+                <div class="productdetail_main-description">
+                    <div class="productdetail_main-description-name">
+                        <i class="fa-solid fa-input-text"></i><a href="">Nombre: </a>
+                        <h4> <%= name %></h4>
+                    </div>
+                    <div class="productdetail_main-description-item">
+                        <i class="fa-solid fa-subtitles"></i><a href="">Descripción: </a>
+                        <h4> <%= description %></h4>
+                    </div>
+                    <div class="productdetail_main-description-item">
+                        <i class="fa-solid fa-calendar-days"></i><a href="">Fecha: </a>
+                        <h4> <%= date %></h4>
+                    </div>
+                    <div class="productdetail_main-description-item">
+                        <i class="fa-solid fa-location-dot"></i><a href="">Ciudad: </a>
+                        <h4> <%= location %></h4>
+                    </div>
+                    <div class="productdetail_main-description-item">
+                        <i class="fa-solid fa-location-dot"></i><a href="">Dirección: </a>
+                        <h4> <%= address %></h4>
+                    </div>
+                    <div class="productdetail_main-description-item">
+                        <i class="fa-solid fa-square-dollar"></i><a href="">Precio: </a>
+                        <h4>$ <%= price %></h4>
+                    </div>
+                </div>
+                <a href="/products/productCart" class="detail-card-button">
+                comprar
+                </a>
             </div>
-            <div class="productdetail_main-description">
-                <div class="productdetail_main-description-item">
-                    <i class="fa-solid fa-input-text"></i><a href="">Nombre </a>
-                    <h4> <%= name %></h4>
-                </div>
-                <div class="productdetail_main-description-item">
-                    <i class="fa-solid fa-subtitles"></i><a href="">Descripción </a>
-                    <h4> <%= description %></h4>
-                </div>
-                <div class="productdetail_main-description-item">
-                    <i class="fa-solid fa-calendar-days"></i><a href="">Fecha </a>
-                    <h4> <%= date %></h4>
-                </div>
-                <div class="productdetail_main-description-item">
-                    <i class="fa-solid fa-location-dot"></i><a href="">Ciudad </a>
-                    <h4> <%= location %></h4>
-                </div>
-                <div class="productdetail_main-description-item">
-                    <i class="fa-solid fa-location-dot"></i><a href="">Dirección </a>
-                    <h4> <%= address %></h4>
-                </div>
-                <div class="productdetail_main-description-item">
-                    <i class="fa-solid fa-square-dollar"></i><a href="">Precio </a>
-                    <h4> <%= price %></h4>
-                </div>
-            </div>
-        </div>
-        <div class="productdetail_main-det">
-            <button>comprar</button>
+
         </div>
         
     </main>

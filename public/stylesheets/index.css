@@ -85,8 +85,16 @@ body {
   background-color: var(--colorAzul2);
   width: 65%;
   margin-bottom: 10px;
+  border-radius: 10%;
   color: var(--colorBlanco);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: 0 0 5px 1px var(--colorTurquesa), 0 0 15px 2px #ebecca;
+  transition: 500ms;
+  transition-property: box-shadow, color;
+}
+
+.div__card--cercaDeTi:hover {
+  box-shadow:  0 2px 2px var(--colorTurquesa), 0 0 22px 2px #ebecca;
+  color: var(--colorNaranja);
 }
 
 .div__card--cercaDeTi img {
@@ -144,6 +152,12 @@ body {
   flex-direction: column;
   align-items: center;
   box-shadow:rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: 0.5s;
+  transition-property: box-shadow;
+}
+
+.body__main--actividades:hover {
+  box-shadow: inset 0 0 5px 1px var(--colorTurquesa), 0 0 15px 2px #ebecca;
 }
 
 .body__main--actividades-title {
@@ -187,10 +201,7 @@ body {
 }
 
 .body__main--pickup:hover {
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
-   rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
-   rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, 
-   rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;;
+  box-shadow: inset 0 0 5px 1px var(--colorTurquesa), 0 0 15px 2px #ebecca;
 
 }
 
@@ -219,6 +230,12 @@ body {
   align-items: center;
   justify-content: center;
   width: 90%;
+  transition: 0.5s;
+  transition-property: box-shadow;
+}
+
+.div__card--proxEvento:hover {
+  box-shadow: inset 0 0 5px 1px var(--colorTurquesa), 0 0 15px 2px #ebecca;
 }
 
 .div__card--proxEvento p {
@@ -356,16 +373,15 @@ body {
     align-items: center;
     background-color: var(--colorAzul2);
     box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
-    padding-bottom: 5px;
+    padding: 15px 0;
   }
 
   .div__card--cercaDeTi {
     background-color: var(--colorAzul);
     width: 55%;
     height: 238px;
-    margin: 10px 0;
+    margin: 15px 0;
     color: var(--colorBlanco);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 
   .body__main--sliderlEventos h2 {
@@ -532,11 +548,23 @@ body {
 
 @media (min-width: 1024px) {
 
-  .body__main--pickup {
-    margin: 10px 0 15px 15px;
-    width: 21%;
-    height: 290px;
+  .body__main__containerSearch {
+    width: 70%;
   }
+
+  .body__main--sections {
+    justify-content: center;
+  }
+
+  .body__main--sections-actYevents {
+    width: 65%;
+}
+
+.body__main--pickup {
+  margin: 0 20px 15px 15px;
+  width: 15%;
+  height: 300px;
+}
 
   .body__main--actividades-title {
     font-size: xx-large;
@@ -552,16 +580,18 @@ body {
 
 }
 
-@media (min-width: 1024px) {
+/*  @media (min-width: 1024px) {
 
   .body__main__containerSearch {
     width: 70%;
   }
 
+  .body__main--sections-actYevents
+
   .div__card--proxEvento img {
     width: 20%;
 }
-}
+}  */
 
 @media (min-width: 1200px) {
 
