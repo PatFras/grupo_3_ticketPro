@@ -20,7 +20,7 @@ module.exports = (req, res) => {
     };
 
   
-    return res.redirect("/");
+    return res.redirect("/users/login");
   } else {
     return res.render("users/register", {
       errors: errors.mapped(),

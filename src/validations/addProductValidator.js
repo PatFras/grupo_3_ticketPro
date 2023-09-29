@@ -13,7 +13,7 @@ module.exports = [
 
   check("serviceCharge")
     .notEmpty()
-    .withMessage("La tarifa de servicio es obligatoria")
+    .withMessage("Tarifa de servicio obligatoria")
     .isNumeric()
     .withMessage("La tarifa de servicio debe ser un número válido"),
 
