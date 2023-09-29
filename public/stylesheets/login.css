@@ -177,6 +177,10 @@
     margin-top: 1em;
 }
 
+.warning {
+    color: rgb(207, 40, 40);
+}
+
 @media (min-width:768px) {
     .login-container {
         margin: 12em 0;

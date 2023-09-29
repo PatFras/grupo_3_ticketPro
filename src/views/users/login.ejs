@@ -14,12 +14,12 @@
             <form class="register_form" action="" method="POST">
                 <div class="register_form-inputs">
                     <input type="email" name="email" placeholder="Email">
-                    <% if (locals.errors && locals.errors.email) { %>
-                        <small><%= locals.errors.email.msg %> </small>
+                    <% if (locals.errors && errors.email) { %>
+                        <small class="warning"><%= errors.email.msg %> </small>
                     <% } %>  
                     <input type="password" name="password" placeholder="Contraseña">
                     <% if (locals.errors && locals.errors.password) { %>
-                        <small><%= locals.errors.password.msg %> </small>
+                        <small class="warning"><%= locals.errors.password.msg %> </small>
                     <% } %>
                     <div class="checkbox">
                         <input type="checkbox" value="" id="remember" name="remember">
