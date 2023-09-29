@@ -10,12 +10,13 @@ module.exports = {
             categories
         })
     },
-    search : (req,res) => {
-        const results = products.filter(product => product.name.toLowerCase().includes(req.query.keywords.toLowerCase()));
+    search: (req, res) => {
+        const keywords = req.query.keywords ? req.query.keywords.toLowerCase() : '';
+        const results = keywords ? products.filter(product => product.name.toLowerCase().includes(keywords)) : [];
         return res.render('searchResults', {
             results,
-            keywords : req.query.keywords
-        })
+            keywords: req.query.keywords
+        });
     },
     allEvents : (req,res) => {
         return res.render('allEvents', {
