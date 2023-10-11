@@ -1,39 +1,36 @@
 'use strict';
-const productsJson = require('../../data/products.json')
+const productsJson = require('../../data/products.json');
+const sectionsJson = require('../../data/sections.json');
+const categoriesJson = require('../../data/categories.json');
 
 
-const productsDB = productsJson.map(({name, price,description,address,image,category,location,serviceCharge,section}) => {
+const categoryMap = Object.fromEntries(categoriesJson.map(category => [category.name, category.id]));
+const sectionMap = Object.fromEntries(sectionsJson.map(section => [section.name, section.id]));
+
+const productsDB = productsJson.map(({ name, price, description, address, image, category, location, serviceCharge, section, date }) => {
   return {
     name,
     price,
     address,
-    categoryId : category === "cine" ? 1 : 2,
+    categoryId: categoryMap[category],
     description,
-    sectionsId : section === "Nuevo" ? 1 : 2,
+    sectionsId: sectionMap[section],
     location,
     serviceCharge,
     image,
-    createdAt : new Date(),
-    updatedAt : new Date()
-  }
-})
+    date,
+    createdAt: new Date(),
+    updatedAt: new Date()
+  };
+});
 
 
-/** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
-    
-     await queryInterface.bulkInsert('Products',productsDB, [
-      
-       
-       
-    ], {});
-    
+  async up(queryInterface, Sequelize) {
+    await queryInterface.bulkInsert('Products', productsDB, [], {});
   },
 
-  async down (queryInterface, Sequelize) {
-    
-      await queryInterface.bulkDelete('Products', null, {});
-     
-  }
+  async down(queryInterface, Sequelize) {
+    await queryInterface.bulkDelete('Products', null, {});
+  },
 };
