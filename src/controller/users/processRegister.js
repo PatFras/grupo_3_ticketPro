@@ -20,11 +20,19 @@ module.exports = (req, res) => {
     };
 
   
+<<<<<<< HEAD
     return res.redirect("/users/login");
+=======
+    return res.redirect("/");
+>>>>>>> dev-rzalazar
   } else {
     return res.render("users/register", {
       errors: errors.mapped(),
       old: req.body,
     });
   }
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> dev-rzalazar
