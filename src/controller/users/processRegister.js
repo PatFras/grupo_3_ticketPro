@@ -1,26 +1,21 @@
 const { validationResult } = require("express-validator");
-const { readJSON, writeJSON } = require("../../data");
-const User = require("../../data/user");
+const db = require("../../database/models");
+const {hashSync} = require('bcryptjs');
 
 module.exports = (req, res) => {
   const errors = validationResult(req);
 
   if (errors.isEmpty()) {
-    const users = readJSON("users.json");
-    const user = new User(req.body);
-
-    users.push(user);
-    writeJSON(users, "users.json");
-
- 
-    req.session.userLogin = {
-      id: user.id,
-      name: user.name,
-      
-    };
-
-  
-    return res.redirect("/users/login");
+    const { name,email,password } = req.body;
+    db.User.create({
+      name : name.trim(),
+      email : email.trim(),
+      password : hashSync(password,10),
+      roleId : 2,
+    })
+    .then(() => {
+      return res.redirect("users/login");
+    }).catch(error => console.log(error))
   } else {
     return res.render("users/register", {
       errors: errors.mapped(),

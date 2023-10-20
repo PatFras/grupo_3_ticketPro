@@ -7,7 +7,6 @@ module.exports = {
     await queryInterface.bulkInsert('Users', [
       {
         name: "Admin",
-        lastName: "TicketPro",
         email: "admin@gmail.com",
         password:"$2a$10$Xb8aoQU3jJJ8lz2xV8RBp.jd4smkyjheeIzbSDMuakwsBo4IIclRu",
         roleId: 1,
@@ -16,7 +15,6 @@ module.exports = {
       },
       {
         name: "Patricio",
-        lastName: "Frascaroli",
         email: "pmfrascaroli@gmail.com",
         password:"$2a$10$BOuG7FuVjrq/o/7cNbbLhO.pJdU9nFnX14h3uKOugIe2qnjWYF9l2",
         roleId: 2,
