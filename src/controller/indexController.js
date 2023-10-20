@@ -1,14 +1,17 @@
-const { readJSON } = require("../data");
-const products = readJSON('products.json');
-const categories = readJSON('categories.json');
+const db = require('../database/models')
 
 module.exports = {
     index : (req,res) => {   
-    
-        return res.render('index', {
-            products,
-            categories
-        })
+        const products = db.Product.findAll()
+        const categories = db.Category.findAll()
+
+        Promise.all([products,categories])
+        .then(([products,categories]) => {
+            return res.render('index', {
+                products,
+                categories
+            })
+        }).catch(error => console.log(error))
     },
     search: (req, res) => {
         const keywords = req.query.keywords ? req.query.keywords.toLowerCase() : '';

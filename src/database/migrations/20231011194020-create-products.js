@@ -41,7 +41,7 @@ module.exports = {
           }
         }
       },
-      sectionsId: {
+      sectionId: {
         type: Sequelize.INTEGER,
         references:{
           model:{
