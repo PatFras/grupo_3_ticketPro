@@ -1,6 +1,3 @@
 [
-    {"id":1,"name":"Gratis"},
-    {"id":2,"name":"Nuevo"},
-    {"id":3,"name":"Agotado"},
-    {"id":4,"name":"Disponible"}
+    "free", "new", "sold out", "available"
 ]

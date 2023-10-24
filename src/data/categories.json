@@ -1,12 +1,3 @@
 [
-    {"id":1, "name":"cine"
-    }, 
-    {"id":2, "name":"show"
-    }, 
-    {"id":3, "name":"teatro"
-    },
-    {"id":4, "name":"streaming"
-    },
-    {"id":5, "name":"festival"
-    }
+    "cine", "show", "teatro" , "streaming", "festival"
 ]

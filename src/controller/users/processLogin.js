@@ -1,26 +1,31 @@
 const { validationResult } = require("express-validator");
-const { readJSON } = require("../../data");
+const db = require("../../database/models");
 
 module.exports = (req, res) => {
   const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    res.render("users/login", { errors: errors.mapped(),
-        old:req.body });
-  } else {
-    const users = readJSON("users.json");
-    const { id, name, role } = users.find(
-      (user) => user.email === req.body.email
-    );
-    req.session.userLogin = {
-      id,
-      name,
-      role,
-    };
-    req.body.remember !== undefined &&
+
+  if (errors.isEmpty()) {
+    db.User.findOne({
+      where : {
+        email : req.body.email
+      }
+    })
+    .then(user => {
+      req.session.userLogin = {
+        id : user.id,
+        name : user.name,
+        role : user.roleId,
+      };
+      req.body.remember !== undefined &&
       res.cookie("ticketProUser", req.session.userLogin, {
         maxAge: 5000 * 60,
       });
 
-    return res.redirect("/");
-  }
+      return res.redirect("/");
+    }).catch(error => console.log(error)) 
+  }else {
+    return res.render('users/login', {
+      errors : errors.mapped()
+    })
+  }  
 };
