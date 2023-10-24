@@ -1,12 +1,13 @@
-const { readJSON } = require("../../data")
+const db = require("../../database/models");
 
-module.exports = (req,res) => {
-
-    const users = readJSON('users.json');
-    const user = users.find(user => user.id == req.session.userLogin.id);
+module.exports = (req, res) => {
     let successMsg = 0;
-    return res.render('users/profile',{
-        ...user,
-        successMsg
-    })
+    db.User.findByPk(req.session.userLogin.id)
+        .then(user => {
+            return res.render('users/profile', {
+                ...user,
+                successMsg: 0
+            });
+        })
+        .catch(error => console.log(error));
 }
