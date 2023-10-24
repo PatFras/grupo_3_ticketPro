@@ -6,15 +6,15 @@ module.exports = (req, res) => {
   const errors = validationResult(req);
 
   if (errors.isEmpty()) {
-    const { name,email,password } = req.body;
+    const { userName,email,password } = req.body;
     db.User.create({
-      name : name.trim(),
+      name : userName.trim(),
       email : email.trim(),
       password : hashSync(password,10),
       roleId : 2,
     })
     .then(() => {
-      return res.redirect("users/login");
+      return res.redirect("login");
     }).catch(error => console.log(error))
   } else {
     return res.render("users/register", {
