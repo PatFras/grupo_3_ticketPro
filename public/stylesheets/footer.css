@@ -1,5 +1,5 @@
 .home__footer {
-    background-color: var(--colorAzul);
+    background-color: #000b27;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,7 +22,7 @@
     margin-bottom: 1em;
 }
 
-.footer-helpBox button {
+.footer-helpBox-button {
     background-color: var(--colorTurquesa);
     border-radius: 30px;
     border: none;
@@ -31,7 +31,13 @@
     font-weight: 700;
     font-size: 14px;
     cursor: pointer;
+    transition: 500ms;
+    transition-property: background-color;
 }
+
+.footer-helpBox-button:hover {
+    background-color: var(--colorNaranja);
+    }
 
 .footer-nav a {
     color: var(--colorBlanco);
@@ -51,13 +57,29 @@
     margin: 1em 0;
     justify-content: center;
     cursor: pointer;
-}
+    transition: 500ms;
+    transition-property: color;
+  }
+  
+  .footer-iconsBox:hover {
+      color: var(--colorNaranja);
+  }
+
 
 .home__footer p {
     color: silver;
     font-size: 12px;
     text-align: left;
     padding: 1em;
+}
+
+.footer-preguntas {
+  transition: 500ms;
+  transition-property: color;
+}
+
+.footer-preguntas:hover {
+    color: var(--colorNaranja);
 }
 
 @media (min-width:768px) {
@@ -120,6 +142,7 @@
 @media (min-width:1024px) {
     .footer-container {
         margin-top: 1em;
+        margin-bottom: 0;
         gap: 3em;
     }
 

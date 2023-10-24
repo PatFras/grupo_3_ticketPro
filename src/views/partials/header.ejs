@@ -2,15 +2,25 @@
     <div class="home-header">
         <div class="containe">
             <div class="home-header-nav nav-home-a">
-                <a href="/users/login" class="nav-icon-a"><i class="fa-regular fa-user"></i></a>
-                <img src="/images/logo.png" alt="">
-                <a href="/users/login">
-                    <h6>Ingresar</h6>
-                </a>
+                <a href="/"><img src="/images/logo.png" alt=""></a>
             </div>
             <div class="home-header-nav nav-home-b">
-                <a href="/users/login" class="nav-icon-a"><i class="fa-regular fa-user"></i></a>
-                <a href="/users/productCart" class="nav-icon-b"><i class="fa-solid fa-cart-shopping"></i></a>
+                <% if (!locals.userLogin) { %>
+                    <a href="/users/login">
+                        <h6>Ingresar</h6>
+                    </a>
+                    <a href="/users/register">
+                        <h6>Registrarse</h6>
+                    </a>
+                <% } %>
+                
+                <% if (locals.userLogin) { %>
+                    <div class="header_login">
+                        <a href="/users/profile">Hola <%= userLogin.name %>!</a>
+                        <a href="/products/productCart" class="nav-icon-b"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="/users/logout">Salir</a>              
+                    </div>
+                <% } %>
             </div>
         </div>
     </div>

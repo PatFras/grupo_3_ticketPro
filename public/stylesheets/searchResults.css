@@ -1,0 +1,131 @@
+.search_card-results--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search_card-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--colorAzul2);
+    margin: 40px 20%;
+    color: var(--colorBlanco);
+    width: 60%;
+    border-radius: 10%;
+    box-shadow: 0 0 5px 1px var(--colorTurquesa), 0 0 15px 2px #ebecca;
+    transition: 500ms;
+    transition-property: box-shadow, color;
+  }
+
+  .search_card-results:hover {
+    box-shadow:  0 2px 2px var(--colorTurquesa), 0 0 22px 2px #ebecca;
+    color: var(--colorNaranja);
+  }
+
+  .search-results-title {
+    color: aliceblue;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+    transition: 500ms;
+    transition-property: color;
+  }
+
+  .search-results-title:hover {
+    color: var(--colorTurquesa);
+  }
+  
+  .search-results-keywords {
+    color: var(--colorTurquesa);
+    transition: 500ms;
+    transition-property: color;
+  }
+
+  .search-results-keywords:hover {
+    color: var(--colorNaranja);
+  }
+
+  .search_card-results-img {
+    height: 220px;
+    width: 90%;
+    padding: 10px;
+  }
+  .div__card--title {
+    border-bottom: 1px solid var(--colorTurquesa);
+    margin: 0 20px;
+    padding-bottom: 5px;
+    font-size: x-large;
+  }
+  .search_card-results-button {
+    border: none;
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    color: var(--colorAzul2);
+    text-transform: uppercase;
+    background-color: var(--colorNaranja);
+    cursor: pointer;
+    transition: 500ms;
+    transition-property: background-color;
+  }
+  
+  .search_card-results-button:hover {
+    background-color: var(--colorTurquesa);
+  }
+
+  .search-products-title{
+    display: flex; 
+    justify-content: center; 
+    color: tomato; 
+    padding: 200px 10px;
+  }
+
+  @media(min-width: 481px){
+    
+    .search_card-results {
+      width: 55%;
+    }
+  }
+
+  @media(min-width:600px){
+    
+    .search_card-results {
+      width: 50%;
+    }
+
+    .search_card-results-img {
+      height: 250px;
+      width: 80%;
+    }
+  }
+
+  @media(min-width:768px){
+
+    .search_card-results {
+      width: 45%;
+    }
+    
+    .search_card-results-img {
+      height: 320px;
+    }
+  }
+  @media(min-width:1024px){
+
+    .search_card-results {
+      width: 40%;
+    }
+
+    .search_card-results-img {
+      height: 320px;
+      width: 75%;
+  }
+  }
+
+  @media(min-width:1024px){
+
+    .search_card-results {
+      width: 35%;
+    }
+  }

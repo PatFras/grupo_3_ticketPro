@@ -3,23 +3,37 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const multer = require('multer');
+const methodOverride = require('method-override');
+const session = require('express-session');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const productsRouter = require('./routes/products.routes');
-
+const productsRouter = require('./routes/products');
+const userSessionCheck = require('./middlewares/userSessionCheck');
+const cookieCheck = require('./middlewares/cookieCheck')
 const app = express();
+
+/* setup PUT & DELETE */
+app.use(methodOverride('_method'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..', 'public')));
+
+app.use(session({
+  secret : "ticketPro",
+  resave : true,
+  saveUninitialized : true
+}));
+app.use(cookieCheck);
+app.use(userSessionCheck);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

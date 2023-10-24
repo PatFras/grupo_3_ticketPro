@@ -9,54 +9,42 @@
     <%- include('partials/header') %>
     
     <main class="productdetail_main">
-        <div class="productdetail_main-buttons">
-            <a>Cómo comprar</a>
-            <a>Información</a>
-        </div>
-        <div class="productdetail_main-des">
-            <div class="productdetail_main-des-img">
-                <img src="/images/DP_img.jfif" alt="imagen del producto">
+        <div class="detail--container">
+            <div class="detail-card">
+                <img class="detail-img" src="/images/products/<%= image %>" alt="">
+                <div class="productdetail_main-description">
+                    <div class="productdetail_main-description-name">
+                        <i class="fa-solid fa-input-text"></i><a href="">Nombre: </a>
+                        <h4> <%= name %></h4>
+                    </div>
+                    <div class="productdetail_main-description-item">
+                        <i class="fa-solid fa-subtitles"></i><a href="">Descripción: </a>
+                        <h4> <%= description %></h4>
+                    </div>
+                    <div class="productdetail_main-description-item">
+                        <i class="fa-solid fa-calendar-days"></i><a href="">Fecha: </a>
+                        <h4> <%= date %></h4>
+                    </div>
+                    <div class="productdetail_main-description-item">
+                        <i class="fa-solid fa-location-dot"></i><a href="">Ciudad: </a>
+                        <h4> <%= location %></h4>
+                    </div>
+                    <div class="productdetail_main-description-item">
+                        <i class="fa-solid fa-location-dot"></i><a href="">Dirección: </a>
+                        <h4> <%= address %></h4>
+                    </div>
+                    <div class="productdetail_main-description-item">
+                        <i class="fa-solid fa-square-dollar"></i><a href="">Precio: </a>
+                        <h4>$ <%= price %></h4>
+                    </div>
+                </div>
+                <a href="/products/productCart" class="detail-card-button">
+                comprar
+                </a>
             </div>
-            <div class="productdetail_main-description">
-                <div class="productdetail_main-description-item">
-                    <i class="fa-solid fa-location-dot"></i> <a href="">Lugar </a>
-                    <h4> Estadio Unico de La Plata</h4>
-                </div>
-                <div class="productdetail_main-description-item">
-                    <i class="fa-solid fa-location-dot"></i><a href="">Ciudad </a>
-                    <h4> -----</h4>
-                </div>
-                <div class="productdetail_main-description-item">
-                    <i class="fa-solid fa-calendar-days"></i><a href="">Fecha </a>
-                    <h4> 0000-00-00</h4>
-                </div>
-                <div class="productdetail_main-description-item">
-                    <i class="fa-solid fa-clock"></i><a href="">Hora </a>
-                    <h4> 00:00PM</h4>
-                </div>
-                <div class="productdetail_main-description-item">
-                    <i class="fa-solid fa-location-dot"></i><a href="">Dirección </a>
-                    <h4> Av 32,25 y 526 y 21</h4>
-                </div>
-            </div>
-        </div>
-        <div class="productdetail_main-det">
-            <img class="productdetail_main-det-img" src="/images/estadio.jpeg" alt="Lugar">
-            <div class="productdetail_main-det-selects">
-                <select name="fecha" id="fecha">
-                    <option value="1">fecha disponible 1</option>
-                    <option value="2">fecha disponible 2</option>
-                    <option value="3">fecha disponible 3</option>
-                </select>
-                <select name="sector" id="sector">
-                    <option value="1">lugar disponible 1</option>
-                    <option value="2">lugar disponible 2</option>
-                    <option value="3">lugar disponible 3</option>
-                </select>
 
-            </div>
-            <button>comprar</button>
         </div>
+        
     </main>
     
     <%- include('partials/footer') %>

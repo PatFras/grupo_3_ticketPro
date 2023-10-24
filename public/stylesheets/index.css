@@ -44,6 +44,21 @@ body {
   display: none;
 }
 
+.body__main__div--admin {
+  display: flex;
+  justify-content: center;
+}
+
+.body__main__div--admin-button {
+  background-color: var(--colorNaranja);
+  padding: 5px;
+  text-transform: uppercase;
+  margin: 5px 0 0 0;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: white;
+}
+
 
 .body__main--sliderlEventos {
   margin: 10px 0;
@@ -55,16 +70,31 @@ body {
   padding-bottom: 10px;
 }
 
-.body__main--sliderlEventos a {
+.ver-todo {
   color: var(--colorTurquesa);
+  transition: 500ms;
+  transition-property: color;
+}
+
+.ver-todo:hover {
+  color: var(--colorNaranja);
+  border-radius: 10px;
 }
 
 .div__card--cercaDeTi {
   background-color: var(--colorAzul2);
   width: 65%;
   margin-bottom: 10px;
+  border-radius: 10%;
   color: var(--colorBlanco);
-  box-shadow: 0 5px 3px 0 var(--colorAzul2);
+  box-shadow: 0 0 5px 1px var(--colorTurquesa), 0 0 15px 2px #ebecca;
+  transition: 500ms;
+  transition-property: box-shadow, color;
+}
+
+.div__card--cercaDeTi:hover {
+  box-shadow:  0 2px 2px var(--colorTurquesa), 0 0 22px 2px #ebecca;
+  color: var(--colorNaranja);
 }
 
 .div__card--cercaDeTi img {
@@ -90,7 +120,7 @@ body {
   text-transform: uppercase;
   background-color: var(--colorNaranja);
   cursor: pointer;
-  transition: all, 0.5s;
+  transition: 500ms;
   transition-property: background-color;
 }
 
@@ -121,7 +151,13 @@ body {
   width: 90%;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 5px 3px 0 var(--colorAzul2);
+  box-shadow:rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: 0.5s;
+  transition-property: box-shadow;
+}
+
+.body__main--actividades:hover {
+  box-shadow: inset 0 0 5px 1px var(--colorTurquesa), 0 0 15px 2px #ebecca;
 }
 
 .body__main--actividades-title {
@@ -143,7 +179,7 @@ body {
   padding: 2px 5px;
   background-color: var(--colorTurquesa);
   cursor: pointer;
-  transition: all, 0.5s;
+  transition: 500ms;
   transition-property: background-color, color;
 }
 
@@ -159,7 +195,14 @@ body {
   padding: 10px;
   margin: 10px 10px 15px 10px;
   width: 90%;
-  box-shadow: 0 2px 3px 0 var(--colorAzul2);
+  box-shadow:rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: 500ms;
+  transition-property: box-shadow;
+}
+
+.body__main--pickup:hover {
+  box-shadow: inset 0 0 5px 1px var(--colorTurquesa), 0 0 15px 2px #ebecca;
+
 }
 
 .body__main--pickup i {
@@ -182,11 +225,17 @@ body {
   background-color: var(--colorAzul2);
   margin-bottom: 25px;
   color: var(--colorBlanco);
-  box-shadow: 0 3px 3px 0 var(--colorAzul2);
+  box-shadow:rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 90%;
+  transition: 0.5s;
+  transition-property: box-shadow;
+}
+
+.div__card--proxEvento:hover {
+  box-shadow: inset 0 0 5px 1px var(--colorTurquesa), 0 0 15px 2px #ebecca;
 }
 
 .div__card--proxEvento p {
@@ -225,7 +274,7 @@ body {
   color: var(--colorAzul2);
   background-color: var(--colorNaranja);
   cursor: pointer;
-  transition: all, 0.5s;
+  transition: 500ms;
   transition-property: background-color;
 }
 
@@ -259,7 +308,7 @@ body {
     margin: 10px 0;
     width: 45%;
     color: var(--colorBlanco);
-    transition: all, 0.5s;
+    transition: 500ms;
     transition-property: background-color, color;
 }
 
@@ -299,8 +348,9 @@ body {
     text-align: center;
     width: 100%;
     appearance: none;
-    transition: all, 0.5s;
+    transition: 500ms;
     transition-property: background-color, color;
+    cursor: pointer;
   }
 
   .select__options option {
@@ -322,16 +372,16 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--colorAzul2);
-    box-shadow: 0 5px 3px 0 var(--colorAzul2);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+    padding: 15px 0;
   }
 
   .div__card--cercaDeTi {
     background-color: var(--colorAzul);
     width: 55%;
     height: 238px;
-    margin: 10px 0;
+    margin: 15px 0;
     color: var(--colorBlanco);
-    box-shadow: 0 5px 3px 0 var(--colorAzul2);
   }
 
   .body__main--sliderlEventos h2 {
@@ -368,6 +418,7 @@ body {
     color: black;
     background-color: rgba(255,255,255, 0.5);
     box-shadow: 2px 1px 9px var(--colorBlanco);
+    padding: 5px;
     margin: 10px 0;
     font-size: small;
     
@@ -399,7 +450,7 @@ body {
 @media (min-width: 600px) {
 
   .div__card--cercaDeTi {
-  width: 63%;
+  width: 80%;
  }
 
  .body__main--sections {
@@ -445,9 +496,7 @@ body {
 }
 
   .body__main--logo {
-    display: inline-block;
-    width: 20%;
-    padding: 10px 0;
+    display: none;
   }
 
   .div__card--cercaDeTi {
@@ -492,17 +541,30 @@ body {
 
   .body__main--proxEvento p{
     font-size: x-large;
+    padding-right: 10px;
   }
 
 }
 
 @media (min-width: 1024px) {
 
-  .body__main--pickup {
-    margin: 10px 0 15px 15px;
-    width: 21%;
-    height: 290px;
+  .body__main__containerSearch {
+    width: 70%;
   }
+
+  .body__main--sections {
+    justify-content: center;
+  }
+
+  .body__main--sections-actYevents {
+    width: 65%;
+}
+
+.body__main--pickup {
+  margin: 0 20px 15px 15px;
+  width: 15%;
+  height: 300px;
+}
 
   .body__main--actividades-title {
     font-size: xx-large;
@@ -518,13 +580,28 @@ body {
 
 }
 
-@media (min-width: 1024px) {
+/*  @media (min-width: 1024px) {
 
   .body__main__containerSearch {
     width: 70%;
   }
 
+  .body__main--sections-actYevents
+
+  .div__card--proxEvento img {
+    width: 20%;
+}
+}  */
+
+@media (min-width: 1200px) {
+
   .div__card--cercaDeTi {
     width: 70%;
+    height: 260px;
   }
+
+  .div__card--proxEvento img {
+    width: 15%;
+}
+
 }

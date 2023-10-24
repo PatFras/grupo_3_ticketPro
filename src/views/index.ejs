@@ -7,140 +7,93 @@
         <%- include('partials/header') %>
 
         <main>
-            <!-- carrousel mobile-tablet Swiper -->
+            <!-- carrousel mobile-tablet Swiper --->
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="/images/pelotas.webp" alt=""></div>
-                    <div class="swiper-slide"><img src="/images/fab.webp" alt=""></div>
-                    <div class="swiper-slide"><img src="/images/sirenita.webp" alt=""></div>
-                    <div class="swiper-slide"><img src="/images/qlokura.webp" alt=""></div>
-                    <div class="swiper-slide"><img src="/images/rusia.webp" alt=""></div>
+                    
+                    <% products.forEach(product => { %>
+                     <div class="swiper-slide"><img src="/images/products/<%= product.image %>" alt=""></div>
+                    <% }) %>
+                    
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
             </div>
 
-            <div class="logo__container">
-                <a href="/"><img class="body__main--logo" src="/images/logo.png" alt="logo"></a>
+              <!-- carrousel desktop -->
+              <div class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <% products.forEach(product => { %>
+                        <div class="swiper-slide">
+                            <img src="/images/products/<%= product.image %>" /> 
+                        </div>
+                    
+                       <% }) %>
+                    
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+
             </div>
 
-            <form class="body__main__form" action="">
+            <form class="body__main__form" action="/search" method="GET">
                 <div class="body__main__containerSearch">
                     <div class="body__main__containerSearchBar">
                         <i class="fas fa-search"></i>
-                        <input class="body__main__containerSearch--searchbar" type="text" name="busqueda" id="busqueda"
+                        <input class="body__main__containerSearch--searchbar" type="text" name="keywords" id="busqueda"
                             placeholder="Buscá artista o evento">
                     </div>
                     <div class="select">
                         <i class="fa-solid fa-caret-down"></i>
-                        <select class="select__options">
-                            <option disabled selected=false>Categorías</option>
-                            <option>categoria 1</option>
-                            <option>categoria 2</option>
-                            <option>categoria 3</option>
-                            <option>categoria 4</option>
-                            <option>categoria 5</option>
-                        </select>
+                        <select class="select__options" aria-label="Default select example" name="category" id="category">
+                            <option value="" selected hidden>Seleccione una categoria</option>
+                            <% categories.forEach(category => { %>
+                            <option value="<%= category.name %>"><%= category.name %></option>
+                        <% }) %>
+                      </select>
                     </div>
                 </div>
             </form>
 
-            <!-- carrousel desktop -->
-            <div class="swiper mySwiper2">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="/images/pelotas.webp" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/images/fab.webp" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/images/sirenita.webp" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/images/qlokura.webp" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/images/rusia.webp" />
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-
+            <% if (locals.userLogin && locals.userLogin.role === "admin") { %>
+            <div class="body__main__div--admin">
+                <a class="body__main__div--admin-button" href="/products/productList">Admin</a>
             </div>
+            <% } %>
+
+          
 
             <section class="body__main--sliderlEventos">
-                <h2>Eventos cerca de ti</h2>
+                <h2>Eventos destacados</h2>
                 <div class="swiper mySwiper3">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="div__card--cercaDeTi">
-                                <img class="div__card--cercaDeTi-img" src="/images/evento1.jpg" alt="">
-                                <p class="div__card--title">Nombre</p>
-                                <p>día 00 mes</p>
-                                <p>Lugar</p>
-                                <a href="/users/productDetail">
-                                    <button class="div__card--cercaDeTi-button">comprar</button>
-                                </a>
+                        <% products.forEach(product => { %>
+                            <div class="swiper-slide">
+                                <div class="div__card--cercaDeTi">
+                                    <img class="div__card--cercaDeTi-img" src="/images/products/<%= product.image %>" alt="">
+                                    <p class="div__card--title"><%= product.name %></p>
+                                    <p><%= product.date %></p>
+                                    <p><%= product.location %></p>
+                                    <a href="/products/productDetail/<%= product.id %>">
+                                        <button class="div__card--cercaDeTi-button">comprar</button>
+                                    </a>
+                                </div> 
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="div__card--cercaDeTi">
-                                <img class="div__card--cercaDeTi-img" src="/images/evento2.jpg" alt="">
-                                <p class="div__card--title"> Nombre </p>
-                                <p>día 00 mes</p>
-                                <p>Lugar</p>
-                                <a href="/users/productDetail">
-                                    <button class="div__card--cercaDeTi-button">Comprar</button>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="div__card--cercaDeTi">
-                                <img class="div__card--cercaDeTi-img" src="/images/evento3.jpg" alt="">
-                                <p class="div__card--title"> Nombre </p>
-                                <p>día 00 mes</p>
-                                <p>Lugar</p>
-                                <a href="/users/productDetail">
-                                    <button class="div__card--cercaDeTi-button">Comprar</button>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="div__card--cercaDeTi">
-                                <img class="div__card--cercaDeTi-img" src="/images/evento4.jpg" alt="">
-                                <p class="div__card--title"> Nombre </p>
-                                <p>día 00 mes</p>
-                                <p>Lugar</p>
-                                <a href="/users/productDetail">
-                                    <button class="div__card--cercaDeTi-button">Comprar</button>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="div__card--cercaDeTi">
-                                <img class="div__card--cercaDeTi-img" src="/images/evento5.jpg" alt="">
-                                <p class="div__card--title"> Nombre </p>
-                                <p>día 00 mes</p>
-                                <p>Lugar</p>
-                                <a href="/users/productDetail">
-                                    <button class="div__card--cercaDeTi-button">Comprar</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                            <% }) %>
+                        
+                   </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
-                    <a href="">Ver todo</a>
-            </section>
+                    <a class="ver-todo" href="/allEvents">Ver todo</a>
+                </section>
 
             <div class="body__main--sections">
 
                 <aside class="body__main--pickup">
-                    <i class="fa-solid fa-location-dot"></i>
                     <a href="">Conocé los puntos de retiro</a>
+                    <i class="fa-solid fa-location-dot"></i>
                 </aside>
 
                 <div class="body__main--sections-actYevents">

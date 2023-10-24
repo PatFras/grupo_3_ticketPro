@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;700;900&display=swap');
-@import './normalize.css';
 @import './general.css';
 @import './index.css';
 @import './login.css';
@@ -8,8 +7,9 @@
 @import './productDetail.css';
 @import './header.css';
 @import './footer.css';
-
-
+@import './productList.css';
+@import './profile.css';
+@import './allEvents.css';
 
 @import './carrousel-mob.css';
 @import './carrousel-desktop.css';
