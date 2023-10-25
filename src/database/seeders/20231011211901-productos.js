@@ -21,7 +21,6 @@ const productsDB = productsJson.map(({ name, price, description, address, image,
     date,
     createdAt: new Date(),
     updatedAt: new Date(),
-    deletedAt: new Date()
   };
 });
 

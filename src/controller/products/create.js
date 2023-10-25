@@ -1,12 +1,16 @@
-const Product = require('../../data/Product');
-const { readJSON, writeJSON } = require('../../data');
 const { validationResult } = require("express-validator");
-
-
+const db = require('../../database/models');
 module.exports = async (req, res) => {
     const errors = validationResult(req);
-    const categories = readJSON('categories.json');
-    const sections = readJSON('sections.json');
+    let categories = await db.Category.findAll();
+    let sections = await db.Section.findAll();
+    if (req.fileValidationError) {
+        let image = {
+            param: 'image',
+            msg: req.fileValidationError,
+        }
+        errors.errors.push(image);
+    }
     if(!errors.isEmpty()) {
         res.render("addProduct", {
             categories,
@@ -14,26 +18,27 @@ module.exports = async (req, res) => {
             errors: errors.mapped(),
             old:req.body });
     }else{
-        const products = readJSON('products.json');
+        //const products = await db.Product.findAll();
+       // console.log(req.body);
+            db.Product.create({
+                name: req.body.name,
+                price: +req.body.price,
+                description: req.body.description,
+                serviceCharge: +req.body.serviceCharge,
+                date: req.body.date,
+                address: req.body.address,
+                location: req.body.location,
+                image: req.file ? req.file.filename : '',
+                createdAt: new Date(),
+                categoryId: req.body.categoryId,
+                sectionId: req.body.sectionId,
+              }).then(product => {  
+                /* console.log(product); */
+                return res.redirect('/products/productList');
+              }).catch(error => {
+                console.log(error);
+                res.redirect('/products/addProduct');
+              });
         
-        const newProductData = {
-            name: req.body.name,
-            price: +req.body.price,
-            category: req.body.category,
-            description: req.body.description,
-            section: req.body.section,
-            address: req.body.address,
-            date: req.body.date,
-            image: req.file ? req.file.filename : '',
-            serviceCharge: +req.body.serviceCharge,
-            location: req.body.location,
-        };
-        
-        const newProduct = new Product(newProductData);
-        
-        products.push(newProduct);
-        writeJSON(products, 'products.json');
-        
-        return res.redirect('/products/productList') ;
     }
 }

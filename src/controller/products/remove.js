@@ -1,16 +1,24 @@
 const fs = require('fs');
-const { readJSON, writeJSON } = require("../../data");
+const db = require('../../database/models');
+const path = require('path');
 
 module.exports = (req,res) => {
-    const products = readJSON('products.json');
-    const modifyProducts = products.filter((product) => {
-        if(product.id == req.params.id){
-            fs.existsSync(`./public/images/${product.image}`) &&
-			fs.unlinkSync(`./public/images/${product.image}`);
-        }
-        return product.id !== +req.params.id;
-    });
-    writeJSON(modifyProducts, 'products.json');
-    
-    return res.redirect('/products/productList');
+
+        const id = +req.params.id
+        db.Product.findByPk(id)
+        .then(product => {
+            let route = (data) => fs.existsSync(path.join(__dirname, '..', 'public', 'images', 'products', data))
+            if (route(product.image)) {
+                fs.unlinkSync(path.join(__dirname, '..', 'public', 'img', 'products', product.image))
+            }
+        })
+        .then(response => {
+            db.Product.destroy({
+                where: {id:id}
+            })
+            .then(redireccion => {
+                res.redirect('/products/productList')
+            })
+        })
+           
 }

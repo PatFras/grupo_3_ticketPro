@@ -31,10 +31,11 @@ module.exports = (sequelize, DataTypes) => {
     location: DataTypes.STRING,
     image: DataTypes.STRING,
     categoryId: DataTypes.INTEGER,
-    sectionId: DataTypes.INTEGER
+    sectionId: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'Product',
+    timestamps: true,
   });
   return Product;
 };

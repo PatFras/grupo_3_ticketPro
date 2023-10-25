@@ -38,7 +38,8 @@ module.exports = {
         references:{
           model:{
             tableName: 'Categories'
-          }
+          },
+          key:'id'
         }
       },
       sectionId: {
@@ -46,7 +47,8 @@ module.exports = {
         references:{
           model:{
             tableName: 'Sections'
-          }
+          },
+          key:'id'
         }
       },
       createdAt: {
@@ -56,15 +58,11 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      },
-      deletedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
       }
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Products');
+    await queryInterface.dropTable('Product');
   }
 };
 

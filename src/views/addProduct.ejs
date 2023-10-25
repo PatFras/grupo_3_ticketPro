@@ -67,7 +67,7 @@
                                 <select class="form-select" aria-label="Default select example" name="category" id="category">
                                     <option value="" selected hidden>Seleccione una categoria</option>
                                     <% categories.forEach(category => { %>
-                                        <option value="<%= category.name %>"><%= category.name %></option>
+                                        <option value="<%= category.id %>"><%= category.name %></option>
                                     <% }) %>
                                 </select>
                                 <% if (locals.errors && locals.errors.category) { %>
@@ -80,7 +80,7 @@
                                 <select class="form-select" aria-label="Default select example" name="section" id="section">
                                     <option value="" selected hidden>Seleccione una seccion</option>
                                     <% sections.forEach(section => { %>
-                                        <option value="<%= section.name %>"><%= section.name %></option>
+                                        <option value="<%= section.id %>"><%= section.name %></option>
                                     <% }) %>
                                 </select>
                                 <% if (locals.errors && locals.errors.section) { %>

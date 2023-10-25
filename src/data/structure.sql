@@ -54,7 +54,6 @@ CREATE TABLE `products` (
   `sectionsId` int DEFAULT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
-  `deletedAt` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `categoryId` (`categoryId`),
   KEY `sectionsId` (`sectionsId`),
