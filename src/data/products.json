@@ -2,9 +2,9 @@
    {
       "id": 1,
       "name": "Nenagenix",
-      "description": "XLR Club - San Miguel, Sabado 01 de Septiembre 19:00 Hs",
+      "description": "XLR Club",
       "location": "San Miguel",
-      "address": " Tribulato",
+      "address": " Tribulato 654",
       "category": "show",
       "price": 2000,
       "serviceCharge": "10",
@@ -15,7 +15,7 @@
    {
       "id": 2,
       "name": "Palito Ortega",
-      "description": "Auditorio Ángel Bustelo - Mendoza, Viernes 17 de Noviembre 22:00 Hs",
+      "description": "Auditorio Ángel Bustelo",
       "location": "Mendoza",
       "address": " Mtro. Joaquín González 40",
       "category": "show",
@@ -28,7 +28,7 @@
    {
       "id": 3,
       "name": "VIRUS",
-      "description": "Mood Live, NQN - Sábado 16 de Septiembre - 21:00hs",
+      "description": "Mood Live",
       "location": "Neuquen",
       "address": " Mtro. Joaquín González 40",
       "category": "show",
@@ -41,7 +41,7 @@
    {
       "id": 4,
       "name": "Axel",
-      "description": "Teatro Sarmiento - San Juan, 16 de Noviembre - 22.00 hs",
+      "description": "Teatro Sarmiento",
       "location": "San Juan",
       "address": " Av. Leandro N. Alem Norte 1",
       "category": "show",
@@ -54,7 +54,7 @@
    {
       "id": 5,
       "name": "Bach: obra completa",
-      "description": "Centro Cultural Kirchner - CABA, 16 de Noviembre - 22.00 hs",
+      "description": "Centro Cultural Kirchner",
       "location": "CABA",
       "address": "Sarmiento 151",
       "category": "teatro",
@@ -67,7 +67,7 @@
    {
       "id": 6,
       "name": "Cuarteto de nos",
-      "description": "Estadio GEI - Ituzaingo, 5 de Octubre - 19.00 hs",
+      "description": "Estadio GEI",
       "location": "Ituzaingo",
       "address": "Alvear 1106",
       "category": "show",
@@ -80,7 +80,7 @@
    {
       "id": 7,
       "name": "Puro Diseño",
-      "description": "Feria puro Diseño La Rural - Palermo, 1,2 y 3 de Septiembre - 21.00 hs",
+      "description": "Feria puro Diseño La Rural",
       "location": "Ituzaingo",
       "address": "Av. Sarmiento 2704",
       "category": "festival",
@@ -93,7 +93,7 @@
    {
       "id": 8,
       "name": "Barbie",
-      "description": "Teatro Seminari - Escobar, 30 de Agosto - 13.00 hs",
+      "description": "Teatro Seminari",
       "location": "Escobar",
       "address": "Mitre 451",
       "category": "cine",
@@ -106,7 +106,7 @@
    {
       "id": 9,
       "name": "Hilda",
-      "description": "Teatro Seminari - Escobar, 08 de Septiembre - 21.30 hs",
+      "description": "Teatro Seminari",
       "location": "Escobar",
       "address": "Mitre 451",
       "category": "cine",
@@ -119,13 +119,13 @@
    {
       "id": 10,
       "name": "Fest. Bandera",
-      "description": "Ex rural - Rosario, 7 de Octubre - 14.30 hs",
+      "description": "Ex rural",
       "location": "Rosario",
       "address": "Mitre 451",
-      "category": "",
+      "category": "festival",
       "price": 15000,
       "serviceCharge": "10",
-      "section": "",
+      "section": "Disponible",
       "date": "2023-10-07",
       "image": "1693867953407_products_.webp"
    }

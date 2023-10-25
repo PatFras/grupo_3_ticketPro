@@ -9,12 +9,12 @@
             <div class="col-12 col-md-8 mx-auto mt-5" id="formAdd">
                 <div class="card shadow" style="background-color: #000B27; color: white;">
                     <div class="card-header" style="text-align: center;">
-                        <h4 class="card-title">Edit products</h4>
+                        <h4 class="card-title">Editar producto</h4>
                     </div>
                     <div class="card-body" style="display: inline-block;">
                         <form action="/products/update/<%= id %>?_method=PUT" method="POST" class="row" enctype="multipart/form-data">
                             <div class="col-12 col-md-4 mb-3">
-                                <label for="name" class="form-label">Name</label>
+                                <label for="name" class="form-label">Nombre</label>
                                 <input type="text" class="form-control" id="name" placeholder="Name of the product" name="name" value="<%= name %>">
                                 <% if (locals.errors && locals.errors.name) { %>
                                     <small class="warning"><%= locals.errors.name.msg %></small>
@@ -22,7 +22,7 @@
                             </div>
 
                             <div class="col-12 col-md-4 mb-3">
-                                <label for="price" class="form-label">Price</label>
+                                <label for="price" class="form-label">Precio</label>
                                 <input type="number" class="form-control" id="price" name="price"  value="<%= price %>">
                                 <% if (locals.errors && locals.errors.price) { %>
                                     <small class="warning"><%= locals.errors.price.msg %></small>
@@ -30,7 +30,7 @@
                             </div>
 
                             <div class="col-12 col-md-4 mb-3">
-                                <label for="serviceCharge" class="form-label">Service Charge</label>
+                                <label for="serviceCharge" class="form-label">Cargo de servicio</label>
                                 <input type="number" class="form-control" id="serviceCharge" name="serviceCharge" value="<%= serviceCharge %>">
                             </div>
                             <% if (locals.errors && locals.errors.serviceCharge) { %>
@@ -38,7 +38,7 @@
                             <% } %>
 
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="address" class="form-label">Address</label>
+                                <label for="address" class="form-label">Dirección</label>
                                 <input type="text" class="form-control" id="address" name="address" value="<%= address %>">
                                 <% if (locals.errors && locals.errors.address) { %>
                                     <small class="warning"><%= locals.errors.address.msg %></small>
@@ -46,7 +46,7 @@
                             </div>
 
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="location" class="form-label">Location</label>
+                                <label for="location" class="form-label">Ciudad</label>
                                 <input type="text" class="form-control" id="location" name="location" value="<%= location %>">
                                 <% if (locals.errors && locals.errors.location) { %>
                                     <small class="warning"><%= locals.errors.location.msg %></small>
@@ -54,7 +54,7 @@
                             </div>
 
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="date" class="form-label">Date</label>
+                                <label for="date" class="form-label">Fecha</label>
                                 <% const formattedDate = (date instanceof Date) ? date.toISOString().split('T')[0] : date; %>
                                 <input type="date" class="form-control" id="date" name="date" value="<%= formattedDate %>">
                                 <% if (locals.errors && locals.errors.date) { %>
@@ -95,7 +95,7 @@
                             </div>
     
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="formFile" class="form-label">Add image</label>
+                                <label for="formFile" class="form-label">Agregar imagen</label>
                                 <input type="file" class="form-control" id="formFile" name="image">
                                 <% if (locals.errors && locals.errors.image) { %>
                                     <small class="warning"><%= locals.errors.image.msg %></small>
@@ -103,7 +103,7 @@
                             </div> 
 
                             <div class="col-12 mb-3">
-                                <label for="description" class="form-label">Description</label>
+                                <label for="description" class="form-label">Descripción</label>
                                 <textarea name="description" id="description" class="form-control" style="resize: none;"><%= description %></textarea>
                                 <% if (locals.errors && locals.errors.description) { %>
                                     <small class="warning"><%= locals.errors.description.msg %></small>
@@ -111,8 +111,8 @@
                             </div>                            
 
                             <div class="col-12 d-flex justify-content-end gap-2 mb-3">
-                                <button type="submit" class="btn" style="background-color: #FE7F2D; color: white;">Edit
-                                    product</button>
+                                <button type="submit" class="btn" style="background-color: #FE7F2D; color: white;">Editar
+                                    producto</button>
                             </div>
                         </form>
                     </div>

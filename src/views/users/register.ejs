@@ -15,7 +15,7 @@
                 <% if (locals.errors && errors.userName) { %>
                     <small><%= errors.userName.msg %> </small>
                 <% } %>        
-                <input type="email" name="email" placeholder="Email" value="<%= locals.old && old.email ? old.email: null ;%>">
+                <input type="email" name="email" placeholder="Correo" value="<%= locals.old && old.email ? old.email: null ;%>">
                 <% if (locals.errors && errors.email) { %>
                     <small><%= errors.email.msg %> </small>
                 <% } %>   

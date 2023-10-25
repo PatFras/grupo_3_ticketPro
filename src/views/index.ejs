@@ -59,7 +59,7 @@
 
             <% if (locals.userLogin && locals.userLogin.role === 1) { %>
             <div class="body__main__div--admin">
-                <a class="body__main__div--admin-button" href="/products/productList">Admin</a>
+                <a class="body__main__div--admin-button" href="/products/productList">Administrador</a>
             </div>
             <% } %>
 
@@ -77,7 +77,7 @@
                                     <p><%= moment(product.date).format('YYYY-MM-DD') %></p>
                                     <p><%= product.location %></p>
                                     <a href="/products/productDetail/<%= product.id %>">
-                                        <button class="div__card--cercaDeTi-button">comprar</button>
+                                        <button class="div__card--cercaDeTi-button">Comprar</button>
                                     </a>
                                 </div> 
                             </div>
