@@ -57,7 +57,7 @@
                 </div>
             </form>
 
-            <% if (locals.userLogin && locals.userLogin.role === "admin") { %>
+            <% if (locals.userLogin && locals.userLogin.role === 1) { %>
             <div class="body__main__div--admin">
                 <a class="body__main__div--admin-button" href="/products/productList">Admin</a>
             </div>

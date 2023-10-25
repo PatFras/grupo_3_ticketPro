@@ -10,11 +10,11 @@ var router = express.Router();
 router
     .get('/productCart', productsController.productCart)
     .get('/productDetail/:id', productsController.productDetail)
-    .get('/productList', /* adminCheck, */ productsController.productList)
-    .get('/addProduct', /* adminCheck, */ productsController.addProduct)
-    .post('/add',[/* adminCheck, */upload.single('image'),addProductValidator], productsController.create)
+    .get('/productList',  adminCheck, productsController.productList)
+    .get('/addProduct',  adminCheck, productsController.addProduct)
+    .post('/add',[adminCheck,upload.single('image'),addProductValidator], productsController.create)
     .get('/edit/:id', adminCheck, productsController.edit)
-    .put('/update/:id', [/* adminCheck, */ upload.single('image')], editProductvalidator, productsController.update)
-    .delete('/remove/:id', /* adminCheck, */ productsController.remove)
+    .put('/update/:id', [adminCheck, upload.single('image')], editProductvalidator, productsController.update)
+    .delete('/remove/:id', adminCheck, productsController.remove)
 
 module.exports = router;
