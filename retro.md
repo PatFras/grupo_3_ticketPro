@@ -75,7 +75,6 @@
 ## Empezar a hacer 
 • Ultimar detalles por fuera del sprint
 • Ponerle fecha límite a cada tarea (realizarla a tiempo)
-• No atrasar el trabajo del compañero/a con mi proscatinación
 
 ## Hacer menos
 • Procastinar
