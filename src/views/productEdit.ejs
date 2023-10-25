@@ -55,36 +55,43 @@
 
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="date" class="form-label">Date</label>
-                                <input type="date" class="form-control" id="date" name="date" value="<%= date %>">
+                                <% const formattedDate = (date instanceof Date) ? date.toISOString().split('T')[0] : date; %>
+                                <input type="date" class="form-control" id="date" name="date" value="<%= formattedDate %>">
                                 <% if (locals.errors && locals.errors.date) { %>
                                     <small class="warning"><%= locals.errors.date.msg %></small>
                                 <% } %>
-                            </div> 
+                            </div>
+                            
 
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="category" class="form-label">Category</label>
-                                <select class="form-select" aria-label="Default select example" name="category" id="category">
-                                    <option value="" selected hidden>Seleccione una categoria</option>
-                                    <% categories.forEach(category => { %>
-                                        <option value="<%= category.name %>"><%= category.name %></option>
+                                <label for="categoryId" class="form-label">Categoría</label>
+                                <select class="form-select"
+                                    aria-label="Default select example"
+                                    name="categoryId"
+                                    id="categoryId">
+                                    <% categories.forEach(category=> { %>
+                                    <option <%=category.id===categoryId &&
+                                        'selected' %> value="<%= category.id
+                                        %>
+                                        "><%= category.name %>
+                                    </option>
                                     <% }) %>
                                 </select>
-                                <% if (locals.errors && locals.errors.category) { %>
-                                    <small class="warning"><%= locals.errors.category.msg %></small>
-                                <% } %>
                             </div>
 
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="section" class="form-label">Section</label>
-                                <select class="form-select" aria-label="Default select example" name="section" id="section">
-                                    <option value="" selected hidden>Seleccione una seccion</option>
-                                    <% sections.forEach(section => { %>
-                                        <option value="<%= section.name %>"><%= section.name %></option>
+                            <div class="col-12 col-md-4 mb-3">
+                                <label for="sectionId" class="form-label">Sección</label>
+                                <select class="form-select"
+                                    aria-label="Default select example"
+                                    name="sectionId"
+                                    id="sectionId">
+                                    <% sections.forEach(section=> { %>
+                                    <option value="<%= section.id %>" <%=sectionId===section.id
+                                        && 'selected' %>><%=
+                                        section.name %>
+                                    </option>
                                     <% }) %>
                                 </select>
-                                <% if (locals.errors && locals.errors.section) { %>
-                                    <small class="warning"><%= locals.errors.section.msg %></small>
-                                <% } %>
                             </div>
     
                             <div class="col-12 col-md-6 mb-3">
