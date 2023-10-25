@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head') %>
+
+<%- include('../partials/head') %>
 
   <body class="profile">
     <div class="profile_container">
@@ -14,15 +15,15 @@
           <% if (locals.errors && errors.name) { %>
             <small><%= errors.name.msg %></small>
           <% } %>
-          <input type="email" name="email" placeholder="Correo" value="<%= email %>">
+          <input type="email" name="email" placeholder="Email" value="<%= email %>">
           <% if (locals.errors && errors.email) { %>
             <small><%= errors.email.msg %></small>
           <% } %>
-          <input type="password" name="password" placeholder="Contraseña">
+          <input type="password" name="password" placeholder="Password">
           <% if (locals.errors && errors.password) { %>
             <small><%= errors.password.msg %></small>
           <% } %>
-          <input type="password" name="password2" placeholder="Reingresar contraseña">
+          <input type="password" name="password2" placeholder="Repeat password">
           <% if (locals.errors && errors.password2) { %>
             <small><%= errors.password2.msg %></small>
           <% } %>
@@ -30,10 +31,13 @@
         <div class="profile_form-buttons">
           <button class="profile_form-buttons-profile" type="submit">Actualizar</button>
         </div>
-        <% if (successMsg === 1) { %>
+
+        <% if (successMsg===1) { %>
           <span class="profile-successMsg">¡Tus datos se actualizaron exitosamente!</span>
-        <% } %>
+          <% } %>
       </form>
     </div>
+
   </body>
-</html> 
+
+</html>
