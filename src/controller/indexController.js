@@ -1,5 +1,6 @@
 const db = require('../database/models');
 const { Op } = require('sequelize');
+const moment = require('moment');
 
 module.exports = {
     index : (req,res) => {   
@@ -10,7 +11,8 @@ module.exports = {
         .then(([products,categories]) => {
             return res.render('index', {
                 products,
-                categories
+                categories,
+                moment
             })
         }).catch(error => console.log(error))
     },
@@ -25,7 +27,8 @@ module.exports = {
         .then(results => {
             return res.render('searchResults', {
                 results,
-                keywords: req.query.keywords
+                keywords: req.query.keywords,
+                moment
             });
         })       
     },
@@ -34,7 +37,8 @@ module.exports = {
         Promise.all([products])
         .then(([products]) => {
             return res.render('allEvents', {
-                products
+                products,
+                moment
             })
         })       
     }
