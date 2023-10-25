@@ -26,10 +26,12 @@ module.exports = (req, res) => {
     }
   )
   .then(response => {
-    res.render('users/profile', { ...user, successMsg });
+   
+    res.render('users/profile', { email: user.email, ...user, successMsg });
   })
   .catch(error => {
     console.error(error);
-    res.render('users/profile', { ...user, successMsg });
+  
+    res.render('users/profile', { email: user.email, ...user, successMsg });
   });
 };
