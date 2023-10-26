@@ -7,7 +7,6 @@ module.exports = (req, res) => {
   let successMsg = 0;
 
   if (!errors.isEmpty()) {
-  
     return res.render('users/profile', { errors: errors.array(), ...req.body, successMsg });
   }
 
@@ -22,16 +21,22 @@ module.exports = (req, res) => {
     },
     {
       where: {
-        id: user.id
+        id: req.session.userLogin.id
       }
     }
   )
   .then(response => {
-    res.redirect('/'); 
+    
+    req.session.userLogin.name = req.body.name;
+   
+    res.locals.userLogin.name = req.body.name;
+
+    res.redirect('/');
   })
   .catch(error => {
     console.error(error);
-   
+
     res.render('users/profile', { email: user.email, ...user, successMsg, errors: [{ msg: 'Error al actualizar el perfil.' }] });
   });
 };
+
