@@ -1,21 +1,22 @@
 const { validationResult } = require("express-validator");
 const db = require("../../database/models");
-const {hashSync} = require('bcryptjs');
+const { hashSync } = require("bcryptjs");
 
 module.exports = (req, res) => {
   const errors = validationResult(req);
 
   if (errors.isEmpty()) {
-    const { userName,email,password } = req.body;
+    const { name, email, password } = req.body;
     db.User.create({
-      name : userName.trim(),
-      email : email.trim(),
-      password : hashSync(password,10),
-      roleId : 2,
+      name: name.trim(),
+      email: email.trim(),
+      password: hashSync(password, 10),
+      roleId: 2,
     })
-    .then(() => {
-      return res.redirect("login");
-    }).catch(error => console.log(error))
+      .then(() => {
+        return res.redirect("login");
+      })
+      .catch((error) => console.log(error));
   } else {
     return res.render("users/register", {
       errors: errors.mapped(),

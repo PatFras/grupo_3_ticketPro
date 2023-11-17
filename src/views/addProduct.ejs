@@ -1,117 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-<link rel="stylesheet" href="/stylesheets/addProduct.css">
-<%-include('partials/head')%>
-    <body class="addProduct">
-        <%-include('partials/header')%>
-            <div class="col-12 col-md-8 mx-auto mt-5" id="formAdd">
-                <div class="card shadow" style="background-color: #000B27; color: white;">
-                    <div class="card-header" style="text-align: center;">
-                        <h4 class="card-title">Agregar producto</h4>
-                    </div>
-                    <div class="card-body" style="display: inline-block;">
-                        <form action="/products/add" method="POST" class="row" enctype="multipart/form-data">
-                            
-                            <div class="col-12 col-md-4 mb-3">
-                                <label for="name" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="name" placeholder="Name of the product" name="name">
-                                <% if (locals.errors && locals.errors.name) { %>
-                                    <small class="warning"><%= locals.errors.name.msg %></small>
-                                <% } %>
-                            </div>
-
-                            <div class="col-12 col-md-4 mb-3">
-                                <label for="price" class="form-label">Precio</label>
-                                <input type="number" class="form-control" id="price" name="price">
-                                <% if (locals.errors && locals.errors.price) { %>
-                                    <small class="warning"><%= locals.errors.price.msg %></small>
-                                <% } %>
-                            </div>
-
-                            <div class="col-12 col-md-4 mb-3">
-                                <label for="serviceCharge" class="form-label">Cargo de servicio</label>
-                                <input type="number" class="form-control" id="serviceCharge" name="serviceCharge">
-                            </div>
-                            <% if (locals.errors && locals.errors.serviceCharge) { %>
-                                <small class="warning"><%= locals.errors.serviceCharge.msg %></small>
-                            <% } %>
-
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="address" class="form-label">Dirección</label>
-                                <input type="text" class="form-control" id="address" name="address">
-                                <% if (locals.errors && locals.errors.address) { %>
-                                    <small class="warning"><%= locals.errors.address.msg %></small>
-                                <% } %>
-                            </div>
-
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="location" class="form-label">Ciudad</label>
-                                <input type="text" class="form-control" id="location" name="location">
-                                <% if (locals.errors && locals.errors.location) { %>
-                                    <small class="warning"><%= locals.errors.location.msg %></small>
-                                <% } %>
-                            </div>
-
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="date" class="form-label">Fecha</label>
-                                <input type="date" class="form-control" id="date" name="date">
-                                <% if (locals.errors && locals.errors.date) { %>
-                                    <small class="warning"><%= locals.errors.date.msg %></small>
-                                <% } %>
-                            </div> 
-
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="category" class="form-label">Categoría</label>
-                                <select class="form-select" aria-label="Default select example" name="category" id="category">
-                                    <option value="" selected hidden>Seleccione una categoria</option>
-                                    <% categories.forEach(category => { %>
-                                        <option value="<%= category.id %>"><%= category.name %></option>
-                                    <% }) %>
-                                </select>
-                                <% if (locals.errors && locals.errors.category) { %>
-                                    <small class="warning"><%= locals.errors.category.msg %></small>
-                                <% } %>
-                            </div>
-
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="section" class="form-label">Sección</label>
-                                <select class="form-select" aria-label="Default select example" name="section" id="section">
-                                    <option value="" selected hidden>Seleccione una sección</option>
-                                    <% sections.forEach(section => { %>
-                                        <option value="<%= section.id %>"><%= section.name %></option>
-                                    <% }) %>
-                                </select>
-                                <% if (locals.errors && locals.errors.section) { %>
-                                    <small class="warning"><%= locals.errors.section.msg %></small>
-                                <% } %>
-                            </div>
-    
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="formFile" class="form-label">Agregar imagen</label>
-                                <input type="file" class="form-control" id="formFile" name="image">
-                                <% if (locals.errors && locals.errors.image) { %>
-                                    <small class="warning"><%= locals.errors.image.msg %></small>
-                                <% } %>
-                            </div> 
-
-                            <div class="col-12 mb-3">
-                                <label for="description" class="form-label">Descripción</label>
-                                <textarea name="description" id="description" class="form-control" style="resize: none;"></textarea>
-                                <% if (locals.errors && locals.errors.description) { %>
-                                    <small class="warning"><%= locals.errors.description.msg %></small>
-                                <% } %>
-                            </div>                            
-
-                            <div class="col-12 d-flex justify-content-end gap-2 mb-3">
-                                <button type="submit" class="btn" style="background-color: #FE7F2D; color: white;">Agregar producto</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="/stylesheets/addProduct.css" />
+  <%-include('partials/head')%>
+  <body class="addProduct">
+    <%-include('partials/header')%>
+    <div class="col-12 col-md-8 mx-auto mt-5" id="formAdd">
+      <div class="card shadow" style="background-color: #000b27; color: white">
+        <div class="card-header" style="text-align: center">
+          <h4 class="card-title">Agregar producto</h4>
+        </div>
+        <div class="card-body" style="display: inline-block">
+          <form
+            action="/products/add"
+            method="POST"
+            class="row"
+            enctype="multipart/form-data"
+            id="formAdd"
+          >
+            <div class="col-12 col-md-4 mb-3">
+              <label for="name" class="form-label">Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Name of the product"
+                name="name"
+              />
+              <small class="warning" id="msg-error-name">
+                <%= locals.errors && (errors.name && errors.name.msg) %>
+              </small>
             </div>
-            <%-include('partials/footer')%>
-    </body>
 
+            <div class="col-12 col-md-4 mb-3">
+              <label for="price" class="form-label">Precio</label>
+              <input
+                type="number"
+                class="form-control"
+                id="price"
+                name="price"
+              />
+              <small class="warning" id="msg-error-price">
+                <%= locals.errors && (errors.price && errors.price.msg) %>
+              </small>
+            </div>
+
+            <div class="col-12 col-md-4 mb-3">
+              <label for="serviceCharge" class="form-label"
+                >Cargo de servicio</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="serviceCharge"
+                name="serviceCharge"
+              />
+
+              <small class="warning" id="msg-error-serviceCharge">
+                <%= locals.errors && (errors.serviceCharge &&
+                errors.serviceCharge.msg) %>
+              </small>
+            </div>
+            <div class="col-12 col-md-6 mb-3">
+              <label for="address" class="form-label">Dirección</label>
+              <input
+                type="text"
+                class="form-control"
+                id="address"
+                name="address"
+              />
+              <small class="warning" id="msg-error-address">
+                <%= locals.errors && (errors.address && errors.address.msg) %>
+              </small>
+            </div>
+
+            <div class="col-12 col-md-6 mb-3">
+              <label for="location" class="form-label">Ciudad</label>
+              <input
+                type="text"
+                class="form-control"
+                id="location"
+                name="location"
+              />
+              <small class="warning" id="msg-error-location">
+                <%= locals.errors && (errors.location && errors.location.msg) %>
+              </small>
+            </div>
+
+            <div class="col-12 col-md-6 mb-3">
+              <label for="date" class="form-label">Fecha</label>
+              <input type="date" class="form-control" id="date" name="date" />
+              <small class="warning" id="msg-error-date">
+                <%= locals.errors && (errors.date && errors.date.msg) %>
+              </small>
+            </div>
+
+            <div class="col-12 col-md-6 mb-3">
+              <label for="category" class="form-label">Categoría</label>
+              <select
+                class="form-select"
+                aria-label="Default select example"
+                name="category"
+                id="category"
+              >
+                <option value="" selected hidden>
+                  Seleccione una categoria
+                </option>
+                <% categories.forEach(category => { %>
+                <option value="<%= category.id %>"><%= category.name %></option>
+                <% }) %>
+              </select>
+              <small class="warning" id="msg-error-category">
+                <%= locals.errors && (errors.category && errors.category.msg) %>
+              </small>
+            </div>
+
+            <div class="col-12 col-md-6 mb-3">
+              <label for="section" class="form-label">Sección</label>
+              <select
+                class="form-select"
+                aria-label="Default select example"
+                name="section"
+                id="section"
+              >
+                <option value="" selected hidden>Seleccione una sección</option>
+                <% sections.forEach(section => { %>
+                <option value="<%= section.id %>"><%= section.name %></option>
+                <% }) %>
+              </select>
+              <small class="warning" id="msg-error-section">
+                <%= locals.errors && (errors.section && errors.section.msg) %>
+              </small>
+            </div>
+
+            <div class="col-12 col-md-6 mb-3">
+              <label for="formFile" class="form-label">Agregar imagen</label>
+              <input
+                type="file"
+                class="form-control"
+                id="formFile"
+                name="image"
+              />
+              <small class="warning" id="msg-error-image">
+                <%= locals.errors && (errors.image && errors.image.msg) %>
+              </small>
+            </div>
+
+            <div class="col-12 mb-3">
+              <label for="description" class="form-label">Descripción</label>
+              <textarea
+                name="description"
+                id="description"
+                class="form-control"
+                style="resize: none"
+              ></textarea>
+              <small class="warning" id="msg-error-description">
+                <%= locals.errors && (errors.description &&
+                errors.description.msg) %>
+              </small>
+
+              <small class="warning" id="msg-error-empty" %> </small>
+            </div>
+
+            <div class="col-12 d-flex justify-content-end gap-2 mb-3">
+              <button
+                type="submit"
+                class="btn"
+                style="background-color: #fe7f2d; color: white"
+              >
+                Agregar producto
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <%-include('partials/footer')%>
+    <script src="/js/addProduct.js"></script>
+  </body>
 </html>

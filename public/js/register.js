@@ -1,12 +1,12 @@
 const $ = (id) => document.getElementById(id);
 
 window.onload = function () {
-  $("userName").addEventListener("focus", function () {
+  $("name").addEventListener("focus", function () {
     $("msg-error-name").innerHTML = null;
     this.classList.remove("is-invalid");
   });
 
-  $("userName").addEventListener("DOMContentLoaded", function (e) {
+  $("name").addEventListener("blur", function (e) {
     switch (true) {
       case !this.value.trim():
         $("msg-error-name").innerHTML = "El nombre es obligatorio";
@@ -28,7 +28,7 @@ window.onload = function () {
     }
   });
 
-  $("email").addEventListener("DOMContentLoaded", function (e) {
+  $("email").addEventListener("blur", function (e) {
     switch (true) {
       case !this.value.trim():
         $("msg-error-email").innerHTML = "El email es obligatorio";
@@ -65,7 +65,7 @@ window.onload = function () {
     }
   });
 
-  $("password").addEventListener("DOMContentLoaded", function (e) {
+  $("password").addEventListener("blur", function (e) {
     switch (true) {
       case !this.value.trim():
         $("msg-error-password").innerHTML = "La contraseña es obligatoria";
@@ -91,12 +91,12 @@ window.onload = function () {
     this.classList.remove("is-invalid");
   });
 
-  $("password2").addEventListener("DOMContentLoaded", function () {
+  $("password2").addEventListener("blur", function () {
     $("msg-error-password2").innerHTML = null;
     this.classList.remove("is-invalid");
   });
 
-  $("password2").addEventListener("DOMContentLoaded", function (e) {
+  $("password2").addEventListener("blur", function (e) {
     switch (true) {
       case !this.value.trim():
         $("msg-error-password2").innerHTML = "Debes confirmar tu contraseña";
@@ -114,7 +114,7 @@ window.onload = function () {
     }
   });
 
-  $("formAdd").addEventListener("DOMContentLoaded", function (e) {
+  $("formAdd").addEventListener("blur", function (e) {
     e.preventDefault();
 
     const elementsForm = $("formAdd").elements;

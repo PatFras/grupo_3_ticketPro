@@ -12,22 +12,18 @@
         <form class="register_form" action="" method="POST">
           <div class="register_form-inputs">
             <input type="email" name="email" placeholder="Correo" id="email" />
-            <% if (locals.errors && errors.email) { %>
-            <small class="warning" id="msg-error-email"
-              ><%= errors.email.msg %>
+            <small class="warning" id="msg-error-email">
+              <%= locals.errors && (errors.email && errors.email.msg) %>
             </small>
-            <% } %>
             <input
               type="password"
               name="password"
               placeholder="Contraseña"
               id="password"
             />
-            <% if (locals.errors && locals.errors.password) { %>
-            <small class="warning" id="msg-error-password"
-              ><%= locals.errors.password.msg %>
+            <small class="warning" id="msg-error-password">
+              <%= locals.errors && (errors.password && errors.password.msg) %>
             </small>
-            <% } %>
             <div class="checkbox">
               <input type="checkbox" value="" id="remember" name="remember" />
               <label for="remember">Recordarme</label>

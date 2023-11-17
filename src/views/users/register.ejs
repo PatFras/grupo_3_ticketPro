@@ -11,14 +11,13 @@
         <div class="register_form-inputs">
           <input
             type="text"
-            name="userName"
-            id="userName"
+            name="name"
+            id="name"
             placeholder="Nombre de usuario"
-            class="form-control <%= locals.errors && (errors.userName && 'is-invalid') %>"
           />
-          <% if (locals.errors && errors.userName) { %>
-          <small id="msg-error-name"><%= errors.userName.msg %> </small>
-          <% } %>
+          <small id="msg-error-name">
+            <%= locals.errors && (errors.name && errors.name.msg) %>
+          </small>
           <input
             type="email"
             name="email"
@@ -26,9 +25,9 @@
             placeholder="Correo"
             class="form-control <%= locals.errors && (errors.email && 'is-invalid') %>"
           />
-          <% if (locals.errors && errors.email) { %>
-          <small id="msg-error-email"><%= errors.email.msg %> </small>
-          <% } %>
+          <small id="msg-error-email">
+            <%= locals.errors && (errors.email && errors.email.msg) %>
+          </small>
           <input
             type="password"
             name="password"
@@ -36,9 +35,9 @@
             placeholder="Contraseña"
             class="form-control <%= locals.errors && (errors.password && 'is-invalid') %>"
           />
-          <% if (locals.errors && errors.password) { %>
-          <small id="msg-error-password"><%= errors.password.msg %> </small>
-          <% } %>
+          <small id="msg-error-password">
+            <%= locals.errors && (errors.password && errors.password.msg) %>
+          </small>
           <input
             type="password"
             name="password2"
@@ -46,9 +45,9 @@
             placeholder="Reingresar contraseña"
             class="form-control <%= locals.errors && (errors.password2 && 'is-invalid') %>"
           />
-          <% if (locals.errors && errors.password2) { %>
-          <small id="msg-error-password2"><%= errors.password2.msg %> </small>
-          <% } %>
+          <small id="msg-error-password2">
+            <%= locals.errors && (errors.password2 && errors.password2.msg) %>
+          </small>
 
           <small class="text-danger ms-2" id="msg-error-empty" %> </small>
         </div>
