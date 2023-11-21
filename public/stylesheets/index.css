@@ -319,11 +319,13 @@ body {
 
   .body__main__containerSearchBar i {
     color: var(--colorTurquesa);
+    padding-top: 3px;
     padding-right: 8px;
   }
 
   .body__main__containerSearch--searchbar {
     color: var(--colorBlanco);
+    margin-right: 3px;
   }
 
   .select {

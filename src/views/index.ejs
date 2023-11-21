@@ -38,13 +38,14 @@
 
             </div>
 
-            <form class="body__main__form" action="/search" method="GET">
+            <form id="searchForm" class="body__main__form" action="/search" method="GET">
                 <div class="body__main__containerSearch">
                     <div class="body__main__containerSearchBar">
                         <i class="fas fa-search"></i>
                         <input class="body__main__containerSearch--searchbar" type="text" name="keywords" id="busqueda"
                             placeholder="Buscá artista o evento">
-                    </div>
+                            <small id="searchError" style="color: red; font-size: 11px;"></small>
+                        </div>
                     <div class="select">
                         <i class="fa-solid fa-caret-down"></i>
                         <select class="select__options" aria-label="Default select example" name="category" id="category">
