@@ -18,10 +18,6 @@
 
 ### Patricio Frascaroli, 32 años. Vivo en Tandil, Bs As. Actualmente curso el primer año de la Tecnicatura en Desarrollo y Análisis de Aplicaciones.
 
-### Roberto Zalazar, 40 años. Vivo en Salta, Argentina. Actualmente curso  Desarrollo Web Full Stack en la Fundación Formar.
-
-### Camila Guerrero, 19 años. Vivo en Cordoba, Argentina. Actualmente cursando Desarrollo Web Full Stack, Salesforce.
-
 ## Referencias del mercado
 
 ### Sitio/s por la estetica que presentan: https://www.allacecess.com.ar/ - https://www.ticketle.com.ar/ - https://www.paseshow.com.ar/
