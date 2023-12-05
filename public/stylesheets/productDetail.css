@@ -115,7 +115,7 @@
 }
 .productdetail_main-description-item{
     display: flex;
-    align-items: center;   
+    align-items: flex-start;   
     font-size:12px;
     gap: 3px;
 }
@@ -154,6 +154,11 @@
 
 
 @media(min-width:768px){
+.detail--container {
+    min-width: 95%;
+    max-width: 95%;
+}
+
     .detail-card {
         margin: 40px 20%;
         width: 45%;
@@ -175,15 +180,12 @@
 
 
 @media(min-width:1024px){
-    .detail-card {
-        margin: 40px 20%;
-        width: 50%;
-        padding: 10px 5px;
+    .detail--container {
+        min-width: 50%;
+        max-width: 50%;
     }
-    .detail-img {
-        width: 85%;
-        padding: 5px 0;
-        margin: 0;
+    .productdetail_main-description {
+        margin: 0 1em;
     }
     .productdetail_main-description-name { 
         font-size:18px;
