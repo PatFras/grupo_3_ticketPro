@@ -1,54 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+  <%- include('partials/head') %>
 
-<%- include('partials/head') %>
-
-
-<body class="productdetail">
-
+  <body class="productdetail">
     <%- include('partials/header') %>
-    
+
     <main class="productdetail_main">
-        <div class="detail--container">
-            <div class="detail-card">
-                <img class="detail-img" src="/images/products/<%= image %>" alt="">
-                <div class="productdetail_main-description">
-                    <div class="productdetail_main-description-name">
-                        <i class="fa-solid fa-input-text"></i><a href="">Nombre: </a>
-                        <h4> <%= name %></h4>
-                    </div>
-                    <div class="productdetail_main-description-item">
-                        <i class="fa-solid fa-subtitles"></i><a href="">Descripción: </a>
-                        <h4> <%= description %></h4>
-                    </div>
-                    <div class="productdetail_main-description-item">
-                        <i class="fa-solid fa-calendar-days"></i><a href="">Fecha: </a>
-                        <h4> <%= moment(date).format('YYYY-MM-DD') %></h4>
-                    </div>
-                    <div class="productdetail_main-description-item">
-                        <i class="fa-solid fa-location-dot"></i><a href="">Ciudad: </a>
-                        <h4> <%= location %></h4>
-                    </div>
-                    <div class="productdetail_main-description-item">
-                        <i class="fa-solid fa-location-dot"></i><a href="">Dirección: </a>
-                        <h4> <%= address %></h4>
-                    </div>
-                    <div class="productdetail_main-description-item">
-                        <i class="fa-solid fa-square-dollar"></i><a href="">Precio: </a>
-                        <h4>$ <%= price %></h4>
-                    </div>
-                </div>
-                <a href="/products/productCart" class="detail-card-button">
-                Comprar
-                </a>
+      <div class="detail--container">
+        <div class="detail-card">
+          <img class="detail-img" src="/images/products/<%= image %>" alt="" />
+          <div class="productdetail_main-description">
+            <div class="productdetail_main-description-name">
+              <a href="">Nombre: </a>
+              <h4><%= name %></h4>
+            </div>
+            <div class="productdetail_main-description-item">
+              <a href="">Precio: </a>
+              <h4>$<%= price %> + $<%= serviceCharge %> (Cargo de servicio)</h4>
             </div>
 
+            <div class="productdetail_main-description-item">
+              <a href="">Fecha: </a>
+              <h4><%= moment(date).format('DD-MM-YYYY') %></h4>
+            </div>
+            <div class="productdetail_main-description-item">
+              <a href="">Lugar: </a>
+              <h4><%= description %>, <%= address %>. <%= location %></h4>
+            </div>
+            <div class="productdetail_main-description-item-link">
+              <a
+                href="<%= generateGoogleMapsLink(description, address, location) %>"
+                >¿Cómo llego?</a
+              >
+            </div>
+          </div>
+          <a href="/products/productCart" class="detail-card-button">
+            Agregar al carrito
+          </a>
         </div>
-        
+      </div>
     </main>
-    
+    <script src="/js/googleMapsLink.js"></script>
     <%- include('partials/footer') %>
-
-</body>
-
+  </body>
 </html>

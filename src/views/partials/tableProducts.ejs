@@ -1,70 +1,100 @@
 <div class="table-responsive">
-    <table class="table  table-striped">
-        <thead >
-            <tr class="productList-table-description">
-                <th scope="col" >#</th>
-                <th scope="col">Evento</th>
-                <th scope="col" >Descripcion</th>
-                <th scope="col" >Localidad</th>
-                <th scope="col" >Fecha</th>
-                <th scope="col" >Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% products.forEach(({id, name,description, location, image, date},index)=> { %>
-                <tr class="productList-table-products">
-                    <th scope="row" id="productList-product" >
-                        <%= index + 1 %>
-                    </th>
-                    <td id="productList-product">
-                        <%= name %>
-                    </td>
-                    <td id="productList-product">
-                        <%= description || 'No hay descripcion' %>
-                    </td>
-                    <td id="productList-product">
-                        <%= location %>
-                    </td>
-                    
-                    <td id="productList-product">
-                        <%= date %>
-                    </td>
-                    <td id="productList-product">
-                        <div class="d-flex gap-1">
-                            <a class="btn btn-sm btn-success" href="/products/edit/<%= id %>">
-                                <i class="fas fa-edit"></i></a>
+  <table class="table table-striped">
+    <thead>
+      <tr class="productList-table-description">
+        <th scope="col">#</th>
+        <th scope="col">Evento</th>
+        <th scope="col">Descripcion</th>
+        <th scope="col">Localidad</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% products.forEach(({id, name,description, location, image,
+      date},index)=> { %>
+      <tr class="productList-table-products">
+        <th scope="row" id="productList-product"><%= index + 1 %></th>
+        <td id="productList-product"><%= name %></td>
+        <td id="productList-product">
+          <%= description || 'No hay descripcion' %>
+        </td>
+        <td id="productList-product"><%= location %></td>
 
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#removeProduct<%= id %>">
-                                <i class="fas fa-trash"></i>
-                            </button>
-  
-                         <!-- Modal -->
-                        <div class="modal fade" id="removeProduct<%= id %>" tabindex="-1" aria-labelledby="removeProduct<%= id %>Label" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content"  id="productList-product"> 
-                            <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="removeProduct<%= id%>Label">Eliminar producto</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body"  id="productList-product">
-                            <p>¿Estás seguro de que queres eliminar el evento <b><%= name %></b>?</p>
-                            
-                        </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <form action="/products/remove/<%= id %>?_method=delete" method="POST">
-                            <button type="submit" class="btn btn-danger">Si, eliminar</button>
-                            </form>
-                    </div>
+        <td id="productList-product"><%= date %></td>
+        <td id="productList-product">
+          <div class="d-flex gap-2">
+            <button type="button" class="btn btn-primary">
+              <a href="/products/productDetail/<%= id %>"
+                ><i class="fas fa-eye" style="color: #ffff"></i
+              ></a>
+            </button>
+            <button type="button" class="btn btn-success">
+              <a href="/products/edit/<%= id %>"
+                ><i class="fas fa-edit" style="color: #ffff"></i
+              ></a>
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-toggle="modal"
+              data-bs-target="#removeProduct<%= id %>"
+            >
+              <i class="fas fa-trash"></i>
+            </button>
+            <div
+              class="modal fade"
+              id="removeProduct<%= id %>"
+              tabindex="-1"
+              aria-labelledby="removeProduct<%= id %>Label"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" id="productList-product">
+                  <div class="modal-header">
+                    <h1
+                      class="modal-title fs-5"
+                      id="removeProduct<%= id%>Label"
+                    >
+                      Eliminar producto
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body" id="productList-product">
+                    <p>
+                      ¿Estás seguro de que queres eliminar el evento
+                      <b><%= name %></b>?
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Cancelar
+                    </button>
+                    <form
+                      action="/products/remove/<%= id %>?_method=delete"
+                      method="POST"
+                    >
+                      <button type="submit" class="btn btn-danger">
+                        Si, eliminar
+                      </button>
+                    </form>
+                  </div>
                 </div>
+              </div>
             </div>
-            </div>
-                        </div>
-                    </td>
-                </tr>
-                <% }) %>
-        </tbody>
-
-    </table>
+          </div>
+        </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
 </div>
