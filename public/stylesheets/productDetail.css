@@ -88,7 +88,6 @@
     border: 2px solid var(--colorTurquesa);
     border-radius: 40px;
     padding: 3px 30px;
-    cursor: none;
 }
 /*segundo div*/
 .productdetail_main-des{
@@ -131,7 +130,6 @@
 
 .productdetail_main-description-item i, a{
     color: var(--colorNaranja);
-    cursor:unset;
 }
 .productdetail_main-description-item h4{
     color: silver;
