@@ -17,6 +17,7 @@
     "express-session": "^1.17.3",
     "express-validator": "^7.0.1",
     "http-errors": "~1.6.3",
+    "lru-cache": "^10.1.0",
     "method-override": "^3.0.0",
     "moment": "^2.29.4",
     "morgan": "~1.9.1",
