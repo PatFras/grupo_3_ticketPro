@@ -11,11 +11,12 @@
 }
 
 .div__card--allEvents {
-    width: 70%;
+    max-width: 250px;
+    min-width: 110px;
     background-color: var(--colorAzul);
     border-radius: 10%;
     color: white;
-    margin: 10px;
+    margin: 20px;
     box-shadow: 0 0 5px 1px var(--colorTurquesa), 0 0 15px 2px #ebecca;
     transition: 500ms;
     transition-property: box-shadow, color;
@@ -29,7 +30,11 @@
 .div__card--allEvents img {
     object-fit: cover;
     width: 70%;
-    padding-top: 5px;
+    padding: 10px 0 0 0;
+}
+
+.div__card--allEvents p {
+    color: white;
 }
 
 @media (min-width: 481px) {
@@ -76,7 +81,11 @@
         display: grid;
         grid-template-columns: repeat(5, 0fr);
         justify-content: space-evenly;
-        
     }
-    
+    .div__card--allEvents {
+        min-width: 190px;
+        max-width: 200px;
+        min-height: 280px;
+        margin: 20px;
+    }
 }

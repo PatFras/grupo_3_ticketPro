@@ -70,6 +70,11 @@ body {
   padding-bottom: 10px;
 }
 
+.body__main--sliderlEventos p {
+  text-align: center;
+  color: var(--colorBlanco);
+}
+
 .ver-todo {
   color: var(--colorTurquesa);
   transition: 500ms;

@@ -73,13 +73,13 @@
                         <% products.forEach(product => { %>
                             <div class="swiper-slide">
                                 <div class="div__card--cercaDeTi">
-                                    <img class="div__card--cercaDeTi-img" src="/images/products/<%= product.image %>" alt="">
-                                    <p class="div__card--title"><%= product.name %></p>
-                                    <p><%= moment(product.date).format('YYYY-MM-DD') %></p>
-                                    <p><%= product.location %></p>
                                     <a href="/products/productDetail/<%= product.id %>">
-                                        <button class="div__card--cercaDeTi-button">Comprar</button>
+                                        <img class="div__card--cercaDeTi-img" src="/images/products/<%= product.image %>" alt="">
+                                        <p class="div__card--title"><%= product.name %></p>
+                                        <p><%= moment(product.date).format('YYYY-MM-DD') %></p>
+                                        <p><%= product.location %></p>
                                     </a>
+                                    <button class="div__card--cercaDeTi-button">Comprar</button>
                                 </div> 
                             </div>
                             <% }) %>
@@ -87,7 +87,7 @@
                    </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
-                    <a class="ver-todo" href="/allEvents">Ver todo</a>
+                    <a class="ver-todo" href="/allEvents">Ver todos los eventos</a>
                 </section>
 
             <div class="body__main--sections">

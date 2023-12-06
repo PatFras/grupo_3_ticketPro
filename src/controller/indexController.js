@@ -19,21 +19,27 @@ module.exports = {
       .catch((error) => console.log(error));
   },
   search: (req, res) => {
+    const whereClause = {
+      [Op.or]: [
+        {
+          name: {
+            [Op.substring]: req.query.keywords,
+          },
+        },
+        {
+          location: {
+            [Op.substring]: req.query.keywords,
+          },
+        },
+      ],
+    };
+
+    if (req.query.category && req.query.category !== "") {
+      whereClause.categoryId = { [Op.eq]: req.query.category };
+    }
+
     db.Product.findAll({
-      where: {
-        [Op.or]: [
-          {
-            name: {
-              [Op.substring]: req.query.keywords,
-            },
-          },
-          {
-            location: {
-              [Op.substring]: req.query.keywords,
-            },
-          },
-        ],
-      },
+      where: whereClause,
     }).then((results) => {
       return res.render("searchResults", {
         results,
