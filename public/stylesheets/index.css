@@ -38,6 +38,8 @@ body {
   font-family: 'Barlow';
   font-weight: 500;
   width: 100%;
+  color: white;
+  outline:none
 }
 
 .select {
@@ -70,11 +72,6 @@ body {
   padding-bottom: 10px;
 }
 
-.body__main--sliderlEventos p {
-  text-align: center;
-  color: var(--colorBlanco);
-}
-
 .ver-todo {
   color: var(--colorTurquesa);
   transition: 500ms;
@@ -89,7 +86,7 @@ body {
 .div__card--cercaDeTi {
   background-color: var(--colorAzul2);
   width: 65%;
-  margin-bottom: 10px;
+  margin: 20px 0 15px 0;
   border-radius: 10%;
   color: var(--colorBlanco);
   box-shadow: 0 0 5px 1px var(--colorTurquesa), 0 0 15px 2px #ebecca;
@@ -105,6 +102,10 @@ body {
 .div__card--cercaDeTi img {
   padding: 15px 20px;
   height: 200px;
+}
+
+.div__card--cercaDeTi p {
+  color: white;
 }
 
 .div__card--title {
@@ -303,6 +304,7 @@ body {
     background-color: var(--colorAzul2);
     box-shadow: 0 5px 3px 0 var(--colorAzul2);
     width: 90%;
+    outline: none;
   }
 
   .body__main__containerSearchBar {
@@ -315,10 +317,10 @@ body {
     color: var(--colorBlanco);
     transition: 500ms;
     transition-property: background-color, color;
+    outline: none;
 }
 
 .body__main__containerSearchBar:hover {
-  background-color: var(--colorTurquesa);
   color: var(--colorAzul);
   }
 
@@ -347,17 +349,19 @@ body {
   }
 
   .select__options {
-    height: 30px;
+    height: 33px;
     margin-top: 10px;
     color: gray;
     background-color: var(--colorAzul);
     border: 2px solid var(--colorTurquesa);
+    border-radius: 0;
     text-align: center;
     width: 100%;
     appearance: none;
     transition: 500ms;
     transition-property: background-color, color;
     cursor: pointer;
+    outline: none;
   }
 
   .select__options option {
@@ -367,8 +371,7 @@ body {
   }
 
   .select__options:hover {
-    background-color: var(--colorTurquesa);
-    color: var(--colorAzul2);
+    color: white;
   }
   
 
@@ -386,7 +389,7 @@ body {
   .div__card--cercaDeTi {
     background-color: var(--colorAzul);
     width: 55%;
-    height: 238px;
+    height: 270px;
     margin: 15px 0;
     color: var(--colorBlanco);
   }
@@ -508,7 +511,7 @@ body {
 
   .div__card--cercaDeTi {
     width: 80%;
-    height: 250px;
+    min-height: 280px;
   }
 
   .div__card--cercaDeTi-button {
