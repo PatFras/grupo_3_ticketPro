@@ -20,22 +20,37 @@ module.exports = {
   },
   search: (req, res) => {
     const whereClause = {
-      [Op.or]: [
+      [Op.and]: [
         {
-          name: {
-            [Op.substring]: req.query.keywords,
-          },
+          [Op.or]: [
+            {
+              name: {
+                [Op.substring]: req.query.keywords,
+              },
+            },
+            {
+              location: {
+                [Op.substring]: req.query.keywords,
+              },
+            },
+          ],
         },
-        {
-          location: {
-            [Op.substring]: req.query.keywords,
-          },
-        },
+        req.query.category && req.query.category !== ""
+          ? {
+              categoryId: {
+                [Op.eq]: req.query.category,
+              },
+            }
+          : {},
       ],
     };
 
-    if (req.query.category && req.query.category !== "") {
-      whereClause.categoryId = { [Op.eq]: req.query.category };
+    if (req.query.location && req.query.location !== "") {
+      whereClause[Op.or].push({
+        location: {
+          [Op.substring]: req.query.location,
+        },
+      });
     }
 
     db.Product.findAll({
