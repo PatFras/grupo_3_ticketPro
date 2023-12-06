@@ -1,35 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="/stylesheets/searchResults.css">
-<%- include('partials/head') %>
-<body>
-    <%- include('partials/header') %>
-    
-    <div class="search-results-title--container">
-        <h2 class="search-results-title">Resultados de la búsqueda: <p class="search-results-keywords"><%= keywords %></p> </h2>
-    </div>
-
-    <% if (results.length) { %>
-        <% results.forEach(product => { %>
-            <div class="search_card-results--container">
-                <div class="search_card-results">
-                    <img class="search_card-results-img" src="/images/products/<%= product.image %>" alt="">
-                    <p class="div__card--title"><%= product.name %></p>
-                    <p><%= moment(product.date).format('YYYY-MM-DD') %></p>
-                    <p><%= product.location %></p>
-                    <a href="/products/productDetail/<%= product.id %>">
-                        <button class="search_card-results-button">Comprar</button>
-                    </a>
-                </div>
-
+  <link rel="stylesheet" href="/stylesheets/productDetail.css" />
+  <%- include('partials/head') %>
+  <body>
+    <%- include('partials/header') %> <% if (results.length) { %> <%
+    results.forEach(product => { %>
+    <main class="productdetail_main">
+      <div class="detail--container">
+        <div class="detail-card">
+          <img
+            class="detail-img"
+            src="/images/products/<%= product.image %>"
+            alt=""
+          />
+          <div class="productdetail_main-description">
+            <div class="productdetail_main-description-name">
+              <a href="">Nombre: </a>
+              <h4><%= product.name %></h4>
             </div>
-        <% }) %>
-    <% } else { %>
-        <div class="col-12">
-            <h2 class="search-products-title">No se encontraron resultados para esta búsqueda</h2>
+            <div class="productdetail_main-description-item">
+              <a href="">Precio: </a>
+              <h4>
+                $<%= product.price %> + $<%= product.serviceCharge %> (Cargo de
+                servicio)
+              </h4>
+            </div>
+
+            <div class="productdetail_main-description-item">
+              <a href="">Fecha: </a>
+              <h4><%= moment(product.date).format('DD-MM-YYYY') %></h4>
+            </div>
+            <div class="productdetail_main-description-item">
+              <a href="">Lugar: </a>
+              <h4>
+                <%= product.description %>, <%= product.address %>. <%=
+                product.location %>
+              </h4>
+            </div>
+            <div class="productdetail_main-description-item-link">
+              <a
+                href="<%= generateGoogleMapsLink(product.description, product.address, product.location) %>"
+                >¿Cómo llego?</a
+              >
+            </div>
+          </div>
+          <a href="/products/productCart" class="detail-card-button">
+            Agregar al carrito
+          </a>
         </div>
+      </div>
+    </main>
+    <% }) %> <% } else { %>
+    <div class="col-12">
+      <h2 class="search-products-title">
+        No se encontraron resultados para esta búsqueda
+      </h2>
+    </div>
     <% } %>
-    
+    <script src="/js/searchProducts.js"></script>
+    <script src="/js/googleMapsLink.js"></script>
     <%- include('partials/footer') %>
-</body>
+  </body>
 </html>

@@ -15,13 +15,13 @@
                     <div class="swiper-slide-allEvents">
                     <% products.forEach(product => { %>
                             <div class="div__card--allEvents">
-                                <img src="/images/products/<%= product.image %>" alt="">
-                                <p class="div__card--title"><%= product.name %></p>
-                                <p><%= moment(product.date).format('YYYY-MM-DD') %></p>
-                                <p><%= product.location %></p>
                                 <a href="/products/productDetail/<%= product.id %>">
-                                    <button class="div__card--cercaDeTi-button">Comprar</button>
+                                    <img src="/images/products/<%= product.image %>" alt="">
+                                    <p class="div__card--title"><%= product.name %></p>
+                                    <p><%= moment(product.date).format('YYYY-MM-DD') %></p>
+                                    <p><%= product.location %></p>
                                 </a>
+                                <button class="div__card--cercaDeTi-button">Comprar</button>
                             </div>
                             
                             <% }) %>
