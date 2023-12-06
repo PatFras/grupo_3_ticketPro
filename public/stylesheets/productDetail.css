@@ -152,6 +152,12 @@
     background-color: var(--colorNaranja) ;
 }  
 
+.search-products-title{
+    display: flex; 
+    justify-content: center; 
+    color: tomato; 
+    padding: 200px 10px;
+  }
 
 @media(min-width:768px){
 .detail--container {
