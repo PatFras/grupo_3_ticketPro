@@ -1,23 +1,16 @@
+const fechaActual = new Date();
 
-var fechaActual = new Date();
+const dia = fechaActual.getDate();
+const mes = fechaActual.getMonth() + 1;
+const año = fechaActual.getFullYear();
 
-
-var dia = fechaActual.getDate();
-var mes = fechaActual.getMonth() + 1; 
-var año = fechaActual.getFullYear();
-
-
-var fechaFormateada = dia + "/" + mes + "/" + año;
+const fechaFormateada = dia + "/" + mes + "/" + año;
 
 document.getElementById("fecha").innerHTML = fechaFormateada;
 
+const hora = fechaActual.getHours();
+const minutos = fechaActual.getMinutes();
 
-var hora = fechaActual.getHours();
-var minutos = fechaActual.getMinutes();
+const horaFormateada = hora + ":" + minutos;
 
-
-
-var horaFormateada = hora + ":" + minutos ;
-
-
-document.getElementById("hora").innerHTML =  horaFormateada;
+document.getElementById("hora").innerHTML = horaFormateada;
