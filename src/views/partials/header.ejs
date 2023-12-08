@@ -1,27 +1,72 @@
 <header class="home-header-all">
-    <div class="home-header">
-        <div class="containe">
-            <div class="home-header-nav nav-home-a">
-                <a href="/"><img src="/images/logo.png" alt=""></a>
-            </div>
-            <div class="home-header-nav nav-home-b">
-                <% if (!locals.userLogin) { %>
-                    <a href="/users/login">
-                        <h6>Ingresar</h6>
-                    </a>
-                    <a href="/users/register">
-                        <h6>Registrarse</h6>
-                    </a>
-                <% } %>
-                
-                <% if (locals.userLogin) { %>
-                    <div class="header_login">
-                        <a href="/users/profile">Hola <%= userLogin.name %>!</a>
-                        <a href="/products/productCart" class="nav-icon-b"><i class="fa-solid fa-cart-shopping"></i></a>
-                        <a href="/users/logout">Salir</a>              
-                    </div>
-                <% } %>
-            </div>
+  <div class="home-header">
+    <div class="containe">
+      <div class="home-header-nav nav-home-a">
+        <a href="/"><img src="/images/logo.png" alt="" /></a>
+      </div>
+      <div class="home-header-nav nav-home-b">
+        <% if (!locals.userLogin) { %>
+        <a href="/users/login">
+          <h6>Ingresar</h6>
+        </a>
+        <a href="/users/register">
+          <h6>Registrarse</h6>
+        </a>
+        <% } %> <% if (locals.userLogin) { %>
+        <div class="header_login">
+          <a href="/users/profile">Hola <%= userLogin.name %>!</a>
+          <a
+            href="#"
+            data-bs-toggle="modal"
+            data-bs-target="#cart"
+            class="nav-icon-b"
+            id="btn-cart"
+            ><i class="fa-solid fa-cart-shopping"></i
+          ></a>
+          <a href="/users/logout">Salir</a>
         </div>
+        <% } %>
+      </div>
     </div>
+  </div>
 </header>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="cart"
+  tabindex="-1"
+  aria-labelledby="cartLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-3" id="cartLabel">Carrito de compras</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div id="cart-body"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Continuar comprando
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger"
+          id="btn-clearCart"
+          onclick="clearCart()"
+        >
+          Vaciar carrito
+        </button>
+        <button type="button" class="btn btn-success">Finalizar compra</button>
+      </div>
+    </div>
+  </div>
+</div>

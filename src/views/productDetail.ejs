@@ -4,7 +4,6 @@
 
   <body class="productdetail">
     <%- include('partials/header') %>
-
     <main class="productdetail_main">
       <div class="detail--container">
         <div class="detail-card">
@@ -34,13 +33,19 @@
               >
             </div>
           </div>
-          <a href="/products/productCart" class="detail-card-button">
+          <a
+            href="#"
+            href="#"
+            onclick="addItemToCart(1,'<%=id%>')"
+            class="detail-card-button"
+          >
             Agregar al carrito
           </a>
         </div>
       </div>
     </main>
+
     <script src="/js/googleMapsLink.js"></script>
-    <%- include('partials/footer') %>
+    <%- include('partials/scripts') %> <%- include('partials/footer') %>
   </body>
 </html>
