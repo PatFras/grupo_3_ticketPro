@@ -19,10 +19,16 @@
             href="#"
             data-bs-toggle="modal"
             data-bs-target="#cart"
-            class="nav-icon-b"
+            class="nav-icon-b position-relative"
             id="btn-cart"
-            ><i class="fa-solid fa-cart-shopping"></i
-          ></a>
+            ><i class="fa-solid fa-cart-shopping"></i>
+            <span
+              id="show-count"
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              hidden
+            >
+            </span>
+          </a>
           <a href="/users/logout">Salir</a>
         </div>
         <% } %>
@@ -70,3 +76,4 @@
     </div>
   </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

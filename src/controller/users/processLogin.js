@@ -18,7 +18,7 @@ module.exports = (req, res) => {
         };
         req.body.remember !== undefined &&
           res.cookie("ticketProUser", req.session.userLogin, {
-            maxAge: 5000 * 60,
+            maxAge: 5000 * 60 * 5,
           });
 
         if (user.roleId === 1) {
@@ -26,7 +26,7 @@ module.exports = (req, res) => {
         } else if (user.roleId === 2) {
           req.body.remember !== undefined &&
             res.cookie("ticketProUser", req.session.userLogin, {
-              maxAge: 5000 * 60,
+              maxAge: 5000 * 60 * 5,
             });
           db.Order.findOne({
             where: {
@@ -36,7 +36,11 @@ module.exports = (req, res) => {
             include: [
               {
                 association: "items",
-                include: ["product"],
+                include: [
+                  {
+                    association: "product",
+                  },
+                ],
               },
             ],
           }).then((order) => {
@@ -81,6 +85,7 @@ module.exports = (req, res) => {
       })
       .catch((error) => console.log(error));
   } else {
+    console.log(errors.mapped());
     return res.render("users/login", {
       errors: errors.mapped(),
     });

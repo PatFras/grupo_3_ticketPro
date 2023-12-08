@@ -38,13 +38,13 @@ const addItemToCart = async (req, res) => {
 
     const { quantity, product: id } = req.body;
 
-    const { name, price, discount, image } = await db.Product.findByPk(id);
+    const { name, price, serviceCharge, image } = await db.Product.findByPk(id);
 
     let newProduct = {
       id,
       name,
       price,
-      discount,
+      serviceCharge,
       image,
       quantity: +quantity || 1,
     };
