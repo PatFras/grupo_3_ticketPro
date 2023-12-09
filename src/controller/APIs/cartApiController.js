@@ -3,7 +3,8 @@ const db = require("../../database/models");
 const calculateTotal = (req) => {
   req.session.cart.total = req.session.cart.products
     .map(
-      ({ price, serviceCharge, quantity }) => (price + serviceCharge) * quantity
+      ({ price, serviceCharge, quantity }) =>
+        (parseFloat(price) + parseFloat(serviceCharge)) * quantity
     )
     .reduce((a, b) => a + b, 0);
 };
