@@ -46,7 +46,7 @@
 }
 
 .register_form input{
-    color: var(--colorBlanco);
+    color: white;
     border: none;
     border-bottom: var(--colorTurquesa) 3px solid;
     background-color: var(--colorGris);
@@ -56,7 +56,7 @@
     outline: none;
 }
 .register_form input:read-write{
-    
+    color: white;
     background-color:var(--colorGris);
 }
 
@@ -83,11 +83,13 @@
 .register_form-buttons-register:hover{
     background-color: var(--colorNaranja) ;
 }  
-.register_form-buttons-singIn p{
+.register_form-buttons-singIn{
     color: var(--colorBlanco);
     font-size: 9px;
     text-align: center;
+    text-decoration: none;
 }
+
 .register small {
     color: rgb(207, 40, 40);
 }
