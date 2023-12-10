@@ -11,6 +11,10 @@ const {
   deleteItemToCart,
   clearCart,
 } = require("../controller/APIs/cartApiController");
+const {
+  allProducts,
+  productDetail,
+} = require("../controller/APIs/productsApiController");
 const router = express.Router();
 
 //get check email
@@ -26,4 +30,8 @@ router.delete("/cart", removeItemToCart);
 router.delete("/cart/item", deleteItemToCart);
 router.delete("/cart/all", clearCart);
 
+//get all products
+router.get("/products", allProducts);
+//get detail of product
+router.get("/product/:id", productDetail);
 module.exports = router;
