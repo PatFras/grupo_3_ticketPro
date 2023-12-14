@@ -73,4 +73,13 @@ module.exports = {
       });
     });
   },
+  termsAndConditions: (req, res) => {
+    return res.render("termsAndConditions");
+  },
+  politicsOfPrivacy: (req, res) => {
+    return res.render("politicsOfPrivacy");
+  },
+  whoWeAre: (req, res) => {
+    return res.render("whoWeAre");
+  },
 };
