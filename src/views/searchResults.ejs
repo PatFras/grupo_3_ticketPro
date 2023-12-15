@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <link rel="stylesheet" href="/stylesheets/productDetail.css" />
-  <%- include('partials/head') %>
+  <%- include('partials/head', {title: 'Resultado de búsqueda'}) %>
   <body>
     <%- include('partials/header') %> <% if (results.length) { %> <%
     results.forEach(product => { %>
