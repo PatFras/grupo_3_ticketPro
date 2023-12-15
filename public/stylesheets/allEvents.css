@@ -1,3 +1,7 @@
+.main-allEvents {
+    background-color: var(--colorAzul);
+}
+
 .body__main__productCard--container {
     display: flex;
 }
@@ -35,6 +39,11 @@
 
 .div__card--allEvents p {
     color: white;
+    margin: 0;
+}
+
+.div__card--allEvents a {
+    text-decoration: none;
 }
 
 @media (min-width: 481px) {
@@ -64,13 +73,19 @@
     
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
 
     .swiper-slide-allEvents {
         display: grid;
         grid-template-columns: repeat(4, 0fr);
         justify-content: space-evenly;
         
+    }
+    .div__card--allEvents {
+        height: 270px;
+    }
+    .div__card--allEvents p {
+        margin: 0;
     }
     
 }
