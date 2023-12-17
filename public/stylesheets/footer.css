@@ -74,7 +74,7 @@
 .home__footer p {
     color: silver;
     font-size: 12px;
-    text-align: left;
+    text-align: center;
     padding: 1em;
 }
 
@@ -94,7 +94,6 @@
 
     .home__footer p {
         font-size: 12px;
-        align-self: center;
 
     }
 
