@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <link rel="stylesheet" href="/stylesheets/productDetail.css" />
+  <link rel="stylesheet" href="/stylesheets/searchResults.css" />
   <%- include('partials/head', {title: 'Resultado de búsqueda'}) %>
-  <body>
+  <body class="productdetail">
     <%- include('partials/header') %> <% if (results.length) { %> <%
     results.forEach(product => { %>
     <main class="productdetail_main">
@@ -40,21 +40,23 @@
               >
             </div>
           </div>
-          <a href="/products/productCart" class="detail-card-button">
+          <a
+            href="#"
+            onclick="addItemToCart(1,'<%=product.id%>')"
+            class="detail-card-button"
+          >
             Agregar al carrito
           </a>
         </div>
       </div>
     </main>
     <% }) %> <% } else { %>
-    <div class="col-12">
-      <h2 class="search-products-title">
-        No se encontraron resultados para esta búsqueda
-      </h2>
+    <div class="col-12 search-products-title">
+      <h2>No se encontraron resultados para esta búsqueda</h2>
     </div>
     <% } %>
     <script src="/js/searchProducts.js"></script>
     <script src="/js/googleMapsLink.js"></script>
-    <%- include('partials/footer') %>
+    <%- include('partials/scripts') %> <%- include('partials/footer') %>
   </body>
 </html>
