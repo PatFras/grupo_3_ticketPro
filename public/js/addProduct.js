@@ -154,12 +154,12 @@ window.onload = function () {
     }
   });
 
-  $("category").addEventListener("focus", function () {
+  $("categoryId").addEventListener("focus", function () {
     $("msg-error-category").innerHTML = null;
     this.classList.remove("is-invalid");
   });
 
-  $("category").addEventListener("blur", function () {
+  $("categoryId").addEventListener("blur", function () {
     switch (true) {
       case this.value === "":
         $("msg-error-category").innerHTML = "Seleccione una categoría";
@@ -173,12 +173,12 @@ window.onload = function () {
     }
   });
 
-  $("section").addEventListener("focus", function () {
+  $("sectionId").addEventListener("focus", function () {
     $("msg-error-section").innerHTML = null;
     this.classList.remove("is-invalid");
   });
 
-  $("section").addEventListener("blur", function () {
+  $("sectionId").addEventListener("blur", function () {
     switch (true) {
       case this.value === "":
         $("msg-error-section").innerHTML = "Seleccione una sección";

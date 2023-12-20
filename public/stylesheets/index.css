@@ -104,7 +104,7 @@
 
 .div__card--cercaDeTi img {
   padding: 15px 20px;
-  height: 200px;
+  height: 180px;
 }
 
 .div__card--cercaDeTi p {
@@ -524,7 +524,7 @@
 
   .div__card--cercaDeTi {
     width: 80%;
-    min-height: 280px;
+    height: 280px;
   }
 
   .div__card--cercaDeTi-button {
@@ -601,7 +601,7 @@
   }
 
   .div__card--cercaDeTi {
-    min-height: 310px;
+    height: 310px;
   }
 
 }
@@ -623,7 +623,7 @@
 
   .div__card--cercaDeTi {
     width: 70%;
-    height: 260px;
+    height: 270px;
   }
 
   .div__card--proxEvento img {
