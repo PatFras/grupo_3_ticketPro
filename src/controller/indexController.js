@@ -95,4 +95,7 @@ module.exports = {
       });
     });
   },
+  salePoints: (req, res) => {
+    return res.render("salePoints");
+  },
 };

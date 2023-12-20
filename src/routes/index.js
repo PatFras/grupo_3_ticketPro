@@ -10,5 +10,6 @@ router.get("/termsAndConditions", indexController.termsAndConditions);
 router.get("/politicsOfPrivacy", indexController.politicsOfPrivacy);
 router.get("/whoWeAre", indexController.whoWeAre);
 router.get("/freeEvents", indexController.freeEvents);
+router.get("/salePoints", indexController.salePoints);
 
 module.exports = router;
