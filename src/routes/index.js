@@ -9,5 +9,6 @@ router.get("/allEvents", indexController.allEvents);
 router.get("/termsAndConditions", indexController.termsAndConditions);
 router.get("/politicsOfPrivacy", indexController.politicsOfPrivacy);
 router.get("/whoWeAre", indexController.whoWeAre);
+router.get("/freeEvents", indexController.freeEvents);
 
 module.exports = router;

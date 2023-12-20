@@ -82,4 +82,17 @@ module.exports = {
   whoWeAre: (req, res) => {
     return res.render("whoWeAre");
   },
+  freeEvents: (req, res) => {
+    db.Product.findAll({
+      where: {
+        sectionId: 1,
+      },
+    }).then((products) => {
+      return res.render("freeEvents", {
+        products,
+        moment,
+        generateGoogleMapsLink,
+      });
+    });
+  },
 };
