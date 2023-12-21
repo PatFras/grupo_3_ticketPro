@@ -237,7 +237,6 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  background: url(/images/fondo.png) no-repeat bottom;
   background-size: 100% 100px;
 }
 
@@ -261,20 +260,30 @@
 .div__card--proxEvento p {
   font-weight: 500;
   text-align: center;
+  margin: 0;
 }
 
 .div__card--proxEvento img {
-  width: 40%;
-  height: 110px;
-  padding: 10px 3px;
+  width: 70%;
+  height: 90px;
+  margin-top: 0.5em;
+}
+
+.div__card--proxEvento-description-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: 1em 0;
 }
 
 .div__card--proxEvento-description {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 35%;
-  padding: 5px;
+  width: 50%;
+  padding: 0 10px 0 0;
+  margin-top: 2em;
 }
 
 .div__card--proxEvento-title {
@@ -533,12 +542,12 @@
   }
 
   .div__card--proxEvento img {
-    width: 25%;
+    width: 70%;
   }
 
   .body__main--pickup {
     width: 25%;
-
+    height: 350px;
   }
 
   .body__main--sections {
@@ -559,7 +568,7 @@
   }
 
   .body__main--proxEvento{
-  height: 150px;
+  height: 200px;
   }
 
   .body__main--proxEvento p{
@@ -586,7 +595,7 @@
 .body__main--pickup {
   margin: 0 20px 15px 15px;
   width: 15%;
-  height: 300px;
+  height: 350px;
 }
 
   .body__main--actividades-title {
@@ -594,7 +603,7 @@
   }
 
   .div__card--proxEvento img {
-    width: 25%;
+    width: 45%;
     height: 110px;
     padding: 10px 0px;
     margin: 0 20px;
@@ -627,7 +636,7 @@
   }
 
   .div__card--proxEvento img {
-    width: 15%;
+    width: 45%;
 }
 
 }
