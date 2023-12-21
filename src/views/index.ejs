@@ -108,21 +108,26 @@
 
                     <section class="body__main--proxEvento">
                         <div class="div__card--proxEvento">
-                            <p>Próximo evento</p>
-                            <img src="/images/evento4.jpg" alt="">
-                            <div class="div__card--proxEvento-description">
-                                <p class="div__card--proxEvento-title">Nombre</p>
-                                <p>día 00 mes</p>
-                                <p>Lugar</p>
-                                <button class="div__card--proxEvento-description-button">Ver en calendario</button>
-                            </div>
+                            
+                            <% if (nextEvent) { %>
+                                <div class="div__card--proxEvento-description-top">
+                                    <p>Próximo evento</p>
+                                    <img src="/images/products/<%= nextEvent.image %>" alt="">
+                                </div>
+                                
+                                <div class="div__card--proxEvento-description">
+                                    <p class="div__card--proxEvento-title"><%= nextEvent.name %></p>
+                                    <p><%= moment(nextEvent.date).format('YYYY-MM-DD') %></p>
+                                    <p><%= nextEvent.location %></p>
+                                    
+                                </div>
+                            <% } else { %>
+                                <p>No hay eventos próximos</p>
+                            <% } %>
                         </div>
-
+                    </section>    
                 </div>
-                </section>
-
             </div>
-
         </main>
 
         <%- include('partials/footer') %>
