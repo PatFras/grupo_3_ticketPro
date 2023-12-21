@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head', {title: 'Acceder a tu cuenta'}) %>
+
+  <body class="body__login">
+    <main class="login-container">
+      <div class="topBox">
+        <a href="/"><img src="/images/logo.png" alt="logo ticket Pro" /></a>
+      </div>
+
+      <div class="middleBox">
+        <form class="register_form" action="" method="POST">
+          <div class="register_form-inputs">
+            <input type="email" name="email" placeholder="Correo" id="email" />
+            <small class="warning" id="msg-error-email">
+              <%= locals.errors && (errors.email && errors.email.msg) %>
+            </small>
+            <input
+              type="password"
+              name="password"
+              placeholder="Contraseña"
+              id="password"
+            />
+            <small class="warning" id="msg-error-password">
+              <%= locals.errors && (errors.password && errors.password.msg) %>
+            </small>
+            <div class="checkbox">
+              <input type="checkbox" value="" id="remember" name="remember" />
+              <label for="remember">Recordarme</label>
+            </div>
+          </div>
+          <div class="bottomBox">
+            <div class="button-container">
+              <button type="submit">Ingresar</button>
+            </div>
+            <div class="links-box">
+              <a href="/users/register">Crear cuenta</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="/js/login.js"></script>
+  </body>
+</html>

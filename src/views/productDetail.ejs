@@ -1,66 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+  <%- include('partials/head', {title: 'Detalle del producto'}) %>
 
-<%- include('partials/head') %>
-
-
-<body class="productdetail">
-
+  <body class="productdetail">
     <%- include('partials/header') %>
-    
     <main class="productdetail_main">
-        <div class="productdetail_main-buttons">
-            <a>Cómo comprar</a>
-            <a>Información</a>
-        </div>
-        <div class="productdetail_main-des">
-            <div class="productdetail_main-des-img">
-                <img src="/images/DP_img.jfif" alt="imagen del producto">
+      <div class="detail--container">
+        <div class="detail-card">
+          <img class="detail-img" src="/images/products/<%= image %>" alt="" />
+          <div class="productdetail_main-description">
+            <div class="productdetail_main-description-item">
+              <a href="">Precio: </a>
+              <h4>$<%= price %> + $<%= serviceCharge %> (Cargo de servicio)</h4>
             </div>
-            <div class="productdetail_main-description">
-                <div class="productdetail_main-description-item">
-                    <i class="fa-solid fa-location-dot"></i> <a href="">Lugar </a>
-                    <h4> Estadio Unico de La Plata</h4>
-                </div>
-                <div class="productdetail_main-description-item">
-                    <i class="fa-solid fa-location-dot"></i><a href="">Ciudad </a>
-                    <h4> -----</h4>
-                </div>
-                <div class="productdetail_main-description-item">
-                    <i class="fa-solid fa-calendar-days"></i><a href="">Fecha </a>
-                    <h4> 0000-00-00</h4>
-                </div>
-                <div class="productdetail_main-description-item">
-                    <i class="fa-solid fa-clock"></i><a href="">Hora </a>
-                    <h4> 00:00PM</h4>
-                </div>
-                <div class="productdetail_main-description-item">
-                    <i class="fa-solid fa-location-dot"></i><a href="">Dirección </a>
-                    <h4> Av 32,25 y 526 y 21</h4>
-                </div>
-            </div>
-        </div>
-        <div class="productdetail_main-det">
-            <img class="productdetail_main-det-img" src="/images/estadio.jpeg" alt="Lugar">
-            <div class="productdetail_main-det-selects">
-                <select name="fecha" id="fecha">
-                    <option value="1">fecha disponible 1</option>
-                    <option value="2">fecha disponible 2</option>
-                    <option value="3">fecha disponible 3</option>
-                </select>
-                <select name="sector" id="sector">
-                    <option value="1">lugar disponible 1</option>
-                    <option value="2">lugar disponible 2</option>
-                    <option value="3">lugar disponible 3</option>
-                </select>
 
+            <div class="productdetail_main-description-item">
+              <a href="">Fecha: </a>
+              <h4><%= moment(date).format('DD-MM-YYYY') %></h4>
             </div>
-            <button>comprar</button>
+            <div class="productdetail_main-description-item">
+              <a href="">Lugar: </a>
+              <h4><%= description %>, <%= address %>. <%= location %></h4>
+            </div>
+            <div class="productdetail_main-description-item-link">
+              <a
+                href="<%= generateGoogleMapsLink(description, address, location) %>"
+                >¿Cómo llego?</a
+              >
+            </div>
+          </div>
+          <a
+            href="#"
+            href="#"
+            onclick="addItemToCart(1,'<%=id%>')"
+            class="detail-card-button"
+          >
+            Agregar al carrito
+          </a>
         </div>
+      </div>
     </main>
-    
-    <%- include('partials/footer') %>
 
-</body>
-
+    <script src="/js/googleMapsLink.js"></script>
+    <%- include('partials/scripts') %> <%- include('partials/footer') %>
+  </body>
 </html>

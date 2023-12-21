@@ -1,9 +1,9 @@
 .home__footer {
-    background-color: var(--colorAzul);
+    background-color: #000b27;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 0 0 10px;
+    padding: 20px 0 0 0;
     text-align: center;
     width: 100%;
 }
@@ -22,7 +22,7 @@
     margin-bottom: 1em;
 }
 
-.footer-helpBox button {
+.footer-helpBox-button {
     background-color: var(--colorTurquesa);
     border-radius: 30px;
     border: none;
@@ -31,10 +31,21 @@
     font-weight: 700;
     font-size: 14px;
     cursor: pointer;
+    transition: 500ms;
+    transition-property: background-color;
 }
+
+.footer-helpBox-button:hover {
+    background-color: var(--colorNaranja);
+    }
+
+.footer-nav ul {
+    padding: 0;
+}    
 
 .footer-nav a {
     color: var(--colorBlanco);
+    text-decoration: none;
 }
 
 .home__footer img {
@@ -51,13 +62,29 @@
     margin: 1em 0;
     justify-content: center;
     cursor: pointer;
-}
+    transition: 500ms;
+    transition-property: color;
+  }
+  
+  .footer-iconsBox:hover {
+      color: var(--colorNaranja);
+  }
+
 
 .home__footer p {
     color: silver;
     font-size: 12px;
-    text-align: left;
+    text-align: center;
     padding: 1em;
+}
+
+.footer-preguntas {
+  transition: 500ms;
+  transition-property: color;
+}
+
+.footer-preguntas:hover {
+    color: var(--colorNaranja);
 }
 
 @media (min-width:768px) {
@@ -67,7 +94,6 @@
 
     .home__footer p {
         font-size: 12px;
-        align-self: center;
 
     }
 
@@ -112,7 +138,7 @@
     }
 
     .footer-bottomBox i {
-        margin-top: 0.3em;
+        margin-top: 0.5em;
     }
 
 }
@@ -120,6 +146,7 @@
 @media (min-width:1024px) {
     .footer-container {
         margin-top: 1em;
+        margin-bottom: 0;
         gap: 3em;
     }
 
@@ -137,7 +164,8 @@
     .footer-nav ul li {
         display: flex;
         flex-direction: column;
-        font-size: 18px;
+        width: 200px;
+        font-size: 17px;
         font-weight: 300;
         margin: 1em 0 0 0;
         align-items: center;
@@ -165,6 +193,10 @@
 
     .footer-bottomBox {
         width: 25%;
+    }
+
+    .footer-bottomBox i {
+        margin-top: 1em;
     }
 
 }

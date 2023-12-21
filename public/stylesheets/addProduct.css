@@ -1,3 +1,11 @@
+.addProduct {
+    background-color: var(--colorAzul);
+}
+
+.warning {
+    color: rgb(207, 40, 40);
+}
+
 #formAdd{
     margin-bottom: 4rem;
 }
@@ -15,4 +23,3 @@
 #category{
     border: solid 3px #41EAD4;
 }
-

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head', {title: 'Registro'}) %>
+
+  <body class="register">
+    <div class="register_conteiner">
+      <header class="register_header">
+        <a href="/"><img src="/images/logo.png" alt="POST" /></a>
+      </header>
+      <form class="register_form" action="" method="POST" id="formAdd">
+        <div class="register_form-inputs">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Nombre de usuario"
+            class="form-control <%= locals.errors && (errors.name && 'is-invalid') %>"
+            value="<%= locals.old && locals.old.name %>"
+          />
+          <small id="msg-error-name">
+            <%= locals.errors && (errors.name && errors.name.msg) %>
+          </small>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Correo"
+            class="form-control <%= locals.errors && (errors.email && 'is-invalid') %>"
+            value="<%= locals.old && locals.old.email %>"
+          />
+          <small id="msg-error-email">
+            <%= locals.errors && (errors.email && errors.email.msg) %>
+          </small>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Contraseña"
+            class="form-control <%= locals.errors && (errors.password && 'is-invalid') %>"
+          />
+          <small id="msg-error-password">
+            <%= locals.errors && (errors.password && errors.password.msg) %>
+          </small>
+          <input
+            type="password"
+            name="password2"
+            id="password2"
+            placeholder="Reingresar contraseña"
+            class="form-control <%= locals.errors && (errors.password2 && 'is-invalid') %>"
+          />
+          <small id="msg-error-password2">
+            <%= locals.errors && (errors.password2 && errors.password2.msg) %>
+          </small>
+
+          <small class="text-danger ms-2" id="msg-error-empty"> </small>
+        </div>
+        <div class="register_form-buttons">
+          <button class="register_form-buttons-register" type="submit">
+            Registrarse
+          </button>
+          <a href="/users/login" class="register_form-buttons-singIn"
+            ><p>Ingresar</p></a
+          >
+        </div>
+      </form>
+    </div>
+    <script src="/js/register.js"></script>
+  </body>
+</html>

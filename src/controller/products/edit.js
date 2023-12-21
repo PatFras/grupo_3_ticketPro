@@ -1,17 +1,22 @@
-const { readJSON } = require("../../data")
+const db = require("../../database/models");
 
-module.exports = (req,res) => {
+module.exports = async (req, res) => {
+    const id = +req.params.id;
 
-    const categories = readJSON('categories.json');
-    const products = readJSON('products.json');
-    const sections = readJSON('sections.json');
-    const id = req.params.id;
+    const product = await db.Product.findOne({
+        where: { id: id }
+    });
 
-    const product = products.find(product => product.id === id)
+    if (product) {
+        const categories = await db.Category.findAll();
+        const sections = await db.Section.findAll();
 
-    return res.render('productEdit',{
-        categories,
-        sections,
-        ...product
-    })
-}
+        return res.render('productEdit', {
+            categories,
+            sections,
+            ...product.dataValues
+        });
+    }
+};
+
+

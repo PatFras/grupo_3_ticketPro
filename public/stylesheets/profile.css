@@ -1,0 +1,110 @@
+.profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: var(--colorAzul);   
+    height: 100vh; 
+}
+.profile_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--colorAzul);
+    width: 100%;
+    height: 100vh;   
+    margin: 0 2em;
+}
+/*herader*/
+.profile_header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    gap: 1em;
+}
+.profile_header img{
+    width:6em;
+    cursor: pointer;
+}
+.profile_header h1{
+    color: silver;
+    font-size: 18px;
+    font-weight: 500;
+}
+/*form*/
+.profile_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile_form-inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.profile_form input{
+    color: var(--colorBlanco);
+    border: none;
+    border-bottom: var(--colorTurquesa) 3px solid;
+    background-color: var(--colorGris);
+    padding: 8px 15px;
+}
+.profile_form input:focus{
+    outline: none;
+}
+.profile_form input:read-write{
+    
+    background-color:var(--colorGris);
+}
+
+.profile_form-buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    gap : 1.5em;
+}
+.profile_form-buttons-profile{
+    color:silver;
+    background-color:var(--colorGris);
+    font-size: 12px;
+    letter-spacing: 1px;
+    width: 6.5em;
+    height: 40px;
+    outline: none;
+    border: 2px solid var(--colorNaranja);
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+.profile_form-buttons-profile:hover{
+    background-color: var(--colorNaranja) ;
+}  
+.profile_form-buttons-singIn p{
+    color: silver;
+    font-size: 9px;
+    text-align: center;
+}
+
+.profile small {
+    color: rgb(207, 40, 40);
+}
+.profile-successMsg {
+    color: var(--colorTurquesa);
+}
+@media(min-width:768px){   
+    .profile_container{
+        margin: 12em 0;
+        padding: 3em 0;
+        align-content: normal;
+        justify-content: normal;
+        height: auto;
+    } 
+
+    .profile_header img {
+        width: 8em;
+    }
+}

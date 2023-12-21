@@ -1,3 +1,7 @@
+.warning {
+    color: rgb(207, 40, 40);
+}
+
 #formAdd{
     margin-bottom: 4rem;
 }
