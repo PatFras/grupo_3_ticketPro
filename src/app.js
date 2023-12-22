@@ -5,6 +5,7 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const methodOverride = require("method-override");
 const session = require("express-session");
+const cors = require("cors"); // Agregar esta línea
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
@@ -13,6 +14,15 @@ const apisRouter = require("./routes/api.routes");
 const userSessionCheck = require("./middlewares/userSessionCheck");
 const cookieCheck = require("./middlewares/cookieCheck");
 const app = express();
+
+/* Configuración de CORS */
+const corsOptions = {
+  origin: 'http://localhost:5173', // Permitir solicitudes desde este origen
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Métodos HTTP permitidos
+  headers: 'Origin,X-Requested-With,Content-Type,Accept,Authorization', // Encabezados permitidos
+};
+
+app.use(cors(corsOptions));
 
 /* setup PUT & DELETE */
 app.use(methodOverride("_method"));

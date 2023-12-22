@@ -1,5 +1,7 @@
 const { validationResult } = require("express-validator");
 const db = require("../../database/models");
+const fs = require("fs");
+const path = require('path');
 
 module.exports = async (req, res) => {
     const errors = validationResult(req);
@@ -18,23 +20,36 @@ module.exports = async (req, res) => {
         const productId = +req.params.id;
 
         try {
-            await db.Product.update(
-                {
-                    name,
-                    description,
-                    price: +price,
-                    category,
-                    section,
-                    address,
-                    date,
-                    serviceCharge: +serviceCharge,
-                },
-                {
-                    where: {
-                        id: productId,
-                    },
+            let updateFields = {
+                name,
+                description,
+                price: +price,
+                category,
+                section,
+                address,
+                date,
+                serviceCharge: +serviceCharge,
+            };
+
+            // Verifica si se adjuntó un nuevo archivo de imagen
+            if (req.file) {
+                const oldProduct = await db.Product.findByPk(productId);
+                // Elimina la imagen antigua si existe
+                if (oldProduct.image) {
+                    let route = (data) => fs.existsSync(path.join(__dirname,'..','..', '..', 'public', 'images', 'products', data))
+                    if (route(oldProduct.image)) {
+                    fs.unlinkSync(path.join(__dirname,'..','..','..', 'public', 'images', 'products', oldProduct.image))
+                }  
                 }
-            );
+                // Actualiza la ruta de la nueva imagen
+                updateFields.image = req.file.filename;
+            }
+
+            await db.Product.update(updateFields, {
+                where: {
+                    id: productId,
+                },
+            });
 
             return res.redirect('/products/productList');
         } catch (error) {
@@ -70,19 +85,3 @@ module.exports = async (req, res) => {
         }
     }
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
