@@ -1,0 +1,27 @@
+.body-main {
+    background-color: var(--colorAzul);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--colorAzul);
+    margin: 5em;
+}
+
+iframe {
+    width:250px;
+    height:300px;
+}
+
+@media (min-width:768px) {
+    iframe{
+        width:655px;
+    }
+}
+
+@media (min-width:1024px) {
+    iframe{
+        width:1250px;
+    }
+}

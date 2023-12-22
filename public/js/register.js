@@ -75,7 +75,7 @@ window.onload = function () {
         this.value
       ):
         $("msg-error-password").innerHTML =
-          "El password debe tener entre 6 y 12 caracteres, un número, una mayúscula y un caracter especial";
+          "Entre 6 y 12 caracteres, un número, una mayúscula y un caracter especial";
         this.classList.add("is-invalid");
         break;
       default:

@@ -15,8 +15,8 @@
 #site,
 #date,
 #formFile,
-#section,
-#category{
+#sectionId,
+#categoryId{
     border: solid 3px #41EAD4;
 }
 

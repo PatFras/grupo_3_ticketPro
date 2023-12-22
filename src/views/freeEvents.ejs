@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="/stylesheets/searchResults.css" />
+  <%- include('partials/head', {title: 'Resultado de búsqueda'}) %>
+  <body class="productdetail">
+    <%- include('partials/header') %> <% products.forEach(product => { %>
+    <main class="productdetail_main">
+      <div class="detail--container">
+        <div class="detail-card">
+          <img
+            class="detail-img"
+            src="/images/products/<%= product.image %>"
+            alt=""
+          />
+          <div class="productdetail_main-description">
+            <div class="productdetail_main-description-item">
+              <a href="">Precio: </a>
+              <h4>Gratis</h4>
+            </div>
+
+            <div class="productdetail_main-description-item">
+              <a href="">Fecha: </a>
+              <h4><%= moment(product.date).format('DD-MM-YYYY') %></h4>
+            </div>
+            <div class="productdetail_main-description-item">
+              <a href="">Lugar: </a>
+              <h4>
+                <%= product.description %>, <%= product.address %>. <%=
+                product.location %>
+              </h4>
+            </div>
+            <div class="productdetail_main-description-item-link">
+              <a
+                href="<%= generateGoogleMapsLink(product.description, product.address, product.location) %>"
+                >¿Cómo llego?</a
+              >
+            </div>
+          </div>
+          <a
+            href="#"
+            onclick="addItemToCart(1,'<%=product.id%>')"
+            class="detail-card-button"
+          >
+            Agregar al carrito
+          </a>
+        </div>
+      </div>
+    </main>
+    <% }) %>
+    <script src="/js/googleMapsLink.js"></script>
+    <%- include('partials/scripts') %> <%- include('partials/footer') %>
+  </body>
+</html>

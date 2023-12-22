@@ -35,7 +35,7 @@ const showProductInCart = (products, total) => {
     <tr>
         <th scope="row"><img src="/images/products/${image}" alt="" width="100px"/></th>
         <td>${name}</td>
-        <td>${(price + serviceCharge) * quantity}</td>
+        <td>${(parseFloat(price) + parseFloat(serviceCharge)) * quantity}</td>
         <td>
             <div class="d-flex gap-2">
                 <button class="btn btn-sm btn-danger ${

@@ -3,7 +3,8 @@ const db = require("../../database/models");
 const calculateTotal = (req) => {
   req.session.cart.total = req.session.cart.products
     .map(
-      ({ price, serviceCharge, quantity }) => (price + serviceCharge) * quantity
+      ({ price, serviceCharge, quantity }) =>
+        (parseFloat(price) + parseFloat(serviceCharge)) * quantity
     )
     .reduce((a, b) => a + b, 0);
 };
@@ -11,7 +12,7 @@ const calculateTotal = (req) => {
 const getCart = async (req, res) => {
   try {
     if (!req.session.cart) {
-      let error = new Error("Debe loguearte para comprar");
+      let error = new Error("Inicia sesión o crea una cuenta para comprar");
       error.status = 404;
       throw error;
     }
@@ -31,20 +32,20 @@ const getCart = async (req, res) => {
 const addItemToCart = async (req, res) => {
   try {
     if (!req.session.cart) {
-      let error = new Error("Debe loguearte para comprar");
+      let error = new Error("Inicia sesión o crea una cuenta para comprar");
       error.status = 404;
       throw error;
     }
 
     const { quantity, product: id } = req.body;
 
-    const { name, price, discount, image } = await db.Product.findByPk(id);
+    const { name, price, serviceCharge, image } = await db.Product.findByPk(id);
 
     let newProduct = {
       id,
       name,
       price,
-      discount,
+      serviceCharge,
       image,
       quantity: +quantity || 1,
     };
@@ -100,7 +101,7 @@ const addItemToCart = async (req, res) => {
 const removeItemToCart = async (req, res) => {
   try {
     if (!req.session.cart) {
-      let error = new Error("Debe loguearte para comprar");
+      let error = new Error("Inicia sesión o crea una cuenta para comprar");
       error.status = 404;
       throw error;
     }
@@ -146,7 +147,7 @@ const removeItemToCart = async (req, res) => {
 const deleteItemToCart = async (req, res) => {
   try {
     if (!req.session.cart) {
-      let error = new Error("Debe loguearte para comprar");
+      let error = new Error("Inicia sesión o crea una cuenta para comprar");
       error.status = 404;
       throw error;
     }
@@ -183,7 +184,7 @@ const deleteItemToCart = async (req, res) => {
 const clearCart = async (req, res) => {
   try {
     if (!req.session.cart) {
-      let error = new Error("Debe loguearte para comprar");
+      let error = new Error("Inicia sesión o crea una cuenta para comprar");
       error.status = 404;
       throw error;
     }

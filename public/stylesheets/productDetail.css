@@ -2,6 +2,7 @@
     background-color: var(--colorAzul);
     font-family: 'Barlow';
 }
+
 .productdetail_main{
     display: flex;
     justify-content: space-around;
@@ -49,6 +50,16 @@
     gap: 3px;
 }
 
+.productdetail_main-description-name a{
+    text-decoration: none;
+    color: var(--colorNaranja);
+}
+
+.productdetail_main-description-item a{
+    text-decoration: none;
+    color: var(--colorNaranja);
+}
+
 .detail-card-button {
         border: none;
         padding: 5px;
@@ -61,7 +72,7 @@
         cursor: pointer;
         transition: 500ms;
         transition-property: background-color;
-      
+        text-decoration: none;
     }
     
     .detail-card-button:hover {
@@ -88,6 +99,7 @@
     border: 2px solid var(--colorTurquesa);
     border-radius: 40px;
     padding: 3px 30px;
+    text-decoration: none;
 }
 /*segundo div*/
 .productdetail_main-des{
@@ -128,12 +140,25 @@
     cursor: pointer;
 }
 
-.productdetail_main-description-item i, a{
+.productdetail_main-description-item-link{
+    text-decoration: none;
     color: var(--colorNaranja);
 }
+
+.productdetail_main-description-item-link a{
+    color: var(--colorNaranja);
+    text-decoration: none;
+}
+
+.productdetail_main-description-name h4{
+    color: silver;
+    font-size:20px;
+}
+
 .productdetail_main-description-item h4{
     color: silver;
     font-size:12px;
+    margin: 2.5px 0 0 0;
 }
 
 .productdetail_main-det button{
@@ -147,6 +172,7 @@
     border: 2px solid var(--colorNaranja);
     border-radius: 40px;
     transition: all 0.25s ease;
+    text-decoration: none;
 }
 .productdetail_main-det button:hover{
     background-color: var(--colorNaranja) ;

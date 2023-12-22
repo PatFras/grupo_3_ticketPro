@@ -1,4 +1,4 @@
-body {
+.body__main {
   background-color: var(--colorAzul);
   font-family: 'Barlow';
 }
@@ -23,13 +23,14 @@ body {
   padding: 5px 20px;
   border-radius: 18px;
   margin: 10px 0;
-  box-shadow: 0 5px 3px 0 var(--colorAzul2);
+  box-shadow: 0 2px 3px 0 var(--colorAzul2);
   width: 75%;
 }
 
 .body__main__containerSearchBar i {
   color: var(--colorNaranja);
-  padding-right: 5px;
+  padding-right: 7px;
+  padding-top: 5px;
 }
 
 .body__main__containerSearch--searchbar {
@@ -59,6 +60,7 @@ body {
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   color: white;
+  text-decoration: none;
 }
 
 
@@ -76,6 +78,7 @@ body {
   color: var(--colorTurquesa);
   transition: 500ms;
   transition-property: color;
+  text-decoration: none;
 }
 
 .ver-todo:hover {
@@ -101,11 +104,16 @@ body {
 
 .div__card--cercaDeTi img {
   padding: 15px 20px;
-  height: 200px;
+  height: 180px;
 }
 
 .div__card--cercaDeTi p {
   color: white;
+  margin: 0;
+}
+
+.div__card--cercaDeTi a {
+  text-decoration: none;
 }
 
 .div__card--title {
@@ -166,6 +174,10 @@ body {
   box-shadow: inset 0 0 5px 1px var(--colorTurquesa), 0 0 15px 2px #ebecca;
 }
 
+.body__main--actividades a {
+  text-decoration: none;
+}
+
 .body__main--actividades-title {
   color: var(--colorBlanco);
   border-radius: 10px;
@@ -183,6 +195,7 @@ body {
   border: none;
   border-radius: 15px;
   padding: 2px 5px;
+  margin-left: 2em;
   background-color: var(--colorTurquesa);
   cursor: pointer;
   transition: 500ms;
@@ -217,13 +230,13 @@ body {
 
 .body__main--pickup a {
   color: var(--colorBlanco);
+  text-decoration: none;
 }
 
 .body__main--proxEvento {
   display: flex;
   width: 100%;
   justify-content: center;
-  background: url(/images/fondo.png) no-repeat bottom;
   background-size: 100% 100px;
 }
 
@@ -247,20 +260,30 @@ body {
 .div__card--proxEvento p {
   font-weight: 500;
   text-align: center;
+  margin: 0;
 }
 
 .div__card--proxEvento img {
-  width: 40%;
-  height: 110px;
-  padding: 10px 3px;
+  width: 70%;
+  height: 90px;
+  margin-top: 0.5em;
+}
+
+.div__card--proxEvento-description-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: 1em 0;
 }
 
 .div__card--proxEvento-description {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 35%;
-  padding: 5px;
+  width: 50%;
+  padding: 0 10px 0 0;
+  margin-top: 2em;
 }
 
 .div__card--proxEvento-title {
@@ -349,7 +372,7 @@ body {
   }
 
   .select__options {
-    height: 33px;
+    height: 37px;
     margin-top: 10px;
     color: gray;
     background-color: var(--colorAzul);
@@ -493,8 +516,7 @@ body {
 
 /* DESKTOP */
 
-@media (min-width: 769px) {
-
+@media (min-width: 768px) {
 
   .logo__container a {
     display: flex;
@@ -511,7 +533,7 @@ body {
 
   .div__card--cercaDeTi {
     width: 80%;
-    min-height: 280px;
+    height: 280px;
   }
 
   .div__card--cercaDeTi-button {
@@ -520,12 +542,12 @@ body {
   }
 
   .div__card--proxEvento img {
-    width: 25%;
+    width: 70%;
   }
 
   .body__main--pickup {
     width: 25%;
-
+    height: 350px;
   }
 
   .body__main--sections {
@@ -546,7 +568,7 @@ body {
   }
 
   .body__main--proxEvento{
-  height: 150px;
+  height: 200px;
   }
 
   .body__main--proxEvento p{
@@ -573,7 +595,7 @@ body {
 .body__main--pickup {
   margin: 0 20px 15px 15px;
   width: 15%;
-  height: 300px;
+  height: 350px;
 }
 
   .body__main--actividades-title {
@@ -581,12 +603,15 @@ body {
   }
 
   .div__card--proxEvento img {
-    width: 25%;
+    width: 45%;
     height: 110px;
     padding: 10px 0px;
     margin: 0 20px;
   }
 
+  .div__card--cercaDeTi {
+    height: 310px;
+  }
 
 }
 
@@ -607,11 +632,11 @@ body {
 
   .div__card--cercaDeTi {
     width: 70%;
-    height: 260px;
+    height: 270px;
   }
 
   .div__card--proxEvento img {
-    width: 15%;
+    width: 45%;
 }
 
 }

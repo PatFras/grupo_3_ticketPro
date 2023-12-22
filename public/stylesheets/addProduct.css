@@ -1,3 +1,7 @@
+.addProduct {
+    background-color: var(--colorAzul);
+}
+
 .warning {
     color: rgb(207, 40, 40);
 }

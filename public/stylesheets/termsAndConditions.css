@@ -1,0 +1,19 @@
+.body-main {
+    background-color: var(--colorAzul);
+}
+
+.container{
+    width: 100%;
+    margin: 1em auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.content {
+    padding: 20px;
+    background: #fff;
+    box-shadow: -6.891px 24.032px 76px 0px rgba(0,0,0,0.1);
+    margin: 20px 0 20px 0;
+    border-radius: 3px;
+    color: #333;
+}

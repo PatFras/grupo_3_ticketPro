@@ -175,6 +175,7 @@
     color: var(--colorBlanco);
     font-size: 9px;
     margin-top: 1em;
+    text-decoration: none;
 }
 
 .warning {

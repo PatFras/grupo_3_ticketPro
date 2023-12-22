@@ -7,7 +7,7 @@
     crossorigin="anonymous"
   />
   <link rel="stylesheet" href="/stylesheets/addProduct.css" />
-  <%-include('partials/head')%>
+  <%-include('partials/head', {title: 'Agregar producto'})%>
   <body class="addProduct">
     <%-include('partials/header')%>
     <div class="col-12 col-md-8 mx-auto mt-5" id="formAdd">
@@ -29,7 +29,7 @@
                 type="text"
                 class="form-control"
                 id="name"
-                placeholder="Name of the product"
+                placeholder=""
                 name="name"
               />
               <small class="warning" id="msg-error-name">
@@ -105,7 +105,7 @@
               <select
                 class="form-select"
                 aria-label="Default select example"
-                name="category"
+                name="categoryId"
                 id="category"
               >
                 <option value="" selected hidden>
@@ -125,7 +125,7 @@
               <select
                 class="form-select"
                 aria-label="Default select example"
-                name="section"
+                name="sectionId"
                 id="section"
               >
                 <option value="" selected hidden>Seleccione una sección</option>

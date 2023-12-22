@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 0 0 10px;
+    padding: 20px 0 0 0;
     text-align: center;
     width: 100%;
 }
@@ -39,8 +39,13 @@
     background-color: var(--colorNaranja);
     }
 
+.footer-nav ul {
+    padding: 0;
+}    
+
 .footer-nav a {
     color: var(--colorBlanco);
+    text-decoration: none;
 }
 
 .home__footer img {
@@ -69,7 +74,7 @@
 .home__footer p {
     color: silver;
     font-size: 12px;
-    text-align: left;
+    text-align: center;
     padding: 1em;
 }
 
@@ -89,7 +94,6 @@
 
     .home__footer p {
         font-size: 12px;
-        align-self: center;
 
     }
 
@@ -134,7 +138,7 @@
     }
 
     .footer-bottomBox i {
-        margin-top: 0.3em;
+        margin-top: 0.5em;
     }
 
 }
@@ -160,7 +164,8 @@
     .footer-nav ul li {
         display: flex;
         flex-direction: column;
-        font-size: 18px;
+        width: 200px;
+        font-size: 17px;
         font-weight: 300;
         margin: 1em 0 0 0;
         align-items: center;
@@ -188,6 +193,10 @@
 
     .footer-bottomBox {
         width: 25%;
+    }
+
+    .footer-bottomBox i {
+        margin-top: 1em;
     }
 
 }
