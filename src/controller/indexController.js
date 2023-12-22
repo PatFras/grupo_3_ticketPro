@@ -7,13 +7,24 @@ module.exports = {
   index: (req, res) => {
     const products = db.Product.findAll();
     const categories = db.Category.findAll();
+    const currentDate = moment().format("YYYY-MM-DD");
+    const nextEvent = db.Product.findOne({
+      where: {
+        date: {
+          [Op.gte]: currentDate,
+        },
+      },
+      order: [["date", "ASC"]],
+      limit: 1,
+    });
 
-    Promise.all([products, categories])
-      .then(([products, categories]) => {
+    Promise.all([products, categories, nextEvent])
+      .then(([products, categories, nextEvent]) => {
         return res.render("index", {
           products,
           categories,
           moment,
+          nextEvent,
         });
       })
       .catch((error) => console.log(error));
@@ -81,5 +92,21 @@ module.exports = {
   },
   whoWeAre: (req, res) => {
     return res.render("whoWeAre");
+  },
+  freeEvents: (req, res) => {
+    db.Product.findAll({
+      where: {
+        sectionId: 1,
+      },
+    }).then((products) => {
+      return res.render("freeEvents", {
+        products,
+        moment,
+        generateGoogleMapsLink,
+      });
+    });
+  },
+  salePoints: (req, res) => {
+    return res.render("salePoints");
   },
 };

@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('partials/head') %>
-
+<%- include('partials/head', {title: 'Todos los eventos'}) %>
 <body>
 
     <%- include('partials/header') %>
 
-    <main>
+    <main class="main-allEvents">
 
         <section class="body__main__productCard--container">
             <div class="swiper mySwiper3">
@@ -20,10 +19,9 @@
                                     <p class="div__card--title"><%= product.name %></p>
                                     <p><%= moment(product.date).format('YYYY-MM-DD') %></p>
                                     <p><%= product.location %></p>
+                                    <button class="div__card--cercaDeTi-button">ver mas</button>
                                 </a>
-                                <button class="div__card--cercaDeTi-button">Comprar</button>
-                            </div>
-                            
+                            </div>                           
                             <% }) %>
                         </div>
                  

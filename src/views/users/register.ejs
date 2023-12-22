@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head') %>
+  <%- include('../partials/head', {title: 'Registro'}) %>
 
   <body class="register">
     <div class="register_conteiner">
@@ -15,6 +15,7 @@
             id="name"
             placeholder="Nombre de usuario"
             class="form-control <%= locals.errors && (errors.name && 'is-invalid') %>"
+            value="<%= locals.old && locals.old.name %>"
           />
           <small id="msg-error-name">
             <%= locals.errors && (errors.name && errors.name.msg) %>
@@ -25,6 +26,7 @@
             id="email"
             placeholder="Correo"
             class="form-control <%= locals.errors && (errors.email && 'is-invalid') %>"
+            value="<%= locals.old && locals.old.email %>"
           />
           <small id="msg-error-email">
             <%= locals.errors && (errors.email && errors.email.msg) %>
@@ -50,7 +52,7 @@
             <%= locals.errors && (errors.password2 && errors.password2.msg) %>
           </small>
 
-          <small class="text-danger ms-2" id="msg-error-empty" %> </small>
+          <small class="text-danger ms-2" id="msg-error-empty"> </small>
         </div>
         <div class="register_form-buttons">
           <button class="register_form-buttons-register" type="submit">

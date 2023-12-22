@@ -6,10 +6,19 @@
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
     crossorigin="anonymous"
   />
-  <%- include('partials/head') %>
+  <%- include('partials/head', {title: 'Lista de productos'}) %>
   <body class="productList">
     <%- include('partials/header') %>
     <main class="container productList-main mt-5 mb-5">
+      <form id="Formulario" method="GET" class="mb-3">
+        <label style="color: white;" for="categorySelect" class="form-label">Seleccionar categoría:</label>
+        <select style="width: min-content; margin-bottom: 10px;" name="category" id="categorySelect" class="form-select">
+          <% categories.forEach(category => { %>
+            <option value="<%= category.id %>"><%= category.name %></option>
+          <% }); %>
+        </select>
+        <button style="color: white; background-color: var(--colorNaranja);" type="submit" class="btn">Filtrar</button>
+      </form>      
       <div class="row">
         <div class="">
           <div class="card shadow">
@@ -31,7 +40,9 @@
                     aria-controls="home"
                     aria-selected="true"
                   >
-                    Productos
+                    Productos <% if (categoryName) { %>
+                     con categoría <%= categoryName %>
+                    <% } %>
                   </button>
                 </li>
               </ul>
@@ -43,6 +54,11 @@
                   aria-labelledby="home-tab"
                 >
                   <%- include('partials/tableProducts',{ products }) %>
+                  <% if (noProductsFound) { %>
+                   <p>
+                    No se encontraron coincidencias
+                   </p>
+                  <% } %>
                 </div>
               </div>
             </div>
@@ -51,5 +67,15 @@
       </div>
     </main>
     <%- include('partials/footer') %> <%- include('partials/scripts') %>
+    <script>
+      // Escucha el evento de cambio del select
+      $('#categorySelect').on('change', function() {
+        // Obtiene el valor seleccionado del select
+        let selectedCategory = $(this).val();
+        // Actualiza el atributo action del formulario con el valor seleccionado
+        $('#Formulario').attr('action', '/productList/' + selectedCategory);
+      });
+    </script>
   </body>
 </html>
+

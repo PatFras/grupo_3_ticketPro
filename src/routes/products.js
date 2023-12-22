@@ -9,6 +9,7 @@ var router = express.Router();
 
 router
   .get("/productDetail/:id", productsController.productDetail)
+  .get("/productList?category=:category", adminCheck, productsController.productList)
   .get("/productList", adminCheck, productsController.productList)
   .get("/addProduct", adminCheck, productsController.addProduct)
   .post(
