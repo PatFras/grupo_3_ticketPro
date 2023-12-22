@@ -1,3 +1,7 @@
+.main-allEvents {
+    background-color: var(--colorAzul);
+}
+
 .body__main__productCard--container {
     display: flex;
 }
@@ -11,8 +15,8 @@
 }
 
 .div__card--allEvents {
-    max-width: 250px;
-    min-width: 110px;
+    width: 200px;
+    height: 300px;
     background-color: var(--colorAzul);
     border-radius: 10%;
     color: white;
@@ -29,12 +33,18 @@
 
 .div__card--allEvents img {
     object-fit: cover;
-    width: 70%;
+    width: 80%;
+    height: 150px;
     padding: 10px 0 0 0;
 }
 
 .div__card--allEvents p {
     color: white;
+    margin: 0;
+}
+
+.div__card--allEvents a {
+    text-decoration: none;
 }
 
 @media (min-width: 481px) {
@@ -64,13 +74,19 @@
     
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
 
     .swiper-slide-allEvents {
         display: grid;
-        grid-template-columns: repeat(4, 0fr);
-        justify-content: space-evenly;
-        
+        grid-template-columns: repeat(2, 0fr);
+        justify-items: center;
+    }
+    .div__card--allEvents {
+        width: 220px;
+        height: 300px;
+    }
+    .div__card--allEvents p {
+        margin: 0;
     }
     
 }
@@ -85,7 +101,7 @@
     .div__card--allEvents {
         min-width: 190px;
         max-width: 200px;
-        min-height: 280px;
+        height: 300px;
         margin: 20px;
     }
 }

@@ -93,6 +93,11 @@
 .register small {
     color: rgb(207, 40, 40);
 }
+
+.register_form input::placeholder {
+    color: silver;
+}
+
 @media(min-width:768px){   
     .register_conteiner{
         margin: 12em 0;

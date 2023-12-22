@@ -1,3 +1,7 @@
+.productList {
+    background-color: var(--colorAzul);
+}
+
 .productList-main .card-header{
     background-color: var(--colorAzul2); 
     color: var(--colorBlanco);
@@ -7,7 +11,8 @@
     color: var(--colorBlanco);
 }
 .productList-main .card-body{
-    background-color: var(--colorAzul2); color: var(--colorBlanco);
+    background-color: var(--colorAzul2);
+    color: var(--colorBlanco);
 }
 #home-tab{
     background-color: var(--colorAzul2); 
@@ -17,10 +22,7 @@
     background-color: var(--colorAzul2);
      color: var(--colorBlanco);
 }
-.productList-table-description th{
-    background-color: var(--colorAzul2); 
-    color: var(--colorBlanco);
-}
+
 #productList-product{
     background-color: var(--colorAzul2); 
     color: var(--colorBlanco);
